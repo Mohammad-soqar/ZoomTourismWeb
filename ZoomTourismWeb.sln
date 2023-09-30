@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomTourismWeb", "ZoomTourismWeb\ZoomTourismWeb.csproj", "{72AD5FE1-AF57-4A6D-BF7E-2DCEAB920CF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomTourism.Models", "ZoomTourism.Models\ZoomTourism.Models.csproj", "{D7085711-D8DB-481A-AF8B-48D7396D1431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomTourism.Utility", "ZoomTourism.Utility\ZoomTourism.Utility.csproj", "{BE409B69-582E-42EA-9B35-AB93C62D32CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomTourism.DataAccess", "ZoomTourism.DataAccess\ZoomTourism.DataAccess.csproj", "{D407659A-F3C8-4910-B4E1-5B644F006043}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72AD5FE1-AF57-4A6D-BF7E-2DCEAB920CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72AD5FE1-AF57-4A6D-BF7E-2DCEAB920CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72AD5FE1-AF57-4A6D-BF7E-2DCEAB920CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72AD5FE1-AF57-4A6D-BF7E-2DCEAB920CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7085711-D8DB-481A-AF8B-48D7396D1431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7085711-D8DB-481A-AF8B-48D7396D1431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7085711-D8DB-481A-AF8B-48D7396D1431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7085711-D8DB-481A-AF8B-48D7396D1431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE409B69-582E-42EA-9B35-AB93C62D32CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE409B69-582E-42EA-9B35-AB93C62D32CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE409B69-582E-42EA-9B35-AB93C62D32CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE409B69-582E-42EA-9B35-AB93C62D32CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D407659A-F3C8-4910-B4E1-5B644F006043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D407659A-F3C8-4910-B4E1-5B644F006043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D407659A-F3C8-4910-B4E1-5B644F006043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D407659A-F3C8-4910-B4E1-5B644F006043}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50EC77E5-30D2-475F-8CAC-D80A73DD7006}
+	EndGlobalSection
+EndGlobal
