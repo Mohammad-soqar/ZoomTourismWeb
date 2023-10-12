@@ -17,13 +17,21 @@ namespace ZoomTourism.DataAccess.Repository
             _db = db;
             Category = new CategoryRepository(_db);
             Blog = new BlogRepository(_db);
-          
+            Trip = new TripRepository(_db);
+            Car = new CarRepository(_db);
+            CarImage = new CarimagesRepository(_db);
+            Lead = new LeadRepository(_db);
+
 
         }
 
         public ICategoryRepository Category {get; private set;}
         public IBlogRepository Blog { get; private set; }
-      
+        public ITripRepository Trip { get; private set; }
+        public ICarRepository Car { get; private set; }
+        public ICarimagesRepository CarImage { get; private set; }
+        public ILeadRepository Lead { get; private set; }
+
 
         public void Save()
         {

@@ -1,0 +1,38 @@
+﻿@using ZoomTourism.Models;
+
+@model IEnumerable<Trip>
+@{
+    ViewData["Title"] = "BlogCreation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/css/tableDesign.scss" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/tableDesign.css" asp-append-version="true" />
+
+    <title>Blogs list</title>
+
+</head>
+
+
+<div class="container">
+    <div class="createButton">
+        <a asp-controller="Trip" asp-action="Upsert">Create New Trip</a>
+    </div>
+    <table id="tbldata" class="" style="width: 100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Rating</th>
+                <th>Number of Reviews</th>
+                <th></th>
+            </tr>
+        </thead>
+
+    </table>
+
+</div>
+
+@section Scripts{
+    <script src="~/js/TripTable.js"></script>
+}

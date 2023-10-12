@@ -24,6 +24,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xVcHNlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Mohammad Ahmad/source/repos/ZoomTourismWeb/ZoomTourismWeb/Areas/Admin/Views/Car/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mohammad Ahmad/source/repos/ZoomTourismWeb/ZoomTourismWeb/Areas/Admin/Views/Car/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyXFVwc2VydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Mohammad Ahmad/source/repos/ZoomTourismWeb/ZoomTourismWeb/Areas/Admin/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +42,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Mohammad Ahmad/source/repos/ZoomTourismWeb/ZoomTourismWeb/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mohammad Ahmad/source/repos/ZoomTourismWeb/ZoomTourismWeb/Areas/Admin/Views/Trip/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHJpcFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mohammad Ahmad/source/repos/ZoomTourismWeb/ZoomTourismWeb/Areas/Admin/Views/Trip/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHJpcFxVcHNlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Mohammad Ahmad/source/repos/ZoomTourismWeb/ZoomTourismWeb/Areas/Admin/Views/_ViewImports.cshtml]

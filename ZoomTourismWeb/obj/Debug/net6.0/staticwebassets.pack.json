@@ -5,12 +5,48 @@
       "PackagePath": "staticwebassets\\ZoomTourismWeb.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Blogs\\9357f9a8-7c14-496f-85b4-f35628a65e53.png",
-      "PackagePath": "staticwebassets\\Images\\Blogs\\9357f9a8-7c14-496f-85b4-f35628a65e53.png"
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Blogs\\77426c71-e75d-4b9a-b9c9-d40dcd1c14ad.png",
+      "PackagePath": "staticwebassets\\Images\\Blogs\\77426c71-e75d-4b9a-b9c9-d40dcd1c14ad.png"
     },
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Blogs\\bd0fcd41-ef91-41f3-b480-0f365048da45.png",
       "PackagePath": "staticwebassets\\Images\\Blogs\\bd0fcd41-ef91-41f3-b480-0f365048da45.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\46c6efb3-f218-4332-9d2c-d6f0f28453eb.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\46c6efb3-f218-4332-9d2c-d6f0f28453eb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\5c4ac6e1-0f48-4686-8ccb-a8e56f74557b.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\5c4ac6e1-0f48-4686-8ccb-a8e56f74557b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\66d2b1a4-29d9-4f22-aa5b-8791ed152831.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\66d2b1a4-29d9-4f22-aa5b-8791ed152831.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\6d9740bd-570d-4f0c-bafd-654b177592de.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\6d9740bd-570d-4f0c-bafd-654b177592de.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\75511d13-cb7f-4627-b016-d1965ed56994.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\75511d13-cb7f-4627-b016-d1965ed56994.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\3e4fc7ea-95fe-4539-bb62-ab550d81c343.png",
+      "PackagePath": "staticwebassets\\Images\\Trips\\3e4fc7ea-95fe-4539-bb62-ab550d81c343.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\792ff926-973b-4621-bf0f-653a6bedf5ca.png",
+      "PackagePath": "staticwebassets\\Images\\Trips\\792ff926-973b-4621-bf0f-653a6bedf5ca.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\b264432e-9105-4b63-acdc-cb9cce571ca0.png",
+      "PackagePath": "staticwebassets\\Images\\Trips\\b264432e-9105-4b63-acdc-cb9cce571ca0.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\e07bbb04-f41d-4d8c-9b62-05b12a1324a9.png",
+      "PackagePath": "staticwebassets\\Images\\Trips\\e07bbb04-f41d-4d8c-9b62-05b12a1324a9.png"
     },
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\site.css",
@@ -23,6 +59,14 @@
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\BlogTable.js",
       "PackagePath": "staticwebassets\\js\\BlogTable.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\CarTable.js",
+      "PackagePath": "staticwebassets\\js\\CarTable.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\TripTable.js",
+      "PackagePath": "staticwebassets\\js\\TripTable.js"
     },
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\site.js",

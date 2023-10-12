@@ -1,0 +1,38 @@
+﻿@using ZoomTourism.Models;
+
+@model IEnumerable<Car>
+@{
+    ViewData["Title"] = "CarCreation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/css/tableDesign.scss" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/tableDesign.css" asp-append-version="true" />
+
+    <title>Cars list</title>
+
+</head>
+
+
+<div class="container">
+    <div class="createButton">
+        <a asp-controller="Car" asp-action="Upsert">Create New Car</a>
+    </div>
+    <table id="tbldata" class="" style="width: 100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Car Brand</th>
+                <th>Model Name</th>
+                <th>Model Year</th>
+                <th></th>
+            </tr>
+        </thead>
+
+    </table>
+
+</div>
+
+@section Scripts{
+    <script src="~/js/CarTable.js"></script>
+}

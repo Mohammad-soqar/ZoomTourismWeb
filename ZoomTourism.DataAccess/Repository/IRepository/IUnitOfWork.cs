@@ -12,7 +12,11 @@ namespace ZoomTourism.DataAccess.Repository.IRepository
         ICategoryRepository Category { get; }
 
         IBlogRepository Blog { get; }
-      
+        ITripRepository Trip { get; }
+        ICarRepository Car { get; }
+        ICarimagesRepository CarImage { get; }
+        ILeadRepository Lead { get; }
+
 
         void Save();
     }

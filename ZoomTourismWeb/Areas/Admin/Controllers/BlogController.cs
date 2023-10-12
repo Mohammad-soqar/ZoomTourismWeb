@@ -22,8 +22,8 @@ namespace ZoomTourism.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Blog> objBlogList = _unitOfWork.Blog.GetAll();
-            return View(objBlogList);
+         
+            return View();
         }
 
       
