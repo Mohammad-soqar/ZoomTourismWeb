@@ -21,6 +21,8 @@ namespace ZoomTourism.DataAccess.Repository
             Car = new CarRepository(_db);
             CarImage = new CarimagesRepository(_db);
             Lead = new LeadRepository(_db);
+            Sale = new SaleRepository(_db);
+            Review = new ReviewRepository(_db);
 
 
         }
@@ -31,6 +33,8 @@ namespace ZoomTourism.DataAccess.Repository
         public ICarRepository Car { get; private set; }
         public ICarimagesRepository CarImage { get; private set; }
         public ILeadRepository Lead { get; private set; }
+        public ISaleRepository Sale { get; private set; }
+        public IReviewRepository Review { get; private set; }
 
 
         public void Save()

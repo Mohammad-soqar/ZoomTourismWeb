@@ -23,6 +23,9 @@ namespace ZoomTourism.DataAccess.Data
         public DbSet<Car> Cars { get; set; }
         public DbSet<CarImages> CarImages { get; set; }
         public DbSet<Lead> Leads { get; set; }
+        public DbSet<Sale> Sales { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
     }
 }

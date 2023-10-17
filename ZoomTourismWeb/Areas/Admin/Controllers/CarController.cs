@@ -7,10 +7,13 @@ using ZoomTourism.Models;
 using ZoomTourism.Models.ViewModels;
 using System.Linq;
 using System.Collections.Generic;
+using CodyleOffical.Utility;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ZoomTourism.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CarController : Controller
     {
      

@@ -1,7 +1,7 @@
 ﻿@{
-    if (ViewData.TryGetValue("ParentLayout", out var parentLayout) && parentLayout !=  null)
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
     {
-        Layout = parentLayout.ToString();
+        Layout = (string)parentLayout;
     }
     else
     {
@@ -9,7 +9,7 @@
     }
 }
 
-<h1>Manage your account</h1>
+<h1>Manage your  asdasd account</h1>
 
 <div>
     <h2>Change your account settings</h2>
@@ -21,7 +21,7 @@
         <div class="col-md-9">
             @RenderBody()
         </div>
-    </div>
+    </div>sadasd
 </div>
 
 @section Scripts {

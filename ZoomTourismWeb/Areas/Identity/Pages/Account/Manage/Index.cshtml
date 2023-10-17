@@ -1,6 +1,9 @@
 ﻿@page
+@using ZoomTourism.Models;
 @model IndexModel
+@inject SignInManager<IdentityUser> SignInManager
 @{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
     ViewData["Title"] = "Profile";
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
@@ -22,6 +25,9 @@
             </div>
             <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
         </form>
+
+       
+
     </div>
 </div>
 

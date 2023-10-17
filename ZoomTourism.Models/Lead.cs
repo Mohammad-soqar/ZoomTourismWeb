@@ -9,18 +9,53 @@ namespace ZoomTourism.Models
 {
     public class Lead
     {
-        public int Id { get; set; }
+        public int Id { get; set; }//no need
+        public string LeadType { get; set; }
+
+        //General
         public string Name { get; set; }
-        public int NumberOfDays { get; set; }
-        public List<string> Destinations { get; set; }
-        public int NumberOfPeople { get; set; }
-        public bool IsPaid { get; set; }
         [ValidateNever]
-        public string Email { get; set; }
+        public string? Email { get; set; }
         public string Phone { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public LeadStatus Status { get; set; }
+        public DateTime CreatedDate { get; set; } //no need
+        public LeadStatus Status { get; set; } //no need
         public string Notes { get; set; }
+
+        [ValidateNever]
+        public decimal? SaleAmount { get; set; } //only when IsPaid is checked
+        public bool IsPaid { get; set; }
+
+
+        public string CallCenterUserId { get; set; }
+        [ValidateNever]
+        public ApplicationUser CallCenter { get; set; }
+        public string BookingDepUserId { get; set; }
+        [ValidateNever]
+        public ApplicationUser BookingDep { get; set; }
+        public string DriverUserId { get; set; }
+        [ValidateNever]
+        public ApplicationUser Driver { get; set; }
+
+
+
+        //Private Trip
+        [ValidateNever]
+        public string? Destinations { get; set; }
+        [ValidateNever]
+        public int? NumberOfPeople { get; set; }
+        [ValidateNever]
+        public DateTime? HotelCheckInDate { get; set; }
+        [ValidateNever]
+        public DateTime? HotelCheckOutDate { get; set; }
+        [ValidateNever]
+        public string? HotelName { get; set; }
+        [ValidateNever]
+        public decimal? HotelTotalCost { get; set; }
+       
+
+
+
+        //Private Trip + Car Rental
         [ValidateNever]
         public int? SelectedCarId { get; set; }
         [ValidateNever]
@@ -30,15 +65,13 @@ namespace ZoomTourism.Models
         [ValidateNever]
         public DateTime? CarReturnDate { get; set; }
         [ValidateNever]
-        public DateTime? HotelCheckInDate { get; set; }
-        [ValidateNever]
-        public DateTime? HotelCheckOutDate { get; set; }
-        [ValidateNever]
-        public string? HotelName { get; set; }
-        [ValidateNever]
-        public decimal? HotelTotalCost { get; set; }
+        public int? NumberOfDays { get; set; }
+        //Public Trip
+        //nothing yet
 
-       
+        //Car Rental
+        //nothing yet
+
     }
 
     public enum LeadStatus

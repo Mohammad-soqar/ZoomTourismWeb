@@ -1,4 +1,6 @@
 ﻿
+using CodyleOffical.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ZoomTourism.DataAccess.Repository.IRepository;
@@ -8,6 +10,7 @@ using ZoomTourism.Models.ViewModels;
 namespace ZoomTourism.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class BlogController : Controller
     {
      

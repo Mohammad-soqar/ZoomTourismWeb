@@ -34,6 +34,12 @@ namespace ZoomTourism.DataAccess.Repository
                 objFromDb.CreatedDate = obj.CreatedDate;
                 objFromDb.Status = obj.Status;
                 objFromDb.Notes = obj.Notes;
+                objFromDb.CallCenterUserId = obj.CallCenterUserId;
+                objFromDb.CallCenter = obj.CallCenter;
+                objFromDb.BookingDepUserId = obj.BookingDepUserId;
+                objFromDb.BookingDep = obj.BookingDep;
+                objFromDb.DriverUserId = obj.DriverUserId;
+                objFromDb.Driver = obj.Driver;
 
                 // Check and update properties that are not null
                 if (obj.SelectedCarId.HasValue)

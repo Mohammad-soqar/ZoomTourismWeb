@@ -1,0 +1,48 @@
+﻿@using ZoomTourism.Models.ViewModels;
+@using System;
+
+@model List<SalesChartVM>
+
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Month');
+            data.addColumn('number', 'Total Sales Count');
+            data.addColumn({ type: 'string', role: 'tooltip', p: { html: true } });
+
+            var tooltipData = [
+        @foreach (var item in Model)
+        {
+            var month = item.Month;
+            var salesCount = item.SalesCount;
+            var totalSales = item.TotalSales;
+
+            @:['@month', @salesCount, '<div>Total Sales: @salesCount<br>Total Amount: @totalSales</div>'],
+        }
+                    ];
+
+            data.addRows(tooltipData);
+
+            var options = {
+                title: 'Sales Performance for the Past Three Months',
+                hAxis: { title: 'Month', titleTextStyle: { color: '#333' } },
+                vAxis: { title: 'Total Sales Count', minValue: 0 },
+                width: '100%',
+                height: 500,
+                focusTarget: 'category',  // Show tooltips on hover
+                tooltip: { isHtml: true }  // Enable HTML content in tooltips
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+    <div id="chart_div"></div>
+</body>

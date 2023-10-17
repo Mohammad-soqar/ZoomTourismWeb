@@ -10,7 +10,11 @@ namespace CodyleOffical.Utility
     {
         
         public const string Role_Admin = "Admin";
-        
+        public const string Role_CallCenter = "CallCenter";
+        public const string Role_Booking = "Booking";
+        public const string Role_Driver = "Driver";
+        public const string Role_Customer = "Customer";
+
 
         public const string StatusPending = "Pending";
         public const string StatusApproved = "Approved";

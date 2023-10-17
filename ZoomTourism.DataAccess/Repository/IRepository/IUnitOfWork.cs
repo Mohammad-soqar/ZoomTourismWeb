@@ -16,6 +16,8 @@ namespace ZoomTourism.DataAccess.Repository.IRepository
         ICarRepository Car { get; }
         ICarimagesRepository CarImage { get; }
         ILeadRepository Lead { get; }
+        ISaleRepository Sale { get; }
+        IReviewRepository Review { get; }
 
 
         void Save();
