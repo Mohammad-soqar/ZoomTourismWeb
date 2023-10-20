@@ -272,3 +272,5 @@ C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourismWeb\obj\Debug\net
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourismWeb\obj\Debug\net6.0\ZoomTourismWeb.pdb
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourismWeb\obj\Debug\net6.0\ZoomTourismWeb.genruntimeconfig.cache
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourismWeb\obj\Debug\net6.0\ref\ZoomTourismWeb.dll
+C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourismWeb\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourismWeb\bin\Debug\net6.0\Twilio.dll

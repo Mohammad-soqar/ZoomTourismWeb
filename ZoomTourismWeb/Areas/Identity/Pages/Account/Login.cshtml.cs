@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using ZoomTourism.Models;
 
 namespace ZoomTourismWeb.Areas.Identity.Pages.Account
 {
@@ -21,11 +22,14 @@ namespace ZoomTourismWeb.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger)
+
+        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, UserManager<IdentityUser> userManager)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _userManager = userManager;
         }
 
         /// <summary>
@@ -114,6 +118,27 @@ namespace ZoomTourismWeb.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+
+                    var user = await _userManager.FindByEmailAsync(Input.Email);
+
+                    if (await _userManager.IsInRoleAsync(user, "Admin"))
+                    {
+                        return RedirectToAction("Index", "Home", new { area = "Admin" });
+                    }
+                    else if (await _userManager.IsInRoleAsync(user, "Coordinator"))
+                    {
+                        return RedirectToAction("Index", "Coordinator", new { area = "Coordinator" });
+
+                    }
+                    else if (await _userManager.IsInRoleAsync(user, "CC"))
+                    {
+                        return RedirectToAction("Index", "Careercenter", new { area = "CareerCenter" });
+                    }
+                    else if (await _userManager.IsInRoleAsync(user, "Admin"))
+                    {
+                        return RedirectToPage("/Account/Register");
+
+                    }
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }

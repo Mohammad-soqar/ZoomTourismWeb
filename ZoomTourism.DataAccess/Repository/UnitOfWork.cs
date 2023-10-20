@@ -23,6 +23,8 @@ namespace ZoomTourism.DataAccess.Repository
             Lead = new LeadRepository(_db);
             Sale = new SaleRepository(_db);
             Review = new ReviewRepository(_db);
+            ReviewLink = new ReviewlinkRepository(_db);
+            ATask = new TaskRepository(_db);
 
 
         }
@@ -35,6 +37,8 @@ namespace ZoomTourism.DataAccess.Repository
         public ILeadRepository Lead { get; private set; }
         public ISaleRepository Sale { get; private set; }
         public IReviewRepository Review { get; private set; }
+        public IReviewlinkRepository ReviewLink { get; private set; }
+        public ITaskRepository ATask { get; private set; }
 
 
         public void Save()

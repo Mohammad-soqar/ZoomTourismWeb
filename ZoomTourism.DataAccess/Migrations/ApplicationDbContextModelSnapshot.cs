@@ -485,6 +485,9 @@ namespace ZoomTourism.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("LeadId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
@@ -498,9 +501,36 @@ namespace ZoomTourism.DataAccess.Migrations
 
                     b.HasIndex("ApplicationUserId");
 
+                    b.HasIndex("LeadId");
+
                     b.HasIndex("TripId");
 
                     b.ToTable("Reviews");
+                });
+
+            modelBuilder.Entity("ZoomTourism.Models.ReviewLink", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<bool>("IsUsed")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("LeadId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LeadId");
+
+                    b.ToTable("ReviewLinks");
                 });
 
             modelBuilder.Entity("ZoomTourism.Models.Sale", b =>
@@ -682,13 +712,32 @@ namespace ZoomTourism.DataAccess.Migrations
                         .WithMany()
                         .HasForeignKey("ApplicationUserId");
 
+                    b.HasOne("ZoomTourism.Models.Lead", "Lead")
+                        .WithMany()
+                        .HasForeignKey("LeadId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ZoomTourism.Models.Trip", "Trip")
                         .WithMany()
                         .HasForeignKey("TripId");
 
                     b.Navigation("ApplicationUser");
 
+                    b.Navigation("Lead");
+
                     b.Navigation("Trip");
+                });
+
+            modelBuilder.Entity("ZoomTourism.Models.ReviewLink", b =>
+                {
+                    b.HasOne("ZoomTourism.Models.Lead", "Lead")
+                        .WithMany()
+                        .HasForeignKey("LeadId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lead");
                 });
 
             modelBuilder.Entity("ZoomTourism.Models.Sale", b =>

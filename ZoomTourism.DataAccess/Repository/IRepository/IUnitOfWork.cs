@@ -18,6 +18,8 @@ namespace ZoomTourism.DataAccess.Repository.IRepository
         ILeadRepository Lead { get; }
         ISaleRepository Sale { get; }
         IReviewRepository Review { get; }
+        IReviewlinkRepository ReviewLink { get; }
+        ITaskRepository ATask { get; }
 
 
         void Save();

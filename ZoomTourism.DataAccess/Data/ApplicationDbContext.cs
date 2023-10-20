@@ -12,7 +12,7 @@ namespace ZoomTourism.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) :base(options)
         {
 
         }
@@ -26,6 +26,8 @@ namespace ZoomTourism.DataAccess.Data
         public DbSet<Sale> Sales { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ReviewLink> ReviewLinks { get; set; }
+        public DbSet<ATask> Tasks { get; set; }
 
     }
 }

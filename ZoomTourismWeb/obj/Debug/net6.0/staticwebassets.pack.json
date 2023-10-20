@@ -69,6 +69,182 @@
       "PackagePath": "staticwebassets\\Images\\Trips\\e07bbb04-f41d-4d8c-9b62-05b12a1324a9.png"
     },
     {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Brand\\Logo.png",
+      "PackagePath": "staticwebassets\\assets\\Brand\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Brand\\LogoPlane.png",
+      "PackagePath": "staticwebassets\\assets\\Brand\\LogoPlane.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-back.jpg",
+      "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-back.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-face.jpg",
+      "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-face.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side1.jpg",
+      "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-side1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side2.jpg",
+      "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-side2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side3.jpg",
+      "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-side3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side4.jpg",
+      "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-side4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito.png",
+      "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Logo.svg.png",
+      "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Logo.svg.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Font\\Inter-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\Font\\Inter-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\StarReview.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\StarReview.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\arrowLeft.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\arrowLeft.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\arrowRight.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\arrowRight.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\Fuel.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\cars\\Fuel.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\ModelYear.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\cars\\ModelYear.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\Seats.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\cars\\Seats.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\manufucture.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\cars\\manufucture.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\model.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\cars\\model.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\transmission.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\cars\\transmission.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\like.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\like.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\right-btn-arrow.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\right-btn-arrow.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\seats.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\seats.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\starBadge.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\starBadge.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\transmission.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\transmission.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\twoStars.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\twoStars.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\whatsapp.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\whatsapp.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\CustomTrip.png",
+      "PackagePath": "staticwebassets\\assets\\Pictures\\CustomTrip.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\girl-xp-suitcase.png",
+      "PackagePath": "staticwebassets\\assets\\Pictures\\girl-xp-suitcase.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\main-ZOOM.png",
+      "PackagePath": "staticwebassets\\assets\\Pictures\\main-ZOOM.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\man-suitcase.png",
+      "PackagePath": "staticwebassets\\assets\\Pictures\\man-suitcase.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\reviews-map.png",
+      "PackagePath": "staticwebassets\\assets\\Pictures\\reviews-map.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\New-Maidens-Tower-Yeni-Kiz-Kulesi-Istanbul-Tourist-Information.png",
+      "PackagePath": "staticwebassets\\assets\\blogs\\New-Maidens-Tower-Yeni-Kiz-Kulesi-Istanbul-Tourist-Information.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\erdogan.png",
+      "PackagePath": "staticwebassets\\assets\\blogs\\erdogan.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\firework.png",
+      "PackagePath": "staticwebassets\\assets\\blogs\\firework.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\mountaineering-ararat.png",
+      "PackagePath": "staticwebassets\\assets\\blogs\\mountaineering-ararat.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\oil.png",
+      "PackagePath": "staticwebassets\\assets\\blogs\\oil.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\shutterstock_395147326.png",
+      "PackagePath": "staticwebassets\\assets\\blogs\\shutterstock_395147326.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\elements\\ExperienceVector.png",
+      "PackagePath": "staticwebassets\\assets\\elements\\ExperienceVector.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\trips\\Bursa.png",
+      "PackagePath": "staticwebassets\\assets\\trips\\Bursa.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\trips\\Trabzon.png",
+      "PackagePath": "staticwebassets\\assets\\trips\\Trabzon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\trips\\kapadokya.png",
+      "PackagePath": "staticwebassets\\assets\\trips\\kapadokya.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\NavBar.css",
+      "PackagePath": "staticwebassets\\css\\NavBar.css"
+    },
+    {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

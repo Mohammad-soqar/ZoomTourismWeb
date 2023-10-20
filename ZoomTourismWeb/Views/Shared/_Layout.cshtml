@@ -14,21 +14,67 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ZoomTourismWeb</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ZoomTourismWeb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/NavBar.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ZoomTourismWeb</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+        <nav class="nav-bar">
+            <div class="nav-header">
+                <a href="index.html"><img src="~/assets/Brand/Logo.png" alt="Logo" class="logo"></a>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul class="nav-list">
+                <a href="aboutus.html">
+                <li class="nav-links">About Us</li>
+                </a>
+                <a href="trips.html">
+                <li class="nav-links">Trips</li>
+                </a>
+                <a href="blogs.html">
+                <li class="nav-links">Blogs</li>
+                </a>
+                <a href="carRental.html">
+                <li class="nav-links">Car Rental</li>
+                </a>
+            </ul>
+            <div class="nav-buttons">
+
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li class="nav-item">
+                        <a id="manage" class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+                    </li>
+                    <li class="nav-item">
+                        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                            <button id="logout" type="submit" class="nav-link btn btn-link ">Logout</button>
+                        </form>
+                    </li>
+                }
+                else
+                {
+                    <div class="nav-buttons">
+                    <li class="nav-item">
+                        <a class="nav-link Transperent-brand-btn" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link brand-background-btn" id="register" asp-area="Identity" asp-page="/Account/Register">Sign up</a>
+                    </li>
+                    </div>
+
+                }
+
+
+              
+            </div>
+        </nav>
+             @*   <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                 <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
@@ -53,7 +99,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Lead" asp-action="SalesChart" asp-area="Admin">Sales</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Task" asp-action="Upsert" asp-area="Admin">Tasks</a>
+                        </li>
 
                         @if (SignInManager.IsSignedIn(User))
                         {
@@ -76,12 +124,11 @@
                             </li>
                         }
 
-                    </ul>
+                    </ul> 
 
                 </div>
-            </div>
-        </nav>
-    </header>
+            </div>  *@
+      
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

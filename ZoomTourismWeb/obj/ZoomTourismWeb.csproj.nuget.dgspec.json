@@ -384,6 +384,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "Twilio": {
+              "target": "Package",
+              "version": "[6.14.1, )"
             }
           },
           "imports": [

@@ -18,6 +18,7 @@ namespace ZoomTourism.Models
         public string? Email { get; set; }
         public string Phone { get; set; }
         public DateTime CreatedDate { get; set; } //no need
+       
         public LeadStatus Status { get; set; } //no need
         public string Notes { get; set; }
 
@@ -66,6 +67,7 @@ namespace ZoomTourism.Models
         public DateTime? CarReturnDate { get; set; }
         [ValidateNever]
         public int? NumberOfDays { get; set; }
+
         //Public Trip
         //nothing yet
 
@@ -79,6 +81,7 @@ namespace ZoomTourism.Models
         New,
         Contacted,
         Converted,
-        Lost
+        Lost,
+        Finished
     }
 }
