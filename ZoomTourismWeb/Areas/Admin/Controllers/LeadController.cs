@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
 using ZoomTourism.DataAccess.Repository.IRepository;
 using ZoomTourism.Models;
 using ZoomTourism.Models.ViewModels;
@@ -127,12 +128,60 @@ namespace ZoomTourism.Areas.Admin.Controllers
                     }
                 }
 
+                if(obj.Status.ToString().ToLower() == "finished")
+                {
+                    var existingReview = _unitOfWork.ReviewLink.GetFirstOrDefault(s => s.LeadId == obj.Id);
+
+                    if (existingReview == null)
+                    {
+                        string reviewToken = GenerateReviewToken();
+                        string phoneNum = obj.Phone;
+                        var reviewLink = new ReviewLink
+                        {
+                            Token = reviewToken,
+                            LeadId = obj.Id
+                        };
+                        _unitOfWork.ReviewLink.Add(reviewLink);
+                        _unitOfWork.Save();
+
+                        string reviewUrl = $"https://localhost:44346/Customer/Home/ReviewUpsert?token={reviewToken}";
+
+                        return RedirectToAction("SendSms", "Sms", new { reviewLink = reviewUrl , phoneNumber = phoneNum });
+                    }
+                }
+
                 _unitOfWork.Save();
                 return RedirectToAction("Index");
             }
 
             return View(leadVm);
         }
+
+        private string GenerateReviewToken()
+        {
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                byte[] tokenData = new byte[32];
+                rng.GetBytes(tokenData);
+                return Convert.ToBase64String(tokenData);
+            }
+        }
+
+
+
+
+        private void DisplayReviewLink(string reviewUrl)
+        {
+            // For testing purposes, you can display the review link in the console or on a webpage
+            Console.WriteLine("Review Link: " + reviewUrl);
+
+            // If you are working in a web application, you can send the link to the view for display
+            // ViewBag.ReviewLink = reviewUrl;
+            // or
+            // ViewData["ReviewLink"] = reviewUrl;
+        }
+
+
 
         public IActionResult SalesChart()
         {
@@ -159,6 +208,8 @@ namespace ZoomTourism.Areas.Admin.Controllers
 
             return View(salesByMonth);
         }
+
+        
 
 
       
