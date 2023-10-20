@@ -5,14 +5,29 @@ using ZoomTourism.DataAccess.Repository.IRepository;
 using ZoomTourism.DataAccess.Repository;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using ZoomTourism.Utility;
+using Twilio.Clients;
+using ZoomTourismWeb;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.AddJsonFile("appsettings.json");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
  builder.Configuration.GetConnectionString("DefaultConnection")
     ));
+
+var twilioSettings = new TwilioSettings();
+builder.Configuration.GetSection("Twilio").Bind(twilioSettings);
+
+builder.Services.Configure<TwilioSettings>(builder.Configuration.GetSection("Twilio"));
+
+builder.Services.AddSingleton<TwilioRestClient>(sp =>
+{
+    var options = sp.GetRequiredService<IOptions<TwilioSettings>>().Value;
+    return new TwilioRestClient(options.AccountSid, options.AuthToken);
+});
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 {
@@ -28,7 +43,6 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
-
 builder.Services.AddRazorPages();
 
 builder.Services.ConfigureApplicationCookie(options =>
