@@ -1,0 +1,47 @@
+﻿@using ZoomTourism.Models.ViewModels;
+
+@model ZoomTourism.Models.ViewModels.TaskVM
+@{
+
+}
+<head>
+    <script src="https://cdn.tiny.cloud/1/17ey362kygya3onsmqifoumhul549v4sc5s58njdpa731on7/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
+
+
+    <script src="~/js/tableJs.js"></script>
+    <title>Create a Task</title>
+</head>
+
+
+<form method="post">
+    <input type="hidden" asp-for="@Model.Task.Id" />
+
+    <div class="form-group">
+        <label asp-for="@Model.Task.Title"></label>
+        <input asp-for="@Model.Task.Title" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.Task.Description"></label>
+        <input asp-for="@Model.Task.Description" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.Task.DueDate"></label>
+        <input asp-for="@Model.Task.DueDate" class="form-control" />
+    </div>
+
+
+
+    <div class="form-group">
+        <label asp-for="Task.AssignedUserId">Driver User</label>
+        @Html.DropDownListFor(model => model.Task.AssignedUserId, Model.UserList, "Select Driver", new { @class = "form-control" })
+    </div>
+
+ 
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-controller="Lead" asp-action="Index" asp-area="Admin">Cancel</a>
+</form>
