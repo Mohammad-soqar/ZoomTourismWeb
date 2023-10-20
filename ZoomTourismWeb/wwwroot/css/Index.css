@@ -1,0 +1,967 @@
+﻿.img-text-section {
+    display: flex;
+}
+
+@media only screen and (min-width: 1300px) {
+
+    .img-text-section {
+        margin: 3rem 12rem;
+        align-items: stretch;
+    }
+
+    .main-ZOOM {
+        max-height: 500px;
+    }
+
+
+    .text-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        position: relative;
+    }
+
+        .text-side h1 {
+            font-size: 5em;
+            color: #292929;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .text-side h3 {
+            font-size: 3em;
+            color: #292929;
+            font-weight: 700;
+            width: 90%;
+            position: relative;
+        }
+
+        .text-side h2 {
+            color: #C4942F;
+            font-weight: 700;
+            width: 90%;
+            position: relative;
+        }
+
+
+    .CustomTrip-img {
+        max-height: 480px;
+    }
+
+    .text-side p,
+    .CustomTrip-text p {
+        font-size: 1.2em;
+        color: #7A7A7A;
+        width: 60%;
+        text-align: justify;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .CustomTrip p {
+        width: 80% !important;
+    }
+
+    .text-side a {
+        font-size: 1.2em;
+        color: #fff;
+        text-align: justify;
+        font-weight: 600;
+        position: relative;
+    }
+
+    .carousel-container-mobile {
+        display: none !important;
+    }
+
+    .value-section {
+        display: flex;
+        justify-content: space-around;
+        background-color: #292929;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        margin: 10rem 0rem 0rem 0rem;
+        padding: 0rem 8rem;
+    }
+
+    .man-suitcase-side {
+        position: relative;
+    }
+
+    .man-suitcase {
+        position: absolute;
+        bottom: 4rem;
+    }
+
+    .top-values h2 {
+        font-size: 2.3em;
+        font-weight: 600;
+    }
+
+    .top-values {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 65%;
+    }
+
+    .value-sec-title {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .values {
+        display: flex;
+        gap: 3rem;
+    }
+
+    .value-title,
+    .value-para {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .value {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 35%;
+    }
+
+        .value h3 {
+            text-align: left;
+        }
+
+        .value p {
+            text-align: left;
+        }
+
+    .dashed-line {
+        border: 2px dashed #C4942F;
+        width: 100%;
+    }
+
+    .section-title {
+        margin: 0rem 4rem;
+    }
+
+    .top-dest-sec {
+        margin: 6rem 8rem;
+    }
+
+    .section-title-text {
+        gap: 1rem;
+    }
+
+        .section-title-text h2 {
+            color: #C4942F;
+            font-size: .9em;
+            font-weight: 600;
+        }
+
+        .section-title-text h3 {
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+    .carousel-container {
+        position: relative;
+        display: flex;
+        gap: 2rem;
+        padding: 20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .trip-description {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0rem 0rem 0rem;
+    }
+
+    .Thumbnail {
+        position: relative;
+    }
+
+    .carousel-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .Thumbnail span {
+        position: absolute;
+        font-family: inter;
+        font-weight: 700;
+        right: 5%;
+        top: 5%;
+        font-size: 1em;
+        padding: .4rem .8rem;
+        border-radius: 27px;
+        background-color: #fff;
+        color: #AB8026;
+    }
+
+    .trip-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+        .trip-title h3 {
+            font-size: 1.4em;
+            width: 70%;
+            font-weight: 600;
+            text-align: start;
+        }
+
+        .trip-title p {
+            font-size: 1em;
+            font-weight: 500;
+            text-align: start;
+        }
+
+    .rating {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 600;
+    }
+
+        .rating span {
+            font-size: .8em;
+            opacity: 70%;
+        }
+
+    .star-rating {
+        display: flex;
+        align-items: center;
+        background-color: #FDF7E9;
+        border-radius: 27px;
+        font-size: .8em;
+        gap: .5rem;
+        padding: .3rem .6rem;
+    }
+
+    .carousel {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        justify-content: center;
+    }
+
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .prev-button,
+    .next-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 5px 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .prev-button {
+        left: 0;
+    }
+
+    .next-button {
+        right: 0;
+    }
+
+    .carousel-item {
+        flex: 0 0 calc(33.33% - 20px);
+        /* Display 3 items on desktop with 20px gap */
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        /* Add smooth animation */
+    }
+
+        .carousel-item img {
+            max-width: 100%;
+        }
+
+    /* Styles for navigation buttons */
+    .carousel-control {
+        transform: translateY(-50%);
+        background: #C4942F;
+        border-radius: 50%;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .experience-sec {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+        margin-top: 5rem;
+        padding: 3rem 6rem;
+        background-image: url(../assets/elements/ExperienceVector.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .experience-text-side {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+
+        .experience-text-side h3 {
+            font-size: 3em;
+            color: #292929;
+            font-weight: 700;
+            width: 90%;
+            position: relative;
+        }
+
+        .experience-text-side h2 {
+            color: #C4942F;
+            font-weight: 700;
+            width: 90%;
+            position: relative;
+        }
+
+    .experience-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .experience-items h4 {
+            color: #C4942F;
+            font-weight: 700;
+            font-size: 2em;
+            position: relative;
+        }
+
+        .experience-items p {
+            font-size: 1.2em;
+            color: #7A7A7A;
+            width: 90%;
+            font-weight: 500;
+            position: relative;
+        }
+
+    .xp-item {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+
+    .reviews {
+        position: relative;
+    }
+
+    .review-sec {
+        display: flex;
+        margin: 12rem 8rem 0rem 8rem;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .reviews-map img {
+        max-height: 240px;
+    }
+
+    .reviews-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+        .reviews-text h3 {
+            font-size: 3em;
+            color: #292929;
+            font-weight: 700;
+            width: 90%;
+            position: relative;
+        }
+
+        .reviews-text h2 {
+            color: #C4942F;
+            font-weight: 700;
+            width: 90%;
+            position: relative;
+        }
+
+    .reviews-text-side {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .review-carousel {
+        overflow: hidden;
+        position: relative;
+        max-width: 500px;
+    }
+
+    .carousel-viewport {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        width: 100%;
+    }
+
+    .review-card-container {
+        flex: 0 0 100%;
+        /* Each card container takes 33.33% of the viewport width with a 10px gap */
+        padding: 1.5rem;
+        background-color: #FFF7E5;
+        box-sizing: border-box;
+        border-radius: 1.625rem;
+    }
+
+    .review-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .review-stars {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .next-btn {
+        margin-top: 10px;
+        position: absolute;
+        z-index: 1;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .review-id {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+        .review-id h4 {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+}
+
+@media only screen and (max-width: 720px) {
+    .main-ZOOM {
+        max-height: 320px;
+    }
+
+    .carousel-container {
+        position: relative;
+        display: flex;
+        gap: 2rem;
+        margin: 0rem 1rem;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .img-text-section {
+        flex-direction: column-reverse;
+        margin: 2rem 1rem 0rem 1rem !important;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .reviews-map {
+        display: none;
+    }
+
+    .CustomTrip-section {
+        margin-top: 8rem !important;
+    }
+
+    .text-side h3 {
+        font-size: 2.3em;
+        color: #292929;
+        font-weight: 700;
+        width: 90%;
+        position: relative;
+    }
+
+    .text-side h2 {
+        color: #C4942F;
+        font-weight: 700;
+        width: 90%;
+        position: relative;
+    }
+
+
+
+    .CustomTrip-img {
+        max-height: 250px;
+    }
+
+
+    .main-ZOOM {
+        max-height: 330px;
+    }
+
+    .text-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        position: relative;
+    }
+
+        .text-side h1 {
+            font-size: 2.5em;
+            color: #292929;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .text-side p {
+            font-size: 1.2em;
+            color: #7A7A7A;
+            width: 90%;
+            line-height: 1.3rem;
+            text-align: justify;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .text-side a {
+            font-size: 1.2em;
+            color: #fff;
+            text-align: justify;
+            font-weight: 600;
+            position: relative;
+        }
+
+    .value-section {
+        background-color: #292929;
+        width: 100%;
+        align-items: center;
+        margin: 8rem 0rem 0rem 0rem;
+    }
+
+    .man-suitcase-side {
+        display: none !important;
+    }
+
+    .man-suitcase {
+        display: none !important;
+        position: absolute;
+        bottom: 4rem;
+    }
+
+    .top-values {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 2rem 4rem 2rem;
+        align-items: center;
+    }
+
+        .top-values h2 {
+            font-size: 2.3em;
+            font-weight: 600;
+        }
+
+    .value-sec-title {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+
+    .dashed-line {
+        border: 2px dashed #C4942F;
+        width: 100%;
+    }
+
+    .dashed-line-mobile {
+        width: 100%;
+    }
+
+    .values {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .value-title,
+    .value-para {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+        .value-para img {
+            display: none !important;
+        }
+
+    .value {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 64%;
+        gap: 0.4rem;
+    }
+
+        .value h3 {
+            text-align: center;
+            font-size: 1.4em;
+        }
+
+        .value p {
+            text-align: center;
+        }
+
+    .carousel-container {
+        display: none !important;
+    }
+
+    .trip-description-mobile {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 60%;
+        left: 50%;
+        gap: 2rem;
+        transform: translate(-50%, -50%);
+    }
+
+    .carousel-item-mobile {
+        position: relative;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.75);
+        border-radius: 16.42px;
+    }
+
+
+    .image-container {
+        display: inline-block;
+    }
+
+        .image-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-radius: 16.42px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+        }
+
+
+    .trip-title-mobile h3 {
+        color: #fff;
+        font-family: Inter;
+        font-size: 2.3em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .trip-title-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rating-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+
+    .carousel-container-mobile {
+        position: relative;
+        display: flex;
+        gap: 2rem;
+        margin: 0rem;
+        padding: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-y: scroll;
+    }
+
+    .star-rating-mobile {
+        display: flex;
+        align-items: center;
+        background-color: #FDF7E9;
+        border-radius: 27px;
+        font-size: .8em;
+        gap: .5rem;
+        padding: .3rem .6rem;
+    }
+
+    .rating-mobile span {
+        color: #FFF;
+        font-size: .8em;
+        opacity: 70%;
+    }
+
+    .price-tag {
+        z-index: 1;
+        position: absolute;
+        font-family: inter;
+        font-weight: 700;
+        right: 5%;
+        top: 5%;
+        font-size: 1em;
+        padding: .4rem .8rem;
+        border-radius: 27px;
+        background-color: #fff;
+        color: #AB8026;
+    }
+
+    .section-title-text {
+        gap: 1rem;
+    }
+
+        .section-title-text h2 {
+            color: #C4942F;
+            font-size: .6em;
+            font-weight: 600;
+        }
+
+        .section-title-text h3 {
+            font-size: 1.7em;
+            font-weight: 600;
+        }
+
+    .top-dest-sec {
+        display: flex;
+        gap: 2rem;
+        margin: 5rem 0rem;
+        flex-direction: column;
+    }
+
+    .section-title {
+        margin: 0rem 1rem;
+    }
+
+    .experience-sec {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-direction: column;
+        margin: 8rem 1rem 0rem 1rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .experience-text-side {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .xp-girl {
+        max-height: 300px;
+    }
+
+
+    .experience-text-side h3 {
+        font-size: 2.3em;
+        color: #292929;
+        font-weight: 700;
+        width: 90%;
+        position: relative;
+    }
+
+    .experience-text-side h2 {
+        color: #C4942F;
+        font-weight: 700;
+        width: 90%;
+        position: relative;
+    }
+
+    .experience-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .experience-items h4 {
+            color: #C4942F;
+            font-weight: 700;
+            font-size: 2em;
+            position: relative;
+        }
+
+        .experience-items p {
+            font-size: 1.2em;
+            color: #7A7A7A;
+            width: 90%;
+            font-weight: 500;
+            position: relative;
+        }
+
+    .xp-item {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+
+
+
+
+    .reviews {
+        position: relative;
+    }
+
+    .review-sec {
+        display: flex;
+        margin: 8rem 1rem 0rem 1rem;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .reviews-map img {
+        max-height: 240px;
+    }
+
+    .reviews-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+        .reviews-text h3 {
+            font-size: 3em;
+            color: #292929;
+            font-weight: 700;
+            width: 90%;
+            position: relative;
+        }
+
+        .reviews-text h2 {
+            color: #C4942F;
+            font-weight: 700;
+            width: 90%;
+            position: relative;
+        }
+
+    .reviews-text-side {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .review-carousel {
+        overflow: hidden;
+        position: relative;
+        max-width: 500px;
+    }
+
+    .carousel-viewport {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        width: 100%;
+    }
+
+    .review-card-container {
+        flex: 0 0 100%;
+        /* Each card container takes 33.33% of the viewport width with a 10px gap */
+        padding: 1.5rem;
+        background-color: #FFF7E5;
+        box-sizing: border-box;
+        border-radius: 1.625rem;
+    }
+
+    .review-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .review-stars {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .next-btn {
+        margin-top: 10px;
+        position: absolute;
+        z-index: 1;
+        right: 8%;
+        top: 20%;
+        transform: translateY(-50%);
+    }
+
+    .review-id {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+        .review-id h4 {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+}
+
+
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.section-title-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-title-cta a {
+    text-decoration: none;
+    color: #C4942F;
+    font-weight: 600;
+}

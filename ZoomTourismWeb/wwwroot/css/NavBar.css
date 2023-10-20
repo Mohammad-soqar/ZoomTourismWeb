@@ -1,0 +1,137 @@
+﻿
+
+/* Desktop */
+@media only screen and (min-width: 1300px) {
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'inter' !important;
+        padding: 1.5rem 13.3rem 0rem 13.3rem;
+    }
+
+    .nav-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #C4942F;
+        }
+
+    .nav-links {
+        margin-right: 0;
+        font-family: 'inter' !important;
+        cursor: pointer;
+    }
+
+    .logo {
+        max-height: 60px;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 1300px) {
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        height: 0;
+        overflow: hidden;
+        list-style-type: none;
+        padding: 0 !important;
+    }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #C4942F;
+        }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        background-color: #292929;
+        padding: 1rem 2rem 0rem 2rem;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .nav-links {
+        margin-right: 0;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .hamburger-menu {
+        display: flex !important;
+    }
+
+    .nav-list.active {
+        height: auto;
+    }
+
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        max-height: 50px;
+    }
+
+    /* Add this rule to hide the buttons initially on mobile */
+    .nav-buttons {
+        display: none;
+        padding: 0rem 0rem 2rem 0rem;
+    }
+
+        /* Add this rule to show the buttons when the 'active' class is applied */
+        .nav-buttons.active {
+            display: flex;
+            gap: 1rem;
+        }
+}
+
+
+/* Global */
+.nav-bar {
+    display: flex;
+}
+
+.nav-list {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #C4942F;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
