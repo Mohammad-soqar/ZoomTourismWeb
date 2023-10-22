@@ -123,7 +123,7 @@ namespace ZoomTourismWeb.Areas.Identity.Pages.Account
 
                     if (await _userManager.IsInRoleAsync(user, "Admin"))
                     {
-                        return RedirectToAction("Index", "Home", new { area = "Admin" });
+                        return RedirectToAction("AdminDashboard", "Home", new { area = "Admin" });
                     }
                     else if (await _userManager.IsInRoleAsync(user, "Coordinator"))
                     {

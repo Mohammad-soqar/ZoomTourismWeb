@@ -1,0 +1,194 @@
+﻿@using ZoomTourism.Models.ViewModels;
+@using System;
+@using Microsoft.AspNetCore.Mvc
+
+@{
+    Layout = "_AdminLayout"; // Specify the user layout
+}
+@model AdminDashboardVM
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ZoomTourismWeb</title>
+    <link rel="stylesheet" href="~/css/Dashboard.css" asp-append-version="true" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Month');
+            data.addColumn('number', 'Total Sales Count');
+            data.addColumn({ type: 'string', role: 'tooltip', p: { html: true } });
+
+            var tooltipData = [
+        @foreach (var item in Model.SalesChartVM)
+        {
+            var month = item.Month;
+            var salesCount = item.SalesCount;
+            var totalSales = item.TotalSales;
+
+            @:['@month', @salesCount, '<div>Total Sales: @salesCount<br>Total Amount: @totalSales</div>'],
+        }
+                                    ];
+
+            data.addRows(tooltipData);
+
+            var options = {
+                title: 'Sales Performance for the Past Three Months',
+                hAxis: { title: 'Month', titleTextStyle: { color: '#333' } },
+                vAxis: { title: 'Total Sales Count', minValue: 0 },
+                width: '100%',
+                height: 352,
+                focusTarget: 'category',  // Show tooltips on hover
+                tooltip: { isHtml: true }  // Enable HTML content in tooltips
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+
+    <div class="leftContainer">
+        <div class="boxesContainer">
+
+            <div class="carContainerDiv">
+                <a href="Car-Management.html" class="carContainer">
+                    <div class="textContainer">
+                        <p>Car</p>
+                        <span>2</span>
+                    </div>
+                    <div class="imgContainer">
+                        <img src="/Images/icons/Car-Icon.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="carContainerDiv">
+                <a href="Car-Management.html" class="carContainer">
+                    <div class="textContainer">
+                        <p>Users Online</p>
+                        <span>2</span>
+                    </div>
+                    <div class="imgContainer">
+                        <img src="/Images/icons/Car-Icon.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="carContainerDiv">
+                <a href="Car-Management.html" class="carContainer">
+                    <div class="textContainer">
+                        <p>Tasks</p>
+                        <span>2</span>
+                    </div>
+                    <div class="imgContainer">
+                        <img src="/Images/icons/Car-Icon.png" alt="">
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="newestLeads">
+            <div class="table-container">
+                <div class="widgetHeader">
+                    <h3>Application Form Approval</h3>
+
+                    <div class="search">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                    </div>
+
+                </div>
+
+
+
+                @*//leads DataTable *@
+                <div class="DataTable">
+                    <table id="studentTable">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable(0, 'text')" data-sort-type="text"
+                                    data-sort-direction="asc">
+                                    Student Name
+                                    <img class="sort" src="/Images/icons/DownArrow.png" alt="" height="8px">
+                                </th>
+                                <th onclick="sortTable(1, 'text')" data-sort-type="text"
+                                    data-sort-direction="asc">
+                                    Student ID
+                                    <img class="sort" src="/Images/icons/DownArrow.png" alt="" height="8px">
+                                </th>
+                                <th onclick="sortTable(2, 'text')" data-sort-type="text"
+                                    data-sort-direction="asc">
+                                    State
+                                    <img class="sort" src="/Images/icons/DownArrow.png" alt="" height="8px">
+                                </th>
+                                <th onclick="sortTable(3, 'date')" data-sort-type="date"
+                                    data-sort-direction="asc">
+                                    Date
+                                    <img class="sort" src="/Images/icons/DownArrow.png" alt="" height="8px">
+                                </th>
+                                <th class="center">View</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tbody>
+                            <tr>
+                                <td>Dwayne Johnson</td>
+                                <td>200111111</td>
+                                <td class=" center state pending">
+                                    <div>Pending</div>
+                                </td>
+                                <td>28/10/2010</td>
+                                <td class="center"><img src="/Images/icons/eye-Icon.png" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Dwayne Johnson</td>
+                                <td>200111111</td>
+                                <td class=" center state pending">
+                                    <div>Pending</div>
+                                </td>
+                                <td>20/10/2011</td>
+                                <td class="center"><img src="/Images/icons/eye-Icon.png" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Ryan Reynolds</td>
+                                <td>200111112</td>
+                                <td class=" center state pending">
+                                    <div>Pending</div>
+                                </td>
+                                <td>20/1/2012</td>
+                                <td class="center"><img src="/Images/icons/eye-Icon.png" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Adele Adkins Adele Adkins Adele Adkins</td>
+                                <td>200111113</td>
+                                <td class="center state pending">
+                                    <div>Pending</div>
+                                </td>
+                                <td>20/11/2013</td>
+                                <td class="center"><img src="/Images/icons/eye-Icon.png" alt=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="rightContainer">
+    <div class="AreaChart" >
+        <div id="chart_div" ></div>
+        </div>
+        <div class="progress-div">
+            <div class="chart" id="graph1" data-percent="70" data-color="#30bae7">
+            </div>
+            <div class="Reviews">
+                <p>Total Reviews: <span>250</span></p>
+                <a href="#">See Details &#8594;</a>
+            </div>
+        </div>
+    </div>

@@ -113,8 +113,84 @@
       "PackagePath": "staticwebassets\\assets\\Font\\Inter-Medium.ttf"
     },
     {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Add-icon-with-circle.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Add-icon-with-circle.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Add-icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Add-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Car-Icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Car-Icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Dashboard-icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Dashboard-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Delete-Icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Delete-Icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\DownArrow.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\DownArrow.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Edit-Icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Edit-Icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Edit.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Edit.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Guide-icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Guide-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Leads-icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Leads-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Logo.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Logout-icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Logout-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Notification-icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Notification-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\SaudiArabiaFlag.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\SaudiArabiaFlag.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Search-icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Search-icon.png"
+    },
+    {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\StarReview.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\StarReview.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Status-Icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Status-Icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Support-icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Support-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Tasks-icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\Tasks-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\User-Icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\User-Icon.png"
     },
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\arrowLeft.png",
@@ -123,6 +199,10 @@
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\arrowRight.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\arrowRight.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\britainFlag.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\britainFlag.png"
     },
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\Fuel.png",
@@ -149,12 +229,28 @@
       "PackagePath": "staticwebassets\\assets\\Icons\\cars\\transmission.png"
     },
     {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\eye-Icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\eye-Icon.png"
+    },
+    {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\like.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\like.png"
     },
     {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\log-in-packground.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\log-in-packground.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\menu-icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\menu-icon.png"
+    },
+    {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\right-btn-arrow.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\right-btn-arrow.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\seat-Icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\seat-Icon.png"
     },
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\seats.png",
@@ -163,6 +259,10 @@
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\starBadge.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\starBadge.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\transmission-Icon.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\transmission-Icon.png"
     },
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\transmission.png",
@@ -235,6 +335,14 @@
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\trips\\kapadokya.png",
       "PackagePath": "staticwebassets\\assets\\trips\\kapadokya.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Crmsite.css",
+      "PackagePath": "staticwebassets\\css\\Crmsite.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Dashboard.css",
+      "PackagePath": "staticwebassets\\css\\Dashboard.css"
     },
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Index.css",

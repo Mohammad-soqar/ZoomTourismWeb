@@ -1,0 +1,213 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Microsoft.AspNetCore.Identity
+@using System.Security.Claims
+﻿@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor HttpContextAccessor
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ZoomTourismWeb</title>
+    <link rel="stylesheet" href="~/css/Crmsite.css" asp-append-version="true" />
+</head>
+<body>
+   
+        <section class="container">
+        <div class="sidebar-button-container">
+
+            <div class="sidebar">
+
+
+                <div class="logo">
+                    <a href="Dashboard.html">
+                        <img src="~/assets/Icons/Logo.png" alt="">
+                    </a>
+                </div>
+                <div class="account-dropdown mobile-sidebar account-dropdown-mobile">
+                    <img src="~/assets/Icons/User-Icon.png" alt="Profile Picture">
+                    <span id="username">John Deo </span>
+                    <img id="DownArrow-username" src="~/assets/Icons/DownArrow.png" alt="" height="15px">
+
+                </div>
+                <div class="search-container mobile-sidebar">
+                    <button type="submit">
+                        <img src="~/assets/Icons/Search-icon.png" alt="Search">
+                    </button>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="icons">
+                    <div class="dashboard">
+                        <a href="Dashboard.html">
+                            <img src="~/assets/Icons/Dashboard-icon.png" alt="" height="35px">
+                            <p>Dashboard</p>
+                        </a>
+                    </div>
+
+                    <div class="Leads">
+                        <a href="">
+                            <img src="~/assets/Icons/Leads-icon.png" alt="" height="35px">
+                            <p>Leads</p>
+                        </a>
+                    </div>
+                    <div class="Tasks">
+                        <a href="">
+                            <img src="~/assets/Icons/Tasks-icon.png" alt="" height="35px">
+                            <p>Tasks</p>
+                        </a>
+                    </div>
+                    <div class="guide">
+                        <a href="">
+                            <img src="~/assets/Icons/Guide-icon.png" alt="" height="35px">
+                            <p>Guide</p>
+                        </a>
+                    </div>
+                    <div class="notification notification-mobile mobile-sidebar">
+                        <a href="#">
+                            <img src="~/assets/Icons/Notification-icon.png" alt="" height="35px">
+                            <p>Notification</p>
+                        </a>
+
+                        <!--    <div class="notificationContiner">
+                            <div class="notifications">
+                                <div class="notification1">
+                                    <span>Notification #1</span>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and </p>
+                                </div>
+                                <div class="notification2">
+                                    <span>Notification #2</span>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and Lorem Ipsum is simply dummy text of the printing andLorem Ipsum is simply dummy text of the printing andLorem Ipsum is simply dummy text of the printing andLorem Ipsum is simply dummy text of the printing and </p>
+
+                                </div>
+                                <div class="notification3">
+                                    <span>Notification #3</span>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and </p>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="language-dropdown mobile-sidebar language-dropdown-mobile">
+                        <img class="FlagContainer" src="~/assets/Icons/britainFlag.png" alt="" height="30px">
+                        <select id="language-select">
+                            <option value="en">EN</option>
+                            <option value="AR">AR</option>
+                        </select>
+                    </div>
+
+
+                    <div class="logout-support">
+                        <div class="logout">
+                            <a href="Login.html">
+                                <img src="~/assets/Icons/Logout-icon.png" alt="" height="27px">
+                                <p>Logout</p>
+                            </a>
+                        </div>
+                        <div class="support">
+                            <a href="Support.html">
+                                <img src="~/assets/Icons/Support-icon.png" alt="">
+                                <p>Support</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+   
+
+        <div class="content">
+            <div class="mobilesidebar-headerbox">
+                <button class="show-sidebar-button">
+                    <img src="~/assets/Icons/Menu-icon.png" alt="" height="35px">
+                </button>
+                <div class="header-box">
+                    <div class="search-container">
+                        <button type="submit">
+                            <img src="~/assets/Icons/Search-icon.png" alt="Search">
+                        </button>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="LanguageAndAccountContainer">
+                        <div class="language-dropdown">
+                            <img class="FlagContainer" src="~/assets/Icons/britainFlag.png" alt="" height="30px">
+                            <select id="language-select">
+                                <option value="en">EN</option>
+                                <option value="AR">AR</option>
+                            </select>
+                        </div>
+                        <div class="notification">
+                            <button id="NotificationButton">
+                                <img src="~/assets/Icons/Notification-icon.png" alt=""
+                                     height="35px">
+                            </button>
+                            <div class="notificationContiner">
+                                <div class="notifications">
+                                    <div class="notification1">
+                                        <span>Notification #1</span>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and </p>
+                                    </div>
+                                    <div class="notification2">
+                                        <span>Notification #2</span>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and Lorem Ipsum is simply
+                                            dummy
+                                            text of the printing andLorem Ipsum is simply dummy text of the printing
+                                            andLorem Ipsum is simply dummy text of the printing andLorem Ipsum is simply
+                                            dummy text of the printing and
+                                        </p>
+
+                                    </div>
+                                    <div class="notification3">
+                                        <span>Notification #3</span>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="account-dropdown">
+                            <img src="~/assets/Icons/User-Icon.png" alt="Profile Picture">
+                            <span id="username">John Deo </span>
+                            <img src="~/assets/Icons/DownArrow.png" alt="" height="15px">
+                            <div class="account-menu">
+                                <ul>
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="#">Settings</a></li>
+                                    <li><a href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="conentContainer">
+                @RenderBody()
+                </div>
+        </div>
+       </section>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="//cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="https://cdn.tiny.cloud/1/n94ifuzvl80pchikopiwgz2esrw8n28dwcywvpejlqrregfp/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
