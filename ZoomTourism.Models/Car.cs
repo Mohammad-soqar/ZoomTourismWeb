@@ -23,6 +23,8 @@ namespace ZoomTourism.Models
         public int MilageCharge { get; set; }
         public int MinimumEligibleAge { get; set; } = 21;
         public bool InsuranceIncluded { get; set; }
+        [ValidateNever]
+        public string? CarCardImage { get; set; }
 
         public int DailyCharge { get; set; }
         public int WeeklyCharge { get; set; }
