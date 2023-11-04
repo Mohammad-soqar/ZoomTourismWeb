@@ -4,6 +4,14 @@
 @{
 
 }
+@{
+    var leadDayCount = Model.LeadDay != null ? Model.LeadDay.Count : 0;
+}
+@{
+
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
 <head>
     <script src="https://cdn.tiny.cloud/1/17ey362kygya3onsmqifoumhul549v4sc5s58njdpa731on7/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
@@ -14,129 +22,225 @@
     <title>Create a Lead</title>
 </head>
 
-
-<form method="post">
+<span class="close-button">X</span>
+<p id="new-lead-p">New Lead</p>
+<div class="lead-type-container">
+    <div class="lead-type-buttons-container">
+        <div class="lead-type-buttons">
+            <input type="radio" id="radio-1" name="tabs" checked />
+            <label class="tab-Public tab" for="radio-1">Public</label>
+            <input type="radio" id="radio-2" name="tabs" />
+            <label class="tab-Private tab" for="radio-2">Private</label>
+            <input type="radio" id="radio-3" name="tabs" />
+            <label class="tab tab-car" for="radio-3">Car Rental</label>
+            <span class="glider show-hover"></span>
+        </div>
+    </div>
+</div>
+<form method="post" >
     <input type="hidden" asp-for="@Model.Lead.Id" />
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.Name"></label>
         <input asp-for="@Model.Lead.Name" class="form-control" />
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.NumberOfDays"></label>
         <input asp-for="@Model.Lead.NumberOfDays" class="form-control" />
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.Destinations"></label>
         <input asp-for="@Model.Lead.Destinations" class="form-control" />
     </div>
 
-    <div class="form-group">
+
+
+    <!-- LeadDays section -->
+    <div id="leadDaysSection">
+        @if (Model.LeadDay != null)
+        {
+            for (int i = 0; i < Model.LeadDay.Count; i++)
+            {
+                <div class="lead-day">
+                    <h3>Lead Day @(i + 1)</h3>
+                    <input type="hidden" asp-for="@Model.LeadDay[i].Id" /> <!-- Add the hidden input for Id -->
+                    <input asp-for="@Model.LeadDay[i].Destination" class="form-control" placeholder="Destination" />
+                    <input asp-for="@Model.LeadDay[i].numOfDays" class="form-control" placeholder="Number of Days" />
+                </div>
+            }
+        }
+    </div>
+    <div class="inputQue">
+    <button id="add-lead-day" type="button" class="btn btn-secondary">Add Lead Day</button>
+    </div>
+
+
+
+
+    <div class="inputQue">
         <label asp-for="@Model.Lead.NumberOfPeople"></label>
         <input asp-for="@Model.Lead.NumberOfPeople" class="form-control" />
     </div>
 
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.IsPaid"></label>
         <input type="checkbox" asp-for="@Model.Lead.IsPaid"   />
     </div>
-
-    <div class="form-group">
+    <div class="Multiple-Inputs-Line">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.Email"></label>
         <input asp-for="@Model.Lead.Email" class="form-control" />
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.Phone"></label>
         <input asp-for="@Model.Lead.Phone" class="form-control" />
     </div>
-
-    <div class="form-group">
+    </div>
+    <div class="inputQue" hidden>
         <label asp-for="@Model.Lead.CreatedDate"></label>
         <input asp-for="@Model.Lead.CreatedDate" class="form-control" type="datetime-local" />
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.Status"></label>
         <select asp-for="@Model.Lead.Status" class="form-control">
+            <option selected disabled>Select</option>
             <option>New</option>
+            <option>Pending</option>
+            <option>InProgress</option>
             <option>Finished</option>
+            <option>Lost</option>
         </select>
     </div>
 
-    <div class="form-group">
+   
+
+    <div class="inputQue">
         <label asp-for="@Model.Lead.Notes"></label>
-        <textarea asp-for="@Model.Lead.Notes" class="form-control"></textarea>
+        <textarea asp-for="@Model.Lead.Notes" class="form-control" rows="3"></textarea>
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="Lead.CallCenterUserId">Call Center User</label>
         @Html.DropDownListFor(model => model.Lead.CallCenterUserId, Model.CallCenterList, "Select Call Center", new { @class = "form-control" })
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="Lead.BookingDepUserId">Booking Department User</label>
         @Html.DropDownListFor(model => model.Lead.BookingDepUserId, Model.BookingList, "Select Booking Department", new { @class = "form-control" })
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="Lead.DriverUserId">Driver User</label>
         @Html.DropDownListFor(model => model.Lead.DriverUserId, Model.DriverList, "Select Driver", new { @class = "form-control" })
     </div>
 
-    <div class="form-group">
-        <label asp-for="@Model.Lead.SelectedCarId"></label>
-        <input asp-for="@Model.Lead.SelectedCarId" class="form-control" />
+    <div class="inputQue">
+        <label>Category</label>
+
+        <select asp-for="@Model.Lead.SelectedCarId" asp-items="@Model.CarList" class="selectC">
+            <option disabled selected>Select Car</option>
+        </select>
+        <span asp-validation-for="@Model.Lead.SelectedCarId" class="alert-warning"></span>
     </div>
 
-    <div class="form-group">
-        <label asp-for="@Model.Lead.SelectedCar"></label>
-        <input asp-for="@Model.Lead.SelectedCar" class="form-control" />
-    </div>
-
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.CarPickupDate"></label>
         <input asp-for="@Model.Lead.CarPickupDate" class="form-control" type="datetime-local" />
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.CarReturnDate"></label>
         <input asp-for="@Model.Lead.CarReturnDate" class="form-control" type="datetime-local" />
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.HotelCheckInDate"></label>
         <input asp-for="@Model.Lead.HotelCheckInDate" class="form-control" type="datetime-local" />
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.HotelCheckOutDate"></label>
         <input asp-for="@Model.Lead.HotelCheckOutDate" class="form-control" type="datetime-local" />
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.HotelName"></label>
         <input asp-for="@Model.Lead.HotelName" class="form-control" />
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.HotelTotalCost"></label>
         <input asp-for="@Model.Lead.HotelTotalCost" class="form-control" />
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.SaleAmount"></label>
         <input asp-for="@Model.Lead.SaleAmount" class="form-control" />
     </div>
 
-    <div class="form-group">
+    <div class="inputQue">
         <label asp-for="@Model.Lead.LeadType"></label>
         <input asp-for="@Model.Lead.LeadType" class="form-control" />
     </div>
 
     <button type="submit" class="btn btn-primary">Save</button>
-    <a asp-controller="Lead" asp-action="Index" asp-area="Admin">Cancel</a>
+    <a asp-controller="Lead" asp-action="Leads" asp-area="Admin">Cancel</a>
 </form>
+@section Scripts{
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var leadDayIndex = @leadDayCount;
+
+            $("#add-lead-day").click(function () {
+                var leadDayHtml = '<div class="inputQue lead-day">' +
+                    '<h3>Lead Day ' + (leadDayIndex + 1) + '</h3>' +
+                    '<input type="hidden" asp-for="Model.LeadDay[' + leadDayIndex + '].Id" />' + // Add hidden input for Id
+                    '<input style="width:70%;" type="text" name="LeadDay[' + leadDayIndex + '].Destination" class="form-control" placeholder="Destination" />' +
+                    '<input style="width:20%;" type="number" name="LeadDay[' + leadDayIndex + '].numOfDays" class="form-control" placeholder="Number of Days" />' +
+
+                    '<button type="button" class="btn btn-danger remove-lead-day">Remove</button>' +
+                    '</div>';
+
+                $("#leadDaysSection").append(leadDayHtml);
+                leadDayIndex++;
+            });
+
+            // Add event listener to remove Lead Day
+            $("#leadDaysSection").on("click", ".remove-lead-day", function () {
+                $(this).closest(".lead-day").remove();
+                leadDayIndex = leadDayIndex - 1;
+            });
+        });
+
+
+
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+    </script>
+@* 
+    <script>
+        $(document).ready(function () {
+            var leadDayIndex = 0;
+            $("#add-lead-day").click(function () {
+                var leadDayHtml = '<div class="lead-day">' +
+                    '<h3>Lead Day ' + (leadDayIndex + 1) + '</h3>' +
+                    '<input type="text" name="LeadDay[' + leadDayIndex + '].Destination" class="form-control" placeholder="Destination" />' +
+                    '<input type="number" name="LeadDay[' + leadDayIndex + '].numOfDays" class="form-control" placeholder="Number of Days" />' +
+                    '</div>';
+                $("#leadDaysSection").append(leadDayHtml);
+                leadDayIndex++;
+            });
+        });
+    </script> *@
+   
+
+}

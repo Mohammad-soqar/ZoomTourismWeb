@@ -1,0 +1,71 @@
+﻿@using ZoomTourism.Models;
+
+@model IEnumerable<Trip>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/Trips.css" asp-append-version="true" />
+
+</head>
+
+<body>
+
+   
+    <section class="TripsSection">
+
+        <div class="section-title">
+            <div class="section-title-text">
+                <h2>Our Trips</h2>
+                <h3>Explore our Trips</h3>
+            </div>
+            <div class="Search-Input">
+                <input type="text" id="search-input" placeholder="Search blog...">
+
+            </div>
+
+        </div>
+
+        <ul id="blog-list" class="tripsBox">
+               @foreach (var Trip in Model.OrderByDescending(p => p.CreatedDate).ToList())
+            {
+                <li>
+                    <a asp-action="TripsDetails" asp-route-id="@Trip.Id">
+                        <div class="carousel-item">
+                            <div class="Thumbnail">
+                                @if (Trip.Price != 0 || Trip.Price != null)
+                                {
+                                    <span>@Trip.Price</span>
+                                }
+                            <img src="@Trip.ImageUrl" style="max-height: 300px;" alt="Trip 1">
+                        </div>
+
+                        <div class="trip-description">
+                            <div class="trip-title">
+                                <h3>Enjoy the Beauty of @Trip.Title</h3>
+                                <p>@Trip.Title</p>
+                            </div>
+
+                            <div class="rating">
+                                <div class="star-rating"><img src="~/assets/Icons/StarReview.png" alt="star">4.6</div>
+                                <span>(@Trip.numOfReviews)</span>
+                            </div>
+                        </div>
+                </a>
+            </li>
+            }
+          
+        </ul>
+
+    </section>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../Javascript/app.js"></script>
+    <script src="../Javascript/search.js"></script>
+</body>

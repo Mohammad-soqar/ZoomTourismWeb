@@ -1,0 +1,219 @@
+﻿@model ZoomTourism.Models.ViewModels.CarVM
+<head>
+    <link rel="stylesheet" href="~/css/CarDetails.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/CarRental.css" asp-append-version="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="description" content="@Model.Car.ModelName">
+    <meta name="keywords" content="Rental, Car, Cars">
+    <title>@Model.Car.ModelName</title>
+</head>
+
+<div class="background-car">
+    <div class="gallery">
+        <h2>
+            <img src="../assets/Cars/Mercedes-Logo.svg.png" style="max-height: 40px;" alt="">
+            @Model.Car.ModelName
+        </h2>
+        <div class="main-image">
+            <img src="" alt="Large Image">
+
+        </div>
+        <div class="thumbnails">
+            <button class="carousel-control" id="prev-image"><img src="/assets/Icons/arrowLeft.png" alt=""></button>
+           @foreach (var CarImage in Model.Images)
+            {
+            <img src="@CarImage.ImageUrl" alt="Image 1" class="thumbnail">
+            }
+            <button class="carousel-control" id="next-image">
+                <img src="/assets/Icons/arrowRight.png"
+                     alt="">
+            </button>
+
+        </div>
+        <div class="navigation">
+        </div>
+    </div>
+
+    <div class="popup">
+        <span class="close-popup">&times;</span>
+        <img class="popup-content" src="">
+    </div>
+    <h1>@Model.Car.ModelName</h1>
+    <input type="text" hidden id="car-model" value="@Model.Car.ModelName">
+    <div class="background-car-blur">
+    </div>
+</div>
+
+
+
+
+<div class="car-details-booking">
+    <div class="car-specs-sec">
+        <div>
+            <h2 class="Car-Specifications">Car Specifications</h2>
+            <div class="car-specs">
+                <div class="car-spec">
+                    <img src="../assets/Icons/cars/manufucture.png" style="max-height: 60px;" alt="">
+                    <div class="car-spec-text">
+                        <span>Brand</span>
+                        <p >@Model.Car.CarBrand</p>
+                    </div>
+                </div>
+                <div class="car-spec">
+                    <img src="../assets/Icons/cars/model.png" style="max-height: 60px;" alt="">
+                    <div class="car-spec-text">
+                        <span>Model</span>
+                        <p>@Model.Car.ModelName</p>
+                    </div>
+                </div>
+                <div class="car-spec">
+                    <img src="../assets/Icons/cars/ModelYear.png" style="max-height: 60px;" alt="">
+                    <div class="car-spec-text">
+                        <span>Model Year</span>
+                        <p>@Model.Car.ModelYear</p>
+                    </div>
+                </div>
+                <div class="car-spec">
+                    <img src="../assets/Icons/cars/transmission.png" style="max-height: 60px;" alt="">
+                    <div class="car-spec-text">
+                        <span>Transmission</span>
+                        <p>@Model.Car.TypeOfTransmission</p>
+                    </div>
+                </div>
+                <div class="car-spec">
+                    <img src="../assets/Icons/cars/Seats.png" style="max-height: 60px;" alt="">
+                    <div class="car-spec-text">
+                        <span>Seats</span>
+                        <p>@Model.Car.NumOfSeats</p>
+                    </div>
+                </div>
+                <div class="car-spec">
+                    <img src="../assets/Icons/cars/Fuel.png" style="max-height: 60px;" alt="">
+                    <div class="car-spec-text">
+                        <span>Fuel</span>
+                        <p>@Model.Car.TypeOfFuel</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="table-container">
+            <h2>Offer Details:</h2>
+            <p>
+                This is the daily price of a car based on how many days you book it for.
+            </p>
+            <table>
+                <tr>
+                    <th>NO OF DAYS</th>
+                    <td>PRICING</td>
+                </tr>
+                <tr>
+                    <td>Daily</td>
+                    <td>@Model.Car.DailyCharge</td>
+                </tr>
+                <tr>
+                    <td>Weekly</td>
+                    <td>@Model.Car.WeeklyCharge</td>
+                </tr>
+                <tr>
+                    <td>Monthly</td>
+                    <td>@Model.Car.MonthlyCharge</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="info-container">
+            <h2>Rental Information:</h2>
+            <div class="info-item">
+                <strong>Security Deposit:</strong> <span>@Model.Car.SecurityDeposit</span>
+            </div>
+           
+            <div class="info-item">
+                <strong>Mileage Charge:</strong> <span>@Model.Car.MilageCharge</span>
+            </div>
+            <div class="info-item">
+                <strong>Minimum Eligible Age:</strong> <span>@Model.Car.MinimumEligibleAge</span>
+            </div>
+            <div class="info-item">
+                <strong>Insurance Included:</strong> <span>@Model.Car.InsuranceIncluded</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-container">
+        <div class="rental-dates">
+            <label class="form-label" for="pickup-date">Pickup Date:</label>
+            <input class="form-input" type="date" id="pickup-date">
+
+            <label class="form-label" for="pickup-time">Pickup Time:</label>
+            <input class="form-input" type="time" id="pickup-time">
+
+            <label class="form-label" for="pickup-location">Pickup Location:</label>
+            <input class="form-input" type="text" id="pickup-location">
+
+            <label class="form-label" for="dropoff-location">Drop-off Location:</label>
+            <input class="form-input" type="text" id="dropoff-location">
+
+            <button id="whatsapp-button">WhatsApp</button>
+        </div>
+    </div>
+</div>
+
+<section class="other-cars">
+    <h3>Other Cars</h3>
+    <div class="car-cards">
+        @foreach (var Car in Model.Cars.ToList().Take(3))
+        {
+            if(Car.Id != Model.Car.Id)
+            {
+                <div class="car-card-full">
+                    <a asp-action="CarDetails" asp-route-id="@Car.Id" class="car-card">
+
+                        <img class="car-img" src="@Car.CarCardImage" alt="">
+
+
+                        <div class="car-title">
+                            <h2>@Car.ModelName</h2>
+                            <span>@Car.ModelYear</span>
+                        </div>
+
+                        <div class="car-specs">
+                            <div class="car-details">
+                                <img src="~/assets/Icons/seats.png" alt="">
+                                <span>@Car.NumOfSeats Seats</span>
+                            </div>
+
+                            <div class="car-details">
+                                <img src="~/assets/Icons/transmission.png" alt="">
+                                <span>@Car.TypeOfTransmission</span>
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <div class="cta-buttons">
+                        <a><img src="~/assets/Icons/whatsapp.png" alt="">WhatsApp</a>
+                        <a>Book Now</a>
+                    </div>
+
+                </div>
+            }
+        }
+    </div>
+</section>
+
+@section Scripts{
+    <script>
+        var currentPage = "CarDetails";
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/IndexTranslation.js"></script>
+    <script src="~/js/CarDetails.js"></script>
+    <script src="~/js/messageSending.js"></script>
+   
+
+}

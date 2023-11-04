@@ -1,0 +1,35 @@
+﻿@model ZoomTourism.Models.Report
+
+<h2>Support Report</h2>
+@{
+    Layout = "_AdminLayout"; // Specify the user layout
+}
+<form asp-action="SupportReport" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PhoneNumber">Phone Number</label>
+        <input asp-for="PhoneNumber" class="form-control" />
+    </div>
+
+    <div class="inputQue">
+        <label>Thumbnail</label>
+
+        <input asp-for="@Model.ImageUrl" id="uploadBox" type="file" name="file" placeholder="ImageUrl">
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <div class="form-group">
+            <label>Current Image</label>
+            <img src="@Model.ImageUrl" alt="Current Image" />
+        </div>
+    }
+
+   
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

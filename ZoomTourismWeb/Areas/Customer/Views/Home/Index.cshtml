@@ -2,6 +2,8 @@
     ViewData["Title"] = "Home Page";
 
 }
+@model ZoomTourism.Models.ViewModels.IndexVM;
+
 <head>
    
     <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
@@ -9,11 +11,11 @@
 
 <section class="img-text-section">
     <div class="text-side">
-        <h1>We Take Care Of Your Trip</h1>
-        <p>
+        <h1 class="translate" data-translate-key="welcome_message">We Take Care Of Your Trip</h1>
+        <p class="translate" data-translate-key="trip_description">
             To get the best of your adventure you just need to leave and go where you like. We are waiting for you.
         </p>
-        <a class="brand-background-btn anchor-with-img" href="">
+        <a class="brand-background-btn anchor-with-img translate" href="" data-translate-key="plan_a_trip">
             Plan a Trip <img src="../assets/Icons/arrowRight.png"
                              style="max-height: 15px;" alt="">
         </a>
@@ -40,8 +42,8 @@
 
     <div class="top-values">
         <div class="value-sec-title">
-            <h2>Top Value For You</h2>
-            <p>Try a variety of benefits when using our services.</p>
+            <h2 class="translate" data-translate-key="top_value_title">Top Value For You</h2>
+            <p class="translate" data-translate-key="top_value_description">Try a variety of benefits when using our services.</p>
         </div>
 
         <div class="dashed-line-mobile">
@@ -52,33 +54,33 @@
             <div class="value">
                 <div class="value-title">
                     <img src="../assets/Icons/twoStars.png" alt="">
-                    <h3>Lot’s of Choices</h3>
+                    <h3 class="translate" data-translate-key="lot_of_choices_title">Lot’s of Choices</h3>
                 </div>
                 <div class="value-para">
                     <img src="../assets/Icons/twoStars.png" style="opacity: 0 !important;" alt="placeholder">
-                    <p>Total of 25 tours in Turkey</p>
+                    <p class="translate" data-translate-key="lot_of_choices_description">Total of 25 tours in Turkey</p>
                 </div>
             </div>
 
             <div class="value">
                 <div class="value-title">
                     <img src="../assets/Icons/starBadge.png" alt="">
-                    <h3>Best Tour Guide</h3>
+                    <h3 class="translate" data-translate-key="best_tour_guide_title">Best Tour Guide</h3>
                 </div>
                 <div class="value-para">
                     <img src="../assets/Icons/starBadge.png" style="opacity: 0 !important;" alt="placeholder">
-                    <p>Our tour guide with 10+ years of experience</p>
+                    <p class="translate" data-translate-key="best_tour_guide_description">Our tour guide with 10+ years of experience</p>
                 </div>
             </div>
 
             <div class="value">
                 <div class="value-title">
                     <img src="../assets/Icons/like.png" alt="">
-                    <h3>Easy Booking</h3>
+                    <h3 class="translate" data-translate-key="easy_booking_title">Easy Booking</h3>
                 </div>
                 <div class="value-para">
                     <img src="../assets/Icons/like.png" style="opacity: 0 !important;" alt="placeholder">
-                    <p>With an easy and fast way to book your trip</p>
+                    <p class="translate" data-translate-key="easy_booking_description">With an easy and fast way to book your trip</p>
                 </div>
             </div>
 
@@ -93,8 +95,8 @@
 
     <div class="section-title">
         <div class="section-title-text">
-            <h2>TOP DESTINATION</h2>
-            <h3>Explore Top Destinations</h3>
+            <h2 class="translate" data-translate-key="top_destination_title">TOP DESTINATION</h2>
+            <h3 class="translate" data-translate-key="explore_top_destinations">Explore Top Destinations</h3>
         </div>
         <div class="section-title-cta">
             <a href="">Check All -></a>
@@ -102,203 +104,68 @@
     </div>
 
     <div class="carousel-container">
-        <button class="carousel-control prev"><img src="../assets/Icons/arrowLeft.png" alt=""></button>
+        <button class="carousel-control prev"><img src="~/assets/Icons/arrowLeft.png" alt=""></button>
 
         <div class="carousel">
+            @foreach (var Trip in Model.Trip.OrderByDescending(p => p.CreatedDate).ToList())
+            {
 
-            <div class="carousel-item">
+                <a asp-action="TripDetails" asp-route-id="@Trip.Id" class="carousel-item">
                 <div class="Thumbnail">
-                    <span>250$</span>
-                    <img src="../assets/trips/kapadokya.png" alt="Trip 1">
+                        @if (Trip.Price != 0 || Trip.Price != null)
+                        {
+                            <span>@Trip.Price</span>
+                        }
+                        <img src="@Trip.ImageUrl" alt="@Trip.Title">
                 </div>
 
                 <div class="trip-description">
                     <div class="trip-title">
-                        <h3>Enjoy the Beauty of Bursa</h3>
-                        <p>Bursa</p>
+                            <h3>Enjoy the Beauty of @Trip.Title</h3>
+                            <p>@Trip.Title</p>
                     </div>
 
                     <div class="rating">
-                        <div class="star-rating"><img src="../assets/Icons/StarReview.png" alt="star">4.6</div>
-                        <span>(2.7k reviews)</span>
+                        <div class="star-rating"><img src="~/assets/Icons/StarReview.png" alt="star">4.6</div>
+                            <span>(@Trip.numOfReviews)</span>
                     </div>
                 </div>
 
 
-            </div>
-
-            <div class="carousel-item">
-                <div class="Thumbnail">
-                    <span>250$</span>
-                    <img src="../assets/trips/Trabzon.png" alt="Trip 1">
-                </div>
-
-                <div class="trip-description">
-                    <div class="trip-title">
-                        <h3>Enjoy the Beauty of Bursa</h3>
-                        <p>Bursa</p>
-                    </div>
-
-                    <div class="rating">
-                        <div class="star-rating"><img src="../assets/Icons/StarReview.png" alt="star">4.6</div>
-                        <span>(2.7k reviews)</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="Thumbnail">
-                    <span>250$</span>
-                    <img src="../assets/trips/Bursa.png" alt="Trip 1">
-                </div>
-
-                <div class="trip-description">
-                    <div class="trip-title">
-                        <h3>Enjoy the Beauty of Bursa</h3>
-                        <p>Bursa</p>
-                    </div>
-
-                    <div class="rating">
-                        <div class="star-rating"><img src="../assets/Icons/StarReview.png" alt="star">4.6</div>
-                        <span>(2.7k reviews)</span>
-                    </div>
-                </div>
-            </div>
+            </a>
+            }
+         
         </div>
-        <button class="carousel-control next"><img src="../assets/Icons/arrowRight.png" alt=""></button>
+        <button class="carousel-control next"><img src="~/assets/Icons/arrowRight.png" alt=""></button>
     </div>
 
     <div class="carousel-container-mobile">
+         @foreach (var Trip in Model.Trip.OrderByDescending(p => p.CreatedDate).ToList())
+            {
         <div class="carousel-item-mobile">
-
-            <span class="price-tag">250$</span>
+                @if (Trip.Price != 0 || Trip.Price != null)
+                {
+                    <span class="price-tag">@Trip.Price</span>
+                }
 
             <div class="trip-description-mobile">
 
                 <div class="trip-title-mobile">
-                    <h3>Cappadocia</h3>
+                        <h3>@Trip.Title</h3>
                 </div>
 
                 <div class="rating-mobile">
-                    <div class="star-rating-mobile"><img src="../assets/Icons/StarReview.png" alt="star">4.6</div>
-                    <span>(2.7k reviews)</span>
+                    <div class="star-rating-mobile"><img src="~/assets/Icons/StarReview.png" alt="star">4.6</div>
+                        <span>(@Trip.numOfReviews)</span>
                 </div>
 
             </div>
 
             <div class="image-container">
-                <img class="Thumbnail-trip-mobile" height="300px" src="../assets/trips/kapadokya.png" alt="Trip 1">
+                    <img class="Thumbnail-trip-mobile" height="300px" src="@Trip.ImageUrl" alt="@Trip.Title">
             </div>
         </div>
-
-        <div class="carousel-item-mobile">
-
-            <span class="price-tag">250$</span>
-
-            <div class="trip-description-mobile">
-
-                <div class="trip-title-mobile">
-                    <h3>Cappadocia</h3>
-                </div>
-
-                <div class="rating-mobile">
-                    <div class="star-rating-mobile"><img src="../assets/Icons/StarReview.png" alt="star">4.6</div>
-                    <span>(2.7k reviews)</span>
-                </div>
-
-            </div>
-
-            <div class="image-container">
-                <img class="Thumbnail-trip-mobile" height="300px" src="../assets/trips/kapadokya.png" alt="Trip 1">
-            </div>
-        </div>
-        <div class="carousel-item-mobile">
-
-            <span class="price-tag">250$</span>
-
-            <div class="trip-description-mobile">
-
-                <div class="trip-title-mobile">
-                    <h3>Cappadocia</h3>
-                </div>
-
-                <div class="rating-mobile">
-                    <div class="star-rating-mobile"><img src="../assets/Icons/StarReview.png" alt="star">4.6</div>
-                    <span>(2.7k reviews)</span>
-                </div>
-
-            </div>
-
-            <div class="image-container">
-                <img class="Thumbnail-trip-mobile" height="300px" src="../assets/trips/kapadokya.png" alt="Trip 1">
-            </div>
-        </div>
-
-        <div class="carousel-item-mobile">
-
-            <span class="price-tag">250$</span>
-
-            <div class="trip-description-mobile">
-
-                <div class="trip-title-mobile">
-                    <h3>Cappadocia</h3>
-                </div>
-
-                <div class="rating-mobile">
-                    <div class="star-rating-mobile"><img src="../assets/Icons/StarReview.png" alt="star">4.6</div>
-                    <span>(2.7k reviews)</span>
-                </div>
-
-            </div>
-
-            <div class="image-container">
-                <img class="Thumbnail-trip-mobile" height="300px" src="../assets/trips/kapadokya.png" alt="Trip 1">
-            </div>
-        </div>
-
-        <div class="carousel-item-mobile">
-
-            <span class="price-tag">250$</span>
-
-            <div class="trip-description-mobile">
-
-                <div class="trip-title-mobile">
-                    <h3>Cappadocia</h3>
-                </div>
-
-                <div class="rating-mobile">
-                    <div class="star-rating-mobile"><img src="../assets/Icons/StarReview.png" alt="star">4.6</div>
-                    <span>(2.7k reviews)</span>
-                </div>
-
-            </div>
-
-            <div class="image-container">
-                <img class="Thumbnail-trip-mobile" height="300px" src="../assets/trips/kapadokya.png" alt="Trip 1">
-            </div>
-        </div>
-
-        <div class="carousel-item-mobile">
-
-            <span class="price-tag">250$</span>
-
-            <div class="trip-description-mobile">
-
-                <div class="trip-title-mobile">
-                    <h3>Cappadocia</h3>
-                </div>
-
-                <div class="rating-mobile">
-                    <div class="star-rating-mobile"><img src="../assets/Icons/StarReview.png" alt="star">4.6</div>
-                    <span>(2.7k reviews)</span>
-                </div>
-
-            </div>
-
-            <div class="image-container">
-                <img class="Thumbnail-trip-mobile" height="300px" src="../assets/trips/kapadokya.png" alt="Trip 1">
-            </div>
-        </div>
+        }
     </div>
 
 </section>
@@ -306,13 +173,13 @@
 <section class="img-text-section CustomTrip-section">
 
     <div class="text-side CustomTrip-text">
-        <h2>CUSTOM TRIP</h2>
-        <h3>You want to plan your own trip?</h3>
-        <p>
+        <h2 class="translate" data-translate-key="custom_trip_title">CUSTOM TRIP</h2>
+        <h3 class="translate" data-translate-key="custom_trip_description">You want to plan your own trip?</h3>
+        <p class="translate" data-translate-key="custom_trip_line">
             Choose your destination, explore attractions, create an itinerary, and book accommodation—all in one
             place.
         </p>
-        <a class="brand-background-btn anchor-with-img" href="">Let’s Go!</a>
+        <a class="brand-background-btn anchor-with-img translate" href="" data-translate-key="let's_go">Let’s Go!</a>
     </div>
     <div>
         <img class="CustomTrip-img" src="../assets/Pictures/CustomTrip.png" alt="">
@@ -326,23 +193,23 @@
     </div>
 
     <div class="experience-text-side">
-        <h2>Our Experience</h2>
-        <h3>With Our Experience We Will Serve You</h3>
-        <p>
+        <h2 class="translate" data-translate-key="our_experience_title">Our Experience</h2>
+        <h3 class="translate" data-translate-key="our_experience_description">With Our Experience We Will Serve You</h3>
+        <p class="translate" data-translate-key="our_experience_line">
             To get the best od your adventure you just need to leave and go where you like. We are waiting for you.
         </p>
         <div class="experience-items">
             <div class="xp-item">
                 <h4>8+</h4>
-                <p>Years of Experience</p>
+                <p class="translate" data-translate-key="experience_years">Years of Experience</p>
             </div>
             <div class="xp-item">
                 <h4>25+</h4>
-                <p>Destinations in Turkey</p>
+                <p class="translate" data-translate-key="destinations_in_turkey">Destinations in Turkey</p>
             </div>
             <div class="xp-item">
                 <h4>1000k+</h4>
-                <p>Happy Customer</p>
+                <p class="translate" data-translate-key="happy_customers">Happy Customer</p>
             </div>
         </div>
     </div>
@@ -353,8 +220,8 @@
 <section class="review-sec">
     <div class="reviews-text-side">
         <div class="reviews-text">
-            <h2>Reviews</h2>
-            <h3>What Our Customer Say About Us</h3>
+            <h2 class="translate" data-translate-key="reviews_title">Reviews</h2>
+            <h3 class="translate" data-translate-key="customer_reviews">What Our Customer Say About Us</h3>
         </div>
         <div class="reviews">
             <button class="next-btn">
@@ -452,4 +319,10 @@
 
 
 </section>
-
+@section Scripts{
+    <script>
+        // Define a JavaScript variable for the current page
+        var currentPage = "homepage";
+    </script>
+<script src="~/js/IndexTranslation.js"></script>
+}

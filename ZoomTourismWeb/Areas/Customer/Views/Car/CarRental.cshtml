@@ -1,0 +1,53 @@
+﻿@using ZoomTourism.Models;
+
+@model IEnumerable<Car>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/CarRental.css" asp-append-version="true" />
+
+</head>
+
+
+
+<div class="car-cards">
+      @foreach (var Car in Model.ToList())
+            {
+        <div class="car-card-full">
+            <a asp-action="CarDetails" asp-route-id="@Car.Id" class="car-card">
+
+                <img class="car-img" src="@Car.CarCardImage" alt="">
+
+
+                <div class="car-title">
+                    <h2>@Car.ModelName</h2>
+                    <span>@Car.ModelYear</span>
+                </div>
+
+                <div class="car-specs">
+                    <div class="car-details">
+                        <img src="~/assets/Icons/seats.png" alt="">
+                        <span>@Car.NumOfSeats Seats</span>
+                    </div>
+
+                    <div class="car-details">
+                        <img src="~/assets/Icons/transmission.png" alt="">
+                        <span>@Car.TypeOfTransmission</span>
+                    </div>
+                </div>
+
+            </a>
+
+            <div class="cta-buttons">
+                <a><img src="~/assets/Icons/whatsapp.png" alt="">WhatsApp</a>
+                <a>Book Now</a>
+            </div>
+
+        </div>
+
+}
+  
+</div>

@@ -1,0 +1,340 @@
+﻿@using ZoomTourism.Models;
+
+@model IEnumerable<Lead>
+@{
+    ViewData["Title"] = "Leads";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Leads.css" asp-append-version="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="description" content="Leads">
+    <meta name="keywords" content="Rental, Car, Cars">
+    <title>Leads</title>
+</head>
+
+
+<div class="create-search-container">
+    <p class="translate" data-translate-key="leads_title">Leads</p>
+    <div class="div-create-container">
+        <div class="create-lead">
+            <a asp-action="Upsert" asp-controller="Lead" asp-area="Admin" id="create-lead-button" class="show-popup translate" data-translate-key="create_lead_button">Create Lead</a>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for a lead...">
+            <button type="submit">
+                <img src="/Images/icons/Search-icon.png" alt="Search" >
+            </button>
+        </div>
+    </div>
+</div>
+<!--  -->
+<div class="lead-type-container">
+    <div class="lead-type-buttons-container">
+        <div class="lead-type-buttons">
+            <input type="radio" id="radio1" name="tabs" checked />
+            <label class="tab2 translate" for="radio1" data-translate-key="private_trips">Private Trips</label>
+            <input type="radio" id="radio2" name="tabs" />
+            <label class="tab2 translate" for="radio2" data-translate-key="public_trips">Public Trips</label>
+            <input type="radio" id="radio3" name="tabs" />
+            <label class="tab2 translate" for="radio3" data-translate-key="car_rental">Car Rental</label>
+            <span class="glider2"></span>
+        </div>
+    </div>
+</div>
+<div class="leads-container">
+    <div class="new-leads-container">
+        <div class="label-container new-lable">
+            <p class="translate" data-translate-key="lead_status_new">New</p>
+        </div>
+          @foreach (var Lead in Model.ToList())
+        {
+            @if (Lead.Status.ToString().ToLower() == "new")
+            {
+                
+                <div class="new-lead">
+
+                        <div class="Lead-Left-Side">
+                     
+                        <a class="LeadLink" asp-action="Upsert" asp-route-id="@Lead.Id">  <h3>@Lead.Name</h3>  </a>
+                        <div class="Lead-Item">
+                            <span  class="translate" data-translate-key="notes">Notes:</span>
+                            <p>
+                                @Lead.Notes
+                            </p>
+                        </div>
+                        <div class="Lead-Item">
+                            <span class="translate" data-translate-key="status" >Status:</span>
+                            <div class=" center state new">
+                                <div class="translate" data-translate-key="new_lable">@Lead.Status</div>
+                            </div>
+                            </div>
+
+                        
+
+                        <div class="Lead-Item">
+                            <span class="translate" data-translate-key="created_date">Created Date:</span>
+                            <p>@Lead.CreatedDate.ToString("dd/MM/yyyy")</p>
+                        </div>
+
+                        </div>
+
+                        <div class="Lead-Right-Side">
+                        <a href="https://wa.me/@Lead.Phone" class="CTA-Lead-An">
+                            <img src="~/assets/Icons/Phone.png" class="CTA-Lead" height="25px" alt="Phone">
+                        </a>
+
+                            @if (Lead.Email != null)
+                            {
+                            <a href="mailto: @Lead.Email" class="CTA-Lead-An">
+                                <img src="~/assets/Icons/mail.png" class="CTA-Lead" height="25px" alt="Mail">
+                            </a>
+                            }
+                        </div>
+                        
+                   
+                   
+                </div>
+              
+            }
+           
+        }
+    </div>
+    <div class="communication-container">
+        <div class="label-container pending-lable">
+            <p class="translate" data-translate-key="lead_status_pending">Pending</p>
+        </div>
+        @foreach (var Lead in Model.ToList())
+        {
+            @if (Lead.Status.ToString().ToLower() == "pending")
+            {
+                <div class="new-lead">
+
+                    <div class="Lead-Left-Side">
+
+                        <a class="LeadLink" asp-action="Upsert" asp-route-id="@Lead.Id">  <h3>@Lead.Name</h3>  </a>
+                        <div class="Lead-Item">
+                            <span  class="translate" data-translate-key="notes">Notes:</span>
+                            <p>
+                                @Lead.Notes
+                            </p>
+                        </div>
+                        <div class="Lead-Item">
+                            <span class="translate" data-translate-key="status" >Status:</span>
+                            <div class=" center state pending">
+                                <div class="translate" data-translate-key="pending_lable">@Lead.Status</div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="Lead-Item">
+                            <span class="translate" data-translate-key="created_date">Created Date:</span>
+                            <p>@Lead.CreatedDate.ToString("dd/MM/yyyy")</p>
+                        </div>
+
+                    </div>
+
+                    <div class="Lead-Right-Side">
+                        <a href="https://wa.me/@Lead.Phone" class="CTA-Lead-An">
+                            <img src="~/assets/Icons/Phone.png" class="CTA-Lead" height="25px" alt="Phone">
+                        </a>
+
+                        @if (Lead.Email != null)
+                        {
+                            <a href="mailto: @Lead.Email" class="CTA-Lead-An">
+                                <img src="~/assets/Icons/mail.png" class="CTA-Lead" height="25px" alt="Mail">
+                            </a>
+                        }
+                    </div>
+
+
+
+                </div>
+
+            }
+
+        }
+    </div>
+    <div class="un-intrested-container">
+        <div class="label-container inprogress-lable">
+            <p class="translate" data-translate-key="lead_status_inprogress">InProgress</p>
+        </div>
+        @foreach (var Lead in Model.ToList())
+        {
+            @if (Lead.Status.ToString().ToLower() == "inprogress")
+            {
+
+                <div class="new-lead">
+
+                    <div class="Lead-Left-Side">
+
+                        <a class="LeadLink" asp-action="Upsert" asp-route-id="@Lead.Id">  <h3>@Lead.Name</h3>  </a>
+                        <div class="Lead-Item">
+                            <span  class="translate" data-translate-key="notes">Notes:</span>
+                            <p>
+                                @Lead.Notes
+                            </p>
+                        </div>
+                        <div class="Lead-Item">
+                            <span class="translate" data-translate-key="status" >Status:</span>
+                            <div class=" center state inprogress">
+                                <div class="translate" data-translate-key="inprogress_lable">@Lead.Status</div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="Lead-Item">
+                            <span class="translate" data-translate-key="created_date">Created Date:</span>
+                            <p>@Lead.CreatedDate.ToString("dd/MM/yyyy")</p>
+                        </div>
+
+                    </div>
+
+                    <div class="Lead-Right-Side">
+                        <a href="https://wa.me/@Lead.Phone" class="CTA-Lead-An">
+                            <img src="~/assets/Icons/Phone.png" class="CTA-Lead" height="25px" alt="Phone">
+                        </a>
+
+                        @if (Lead.Email != null)
+                        {
+                            <a href="mailto: @Lead.Email" class="CTA-Lead-An">
+                                <img src="~/assets/Icons/mail.png" class="CTA-Lead" height="25px" alt="Mail">
+
+                            </a>
+                        }
+                    </div>
+
+
+
+                </div>
+            }
+
+        }
+    </div>
+    <div class="intressted-container">
+        <div class="label-container finished-lable">
+            <p class="translate" data-translate-key="lead_status_finished">Finished</p>
+        </div>
+        @foreach (var Lead in Model.ToList())
+        {
+            @if (Lead.Status.ToString().ToLower() == "finished")
+            {
+              
+                      <div class="new-lead">
+
+                        <div class="Lead-Left-Side">
+                     
+                        <a class="LeadLink" asp-action="Upsert" asp-route-id="@Lead.Id">  <h3>@Lead.Name</h3>  </a>
+                        <div class="Lead-Item">
+                            <span  class="translate" data-translate-key="notes">Notes:</span>
+                            <p>
+                                @Lead.Notes
+                            </p>
+                        </div>
+                        <div class="Lead-Item">
+                            <span class="translate" data-translate-key="status" >Status:</span>
+                            <div class=" center state finished">
+                                <div class="translate" data-translate-key="finished_lable">@Lead.Status</div>
+                            </div>
+                            </div>
+
+                        
+
+                        <div class="Lead-Item">
+                            <span class="translate" data-translate-key="created_date">Created Date:</span>
+                            <p>@Lead.CreatedDate.ToString("dd/MM/yyyy")</p>
+                        </div>
+
+                        </div>
+
+                        <div class="Lead-Right-Side">
+                        <a href="https://wa.me/@Lead.Phone" class="CTA-Lead-An">
+                            <img src="~/assets/Icons/Phone.png" class="CTA-Lead" height="25px" alt="Phone">
+                        </a>
+
+                            @if (Lead.Email != null)
+                            {
+                            <a href="mailto: @Lead.Email" class="CTA-Lead-An">
+                                <img src="~/assets/Icons/mail.png" class="CTA-Lead" height="25px" alt="Mail">
+                            </a>
+                            }
+                        </div>
+                        
+                   
+                   
+                </div>
+            }
+        }
+
+    </div>
+    <div class="set-meeting-container">
+        <div class="label-container lost-lable">
+            <p class="translate" data-translate-key="lead_status_lost">Lost</p>
+        </div>
+        @foreach (var Lead in Model.ToList())
+        {
+            @if (Lead.Status.ToString().ToLower() == "lost")
+            {
+
+                <div class="new-lead">
+
+                    <div class="Lead-Left-Side">
+
+                        <a class="LeadLink" asp-action="Upsert" asp-route-id="@Lead.Id">  <h3>@Lead.Name</h3>  </a>
+                        <div class="Lead-Item">
+                            <span  class="translate" data-translate-key="notes">Notes:</span>
+                            <p>
+                                @Lead.Notes
+                            </p>
+                        </div>
+                        <div class="Lead-Item">
+                            <span class="translate" data-translate-key="status" >Status:</span>
+                            <div class=" center state lost">
+                                <div class="translate" data-translate-key="lost_lable">@Lead.Status</div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="Lead-Item">
+                            <span class="translate" data-translate-key="created_date">Created Date:</span>
+                            <p>@Lead.CreatedDate.ToString("dd/MM/yyyy")</p>
+                        </div>
+
+                    </div>
+
+                    <div class="Lead-Right-Side">
+                        <a href="https://wa.me/@Lead.Phone" class="CTA-Lead-An">
+                            <img src="~/assets/Icons/Phone.png" class="CTA-Lead" height="25px" alt="Phone">
+                        </a>
+
+                        @if (Lead.Email != null)
+                        {
+                            <a href="mailto: @Lead.Email" class="CTA-Lead-An">
+                                <img src="~/assets/Icons/mail.png" class="CTA-Lead" height="25px" alt="Mail">
+                            </a>
+                        }
+                    </div>
+
+
+
+                </div>
+            }
+        }
+    </div>
+</div>
+
+
+@section Scripts{
+
+    <script>
+        var currentPage = "leadsPage";
+    </script>
+    <script src="~/js/LeadTable.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Dashboard.js"></script>
+    <script src="~/js/IndexTranslation.js"></script>
+}

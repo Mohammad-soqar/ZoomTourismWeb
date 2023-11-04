@@ -1,0 +1,146 @@
+﻿@model ZoomTourism.Models.ViewModels.TripVM
+@{
+    var a = 3;
+    var filteredTrips = Model.Trips.Where(Trip => Trip.Id != Model.trip.Id).Take(a).ToList();
+
+}
+<head>
+
+    <title>@Model.trip.Title</title>
+    <meta name="description" content="@Model.trip.Title">
+    <meta name="keywords" content="Writing, Blog, Blogs, @Model.trip.Title">
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/TripDetails.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/CarDetails.css" asp-append-version="true" />
+</head>
+
+<div class="Event-Details">
+
+    <div class="Thumbnail">
+        <img src="@Model.trip.ImageUrl" height="450px" alt="@Model.trip.ImageUrl" draggable="false">
+    </div>
+
+    <div class="EventInfo">
+        <div class="Title-CTA">
+            <div class="Title-Date">
+                <h1>Visit the awesome @Model.trip.Title</h1>
+            </div>
+            <div class="CTA-BTN">
+                <button><img src="~/assets/Icons/Sharebtn3.png" alt="share btn"></button>
+            </div>
+
+        </div>
+
+        <div class="Event-Details-Sec-2">
+            <!-- Left Side -->
+            <div class="Event-Details-Sec-Left">
+
+
+                <p>
+                    @Html.Raw(Model.trip.Content)
+                </p>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="Event-Details-Sec-Right">
+                <div class="Reserve-btn">
+                    <div class="form-container">
+                        <div class="rental-dates">
+                            <label class="form-label" for="pickup-date">Pickup Date:</label>
+                            <input class="form-input" type="date" id="pickup-date">
+
+                            <label class="form-label" for="pickup-time">Pickup Time:</label>
+                            <input class="form-input" type="time" id="pickup-time">
+
+                            <label class="form-label" for="pickup-location">Pickup Location:</label>
+                            <input class="form-input" type="text" id="pickup-location">
+
+                            <label class="form-label" for="dropoff-location">Drop-off Location:</label>
+                            <input class="form-input" type="text" id="dropoff-location">
+
+                            <button id="whatsapp-button">WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+
+<section class="other-cars">
+    <h3>Other Cars</h3>
+    <div class="carousel-container">
+        
+        @foreach (var Trip in filteredTrips)
+        {
+            if (Trip.Id != Model.trip.Id)
+            {
+                <a asp-action="TripDetails" asp-route-id="@Trip.Id" class="carousel-item-details">
+                    <div class="Thumbnail-trip">
+                        @if (Trip.Price != 0 || Trip.Price != null)
+                        {
+                            <span>@Trip.Price</span>
+                        }
+                        <img src="@Trip.ImageUrl" alt="@Trip.Title">
+                    </div>
+
+                    <div class="trip-description">
+                        <div class="trip-title">
+                            <h3>Enjoy the Beauty of @Trip.Title</h3>
+                            <p>@Trip.Title</p>
+                        </div>
+
+                        <div class="rating">
+                            <div class="star-rating"><img src="../assets/Icons/StarReview.png" alt="star">4.6</div>
+                            <span>(@Trip.numOfReviews)</span>
+                        </div>
+                    </div>
+
+
+                </a>
+               @*  <div class="carousel-item-mobile">
+                    @if (Trip.Price != 0 || Trip.Price != null)
+                    {
+                        <span class="price-tag">@Trip.Price</span>
+                    }
+
+                    <div class="trip-description-mobile">
+
+                        <div class="trip-title-mobile">
+                            <h3>@Trip.Title</h3>
+                        </div>
+
+                        <div class="rating-mobile">
+                            <div class="star-rating-mobile"><img src="~/assets/Icons/StarReview.png" alt="star">4.6</div>
+                            <span>(@Trip.numOfReviews)</span>
+                        </div>
+
+                    </div>
+
+                    <div class="image-container">
+                        <img class="Thumbnail-trip-mobile" height="300px" src="@Trip.ImageUrl" alt="@Trip.Title">
+                    </div>
+                </div> *@
+            }
+           
+
+        }
+    </div>
+</section>
+
+@section Scripts{
+    <script>
+        var currentPage = "TripDetails";
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/IndexTranslation.js"></script>
+    <script src="~/js/TripmessageSending.js"></script>
+
+
+}

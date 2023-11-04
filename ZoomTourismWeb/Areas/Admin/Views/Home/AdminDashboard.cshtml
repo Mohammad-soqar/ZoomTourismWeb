@@ -1,5 +1,6 @@
 ﻿@using ZoomTourism.Models.ViewModels;
 @using System;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @using Microsoft.AspNetCore.Mvc
 
 @{
@@ -43,49 +44,52 @@
                 width: '100%',
                 height: 352,
                 focusTarget: 'category',  // Show tooltips on hover
-                tooltip: { isHtml: true }  // Enable HTML content in tooltips
+                tooltip: { isHtml: true },
+                         series: {
+                    0: { color: '#C4942F' }  // Color for the data series
+                }// Enable HTML content in tooltips
             };
 
             var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
             chart.draw(data, options);
         }
     </script>
+
 </head>
-
-
+<div class="contentContainer">
     <div class="leftContainer">
         <div class="boxesContainer">
 
             <div class="carContainerDiv">
-                <a href="Car-Management.html" class="carContainer">
+            <a asp-action="CarsDashboard" asp-controller="Home" asp-area="Admin" class="carContainer">
                     <div class="textContainer">
-                        <p>Car</p>
-                        <span>2</span>
+                        <p class="translate" data-translate-key="car_text">Car</p>
+                    <span>@Model.CarCount</span>
                     </div>
                     <div class="imgContainer">
-                        <img src="/Images/icons/Car-Icon.png" alt="">
+                        <img src="~/assets/icons/Car-Icon.png" alt="">
                     </div>
                 </a>
             </div>
             <div class="carContainerDiv">
                 <a href="Car-Management.html" class="carContainer">
                     <div class="textContainer">
-                        <p>Users Online</p>
+                        <p class="translate" data-translate-key="users_online_text">Users Online</p>
                         <span>2</span>
                     </div>
                     <div class="imgContainer">
-                        <img src="/Images/icons/Car-Icon.png" alt="">
+                        <img src="~/assets/icons/Useronline.png" alt="">
                     </div>
                 </a>
             </div>
             <div class="carContainerDiv">
-                <a href="Car-Management.html" class="carContainer">
+                <a asp-action="Index" asp-controller="Task" asp-area="Admin"s class="carContainer">
                     <div class="textContainer">
-                        <p>Tasks</p>
-                        <span>2</span>
+                        <p class="translate" data-translate-key="tasks_text">Tasks</p>
+                    <span>@Model.TaskCount</span>
                     </div>
                     <div class="imgContainer">
-                        <img src="/Images/icons/Car-Icon.png" alt="">
+                        <img src="~/assets/icons/UserTasks.png" alt="">
                     </div>
                 </a>
             </div>
@@ -94,10 +98,10 @@
         <div class="newestLeads">
             <div class="table-container">
                 <div class="widgetHeader">
-                    <h3>Application Form Approval</h3>
+                    <h3 class="translate" data-translate-key="leads_text">Leads</h3>
 
                     <div class="search">
-                        <input type="text" id="searchInput" placeholder="Search...">
+                        <input type="text" id="searchInput" placeholder="Search..." class="translate" data-translate-key="search_placeholder">
                     </div>
 
                 </div>
@@ -106,70 +110,74 @@
 
                 @*//leads DataTable *@
                 <div class="DataTable">
-                    <table id="studentTable">
+                <table >
                         <thead>
                             <tr>
                                 <th onclick="sortTable(0, 'text')" data-sort-type="text"
-                                    data-sort-direction="asc">
-                                    Student Name
-                                    <img class="sort" src="/Images/icons/DownArrow.png" alt="" height="8px">
+                                    data-sort-direction="asc" class="translate" data-translate-key="name_header">
+                                Name
+                                    <img class="sort" src="~/assets/icons/DownArrow.png" alt="" height="8px">
                                 </th>
                                 <th onclick="sortTable(1, 'text')" data-sort-type="text"
-                                    data-sort-direction="asc">
-                                    Student ID
-                                    <img class="sort" src="/Images/icons/DownArrow.png" alt="" height="8px">
+                                    data-sort-direction="asc" class="translate" data-translate-key="days_header">
+                                Number Of Days
+                                    <img class="sort" src="~/assets/icons/DownArrow.png" alt="" height="8px">
                                 </th>
                                 <th onclick="sortTable(2, 'text')" data-sort-type="text"
-                                    data-sort-direction="asc">
-                                    State
-                                    <img class="sort" src="/Images/icons/DownArrow.png" alt="" height="8px">
+                                    data-sort-direction="asc" class="translate" data-translate-key="status_header">
+                                Status
+                                    <img class="sort" src="~/assets/icons/DownArrow.png" alt="" height="8px">
                                 </th>
                                 <th onclick="sortTable(3, 'date')" data-sort-type="date"
-                                    data-sort-direction="asc">
-                                    Date
-                                    <img class="sort" src="/Images/icons/DownArrow.png" alt="" height="8px">
+                                    data-sort-direction="asc" class="translate" data-translate-key="created_date_header">
+                                CreatedDate
+                                    <img class="sort" src="~/assets/icons/DownArrow.png" alt="" height="8px">
                                 </th>
-                                <th class="center">View</th>
+                                <th class="center translate"  data-translate-key="view_header">View</th>
                             </tr>
                         </thead>
                         <tbody>
                         <tbody>
+                            @foreach (var Lead in Model.Lead.OrderByDescending(p => p.CreatedDate).ToList().Take(4))
+                        {
                             <tr>
-                                <td>Dwayne Johnson</td>
-                                <td>200111111</td>
-                                <td class=" center state pending">
-                                    <div>Pending</div>
-                                </td>
-                                <td>28/10/2010</td>
-                                <td class="center"><img src="/Images/icons/eye-Icon.png" alt=""></td>
+                                <td>@Lead.Name</td>
+                                <td>@Lead.NumberOfDays</td>
+                                    @if (Lead.Status.ToString().ToLower() == "new")
+                                    {
+                                    <td class=" center state new">
+                                        <div>@Lead.Status</div>
+                                        </td>
+                                    }
+                                    else if (Lead.Status.ToString().ToLower() == "pending")
+                                    {
+                                    <td class=" center state pending">
+                                        <div>@Lead.Status</div>
+                                    </td>
+                                    }
+                                    else if (Lead.Status.ToString().ToLower() == "inprogress")
+                                    {
+                                    <td class=" center state inprogress">
+                                        <div>In Progress</div>
+                                    </td>
+                                    }
+                                    else if (Lead.Status.ToString().ToLower() == "finished")
+                                    {
+                                    <td class=" center state finished">
+                                        <div>@Lead.Status</div>
+                                    </td>
+                                    }
+                                    else if (Lead.Status.ToString().ToLower() == "lost")
+                                    {
+                                    <td class=" center state lost">
+                                        <div>@Lead.Status</div>
+                                    </td>
+                                    }
+
+                                <td>@Lead.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                <td><a href="/Admin/Lead/Upsert?id=@Lead.Id">View</a></td>
                             </tr>
-                            <tr>
-                                <td>Dwayne Johnson</td>
-                                <td>200111111</td>
-                                <td class=" center state pending">
-                                    <div>Pending</div>
-                                </td>
-                                <td>20/10/2011</td>
-                                <td class="center"><img src="/Images/icons/eye-Icon.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>Ryan Reynolds</td>
-                                <td>200111112</td>
-                                <td class=" center state pending">
-                                    <div>Pending</div>
-                                </td>
-                                <td>20/1/2012</td>
-                                <td class="center"><img src="/Images/icons/eye-Icon.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>Adele Adkins Adele Adkins Adele Adkins</td>
-                                <td>200111113</td>
-                                <td class="center state pending">
-                                    <div>Pending</div>
-                                </td>
-                                <td>20/11/2013</td>
-                                <td class="center"><img src="/Images/icons/eye-Icon.png" alt=""></td>
-                            </tr>
+                          }
                         </tbody>
                     </table>
                 </div>
@@ -184,11 +192,25 @@
         <div id="chart_div" ></div>
         </div>
         <div class="progress-div">
-            <div class="chart" id="graph1" data-percent="70" data-color="#30bae7">
+        <div class="chart" id="graph1" data-percent="@Model.ReviewPercentage" data-color="#C4942F">
             </div>
             <div class="Reviews">
-                <p>Total Reviews: <span>250</span></p>
-                <a href="#">See Details &#8594;</a>
+                <div style="display:flex;gap: .5rem;align-items: center;">
+                    <p class="translate" data-translate-key="total_reviews_text">Total Reviews </p><span>: @Model.ReviewCount</span>
+
+                </div>
+                <a href="#" class="translate" data-translate-key="see_details_text">See Details &#8594;</a>
             </div>
         </div>
     </div>
+</div>
+@section Scripts{
+   s
+    <script>
+        var currentPage = "adminDashboard";
+    </script>
+    <script src="~/js/LeadTable.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Dashboard.js"></script>
+    <script src="~/js/IndexTranslation.js"></script>
+}

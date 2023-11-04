@@ -89,6 +89,12 @@
         <span asp-validation-for="Car.WeeklyCharge" class="text-danger"></span>
     </div>
 
+    <div class="inputQue">
+        <label>Thumbnail</label>
+
+        <input asp-for="Car.CarCardImage" id="uploadBox" type="file" name="file" placeholder="ImageUrl">
+    </div>
+
     <div class="form-group">
         <label asp-for="Car.MonthlyCharge">Monthly Charge</label>
         <input asp-for="Car.MonthlyCharge" class="form-control" />
@@ -117,13 +123,13 @@
 
             <script>
     function validateFileCount(input) {
-        var maxFiles = 5; // Maximum number of allowed files
+        var maxFiles = 6; // Maximum number of allowed files
         var fileCountError = document.getElementById("fileCountError");
         var selectedFiles = input.files;
 
         if (selectedFiles.length > maxFiles) {
             // Display an error message
-            fileCountError.textContent = "Maximum of 5 files allowed.";
+            fileCountError.textContent = "Maximum of 6 files allowed.";
             input.value = ""; // Clear the selected files
         } else {
             fileCountError.textContent = ""; // Clear the error message
