@@ -1,4 +1,5 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿@using CodyleOffical.Utility;
+@using Microsoft.AspNetCore.Identity
 @using System.Security.Claims
 ﻿@using Microsoft.AspNetCore.Http
 
@@ -21,7 +22,7 @@
     <header>
         <nav class="nav-bar">
             <div class="nav-header">
-                <a href="index.html"><img src="~/assets/Brand/Logo.png" alt="Logo" class="logo"></a>
+                <a asp-action="Index" asp-controller="Home" asp-area="Customer"><img src="~/assets/Brand/Logo.png" alt="Logo" class="logo"></a>
                 <div class="hamburger-menu">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -32,13 +33,13 @@
                 <a href="aboutus.html">
                 <li class="nav-links">About Us</li>
                 </a>
-                <a href="trips.html">
+                <a asp-action="Trips" asp-controller="Home" asp-area="Customer">
                 <li class="nav-links">Trips</li>
                 </a>
-                <a href="blogs.html">
+                <a asp-action="Blogs" asp-controller="Home" asp-area="Customer">
                 <li class="nav-links">Blogs</li>
                 </a>
-                <a href="carRental.html">
+                <a asp-action="CarRental" asp-controller="Car" asp-area="Customer">
                 <li class="nav-links">Car Rental</li>
                 </a>
             </ul>
@@ -46,89 +47,48 @@
 
                 @if (SignInManager.IsSignedIn(User))
                 {
+                    @if (User.IsInRole(SD.Role_Admin))
+                    {
+                        <li class="nav-item">
+                            <a id="manage" class="nav-link " style="color:#C4942F; text-decoration:none;" asp-controller="Home" asp-area="Admin" asp-action="AdminDashboard" title="Manage">CRM</a>
+                        </li>
+                    }
                     <li class="nav-item">
-                        <a id="manage" class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+                        <a id="manage" class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><img src="~/assets/icons/User-Icon.png" alt="Profile Picture"></a>
                     </li>
-                    <li class="nav-item">
-                        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                            <button id="logout" type="submit" class="nav-link btn btn-link ">Logout</button>
-                        </form>
-                    </li>
+                    <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button id="logout" type="submit" class="nav-link btn btn-link ">Logout</button>
+                    </form>
+                   
                 }
                 else
                 {
                     <div class="nav-buttons">
-                    <li class="nav-item">
+                    <li style="list-style:none;" class="nav-item">
                         <a class="nav-link Transperent-brand-btn" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
                     </li>
 
-                    <li class="nav-item">
+                        <li style="list-style:none;" class="nav-item">
                         <a class="nav-link brand-background-btn" id="register" asp-area="Identity" asp-page="/Account/Register">Sign up</a>
                     </li>
                     </div>
 
                 }
 
-                <a class="nav-link Transperent-brand-btn" id="login" asp-area="Admin" asp-controller="Home" asp-action="AdminDashboard">Lsdsdsin</a>
+                <div class="language-selector">
+                    <select id="languageSelector">
+                        <option value="en"><img src="/assets/Flags/USA.png" />English</option>
+                        <option value="ar"><img src="/assets/Flags/Arabic.png" />Arabic</option>
+                        <option value="ru"><img src="/assets/Flags/RUSSIA.png" />Russian</option>
+                        <option value="tr"><img src="/assets/Flags/TURKEY.png" />Turkish</option>
+                    </select>
+                </div>
 
-              
+
             </div>
         </nav>
-             @*   <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                 <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Category" asp-action="Index" asp-area="Admin">Category</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Blog" asp-action="Index" asp-area="Admin">Blogs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Trip" asp-action="Index" asp-area="Admin">Trips</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Car" asp-action="Index" asp-area="Admin">Cars</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Lead" asp-action="Index" asp-area="Admin">Leads</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Lead" asp-action="SalesChart" asp-area="Admin">Sales</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Task" asp-action="Upsert" asp-area="Admin">Tasks</a>
-                        </li>
+       </header>
 
-                        @if (SignInManager.IsSignedIn(User))
-                        {
-                            <li class="nav-item">
-                                <a id="manage" class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
-                            </li>
-                            <li class="nav-item">
-                                <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                                    <button id="logout" type="submit" class="nav-link btn btn-link ">Logout</button>
-                                </form>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
-                            </li>
-                        }
-
-                    </ul> 
-
-                </div>
-            </div>  *@
       
     <div class="container">
         <main role="main" class="pb-3">
@@ -136,18 +96,14 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - ZoomTourismWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   
-    <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/app.js" asp-append-version="true"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="//cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
