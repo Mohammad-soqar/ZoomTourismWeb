@@ -10,7 +10,7 @@ using ZoomTourism.Models.ViewModels;
 namespace ZoomTourism.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = SD.Role_Admin)]
+    [Authorize(Roles = SD.Role_Admin + "," + SD.Role_CodyleSupport)]
     public class BlogController : Controller
     {
      

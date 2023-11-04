@@ -5,7 +5,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Security.Claims;
 using System.Security.Cryptography;
+using Twilio.TwiML.Voice;
 using ZoomTourism.DataAccess.Repository.IRepository;
 using ZoomTourism.Models;
 using ZoomTourism.Models.ViewModels;
@@ -13,7 +16,7 @@ using ZoomTourism.Models.ViewModels;
 namespace ZoomTourism.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = SD.Role_Admin)]
+    [Authorize(Roles = SD.Role_Admin + "," + SD.Role_CallCenter + "," + SD.Role_CodyleSupport)]
     public class LeadController : Controller
     {
      
@@ -34,14 +37,51 @@ namespace ZoomTourism.Areas.Admin.Controllers
             return View();
         }
 
+        public IActionResult Leads()
+        {
+            string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            bool isAdmin = User.IsInRole(SD.Role_Admin);
+
+            IEnumerable <Lead> leads;
+
+            if (isAdmin || User.IsInRole(SD.Role_CodyleSupport))
+            {
+                leads = _unitOfWork.Lead.GetAll();
+                return View(leads);
+            }
+            else if (User.IsInRole(SD.Role_CallCenter))
+            {
+                leads = _unitOfWork.Lead.GetAll()
+                    .Where(lead => lead.CallCenterUserId == userId);
+                return View(leads);
+            }
+            else if (User.IsInRole(SD.Role_Booking))
+            {
+                leads = _unitOfWork.Lead.GetAll()
+                    .Where(lead => lead.BookingDepUserId == userId);
+                return View(leads);
+            }
+            else if (User.IsInRole(SD.Role_Driver))
+            {
+                leads = _unitOfWork.Lead.GetAll()
+                    .Where(lead => lead.BookingDepUserId == userId);
+                return View(leads);
+            }
+
+            return View();
+        }
+
         public IActionResult Upsert(int? Id)
         {
             LeadVM leadVm = new() {
-                Lead = new()
+                Lead = new Lead(),
+                CarList = _unitOfWork.Car.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.ModelName,
+                    Value = i.Id.ToString()
+                })
             };
 
-           
-            // Load users for CallCenter role
             var callCenterUsers = _userManager.GetUsersInRoleAsync("CallCenter").Result;
             leadVm.CallCenterList = new SelectList(callCenterUsers, "Id", "UserName");
 
@@ -61,20 +101,23 @@ namespace ZoomTourism.Areas.Admin.Controllers
             {
                 var lead = _unitOfWork.Lead.GetFirstOrDefault(u => u.Id == Id);
                 leadVm.Lead = lead;
-                
+
+                // Retrieve and populate LeadDays for the existing lead
+                var leadDays = _unitOfWork.LeadDay.GetAll(ld => ld.LeadId == Id).ToList();
+                leadVm.LeadDay = leadDays;
 
                 return View(leadVm);
             }
 
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(LeadVM leadVm)
-        {
+     {
             if (ModelState.IsValid)
             {
                 Lead obj = leadVm.Lead;
+
                 if (!string.IsNullOrEmpty(obj.CallCenterUserId))
                 {
                     // Assign Call Center user based on obj.CallCenterUserId
@@ -96,15 +139,76 @@ namespace ZoomTourism.Areas.Admin.Controllers
                     obj.Driver = (ApplicationUser)driverUser;
                 }
 
-
                 if (obj.Id == 0)
                 {
                     _unitOfWork.Lead.Add(obj);
+                    _unitOfWork.Save(); // Save to get the generated Lead Id
+
+                    // Now you have the Lead Id, so you can set it for LeadDays
+                    if (leadVm.LeadDay != null)
+                    {
+                        foreach (var leadDay in leadVm.LeadDay)
+                        {
+                            leadDay.LeadId = obj.Id; // Set the LeadId to the newly generated Lead's Id
+                            _unitOfWork.LeadDay.Add(leadDay);
+                        }
+                    }
                 }
                 else
                 {
                     _unitOfWork.Lead.Update(obj);
+
+                    // Fetch existing LeadDays for the Lead
+                    var existingLeadDays = _unitOfWork.LeadDay.GetAll(ld => ld.LeadId == obj.Id).ToList();
+
+                    // Create a dictionary to track which LeadDays to update
+                    var leadDaysToUpdate = new Dictionary<int, LeadDay>();
+
+                    // Process the LeadDays in the view model
+                    if (leadVm.LeadDay != null)
+                    {
+                        foreach (var leadDay in leadVm.LeadDay)
+                        {
+                            leadDay.LeadId = obj.Id; // Set the LeadId to match the Lead being updated
+
+                            // Check if the LeadDay with the same Id already exists
+                            var existingLeadDay = existingLeadDays.FirstOrDefault(ld => ld.Id == leadDay.Id);
+
+                            if (existingLeadDay != null)
+                            {
+                                // Update the existing LeadDay with the new data
+                                existingLeadDay.Destination = leadDay.Destination;
+                                existingLeadDay.numOfDays = leadDay.numOfDays;
+                                leadDaysToUpdate.Add(existingLeadDay.Id, existingLeadDay);
+                            }
+                            else
+                            {
+                                // Add the LeadDay as it's new
+                                _unitOfWork.LeadDay.Add(leadDay);
+                            }
+                        }
+                    }
+
+                    // Remove LeadDays that were marked for deletion
+                    var deleteLeadDayIds = Request.Form["deleteLeadDay"];
+                    if (deleteLeadDayIds.Count > 0)
+                    {
+                        foreach (var deleteLeadDayId in deleteLeadDayIds)
+                        {
+                            if (int.TryParse(deleteLeadDayId, out int idToDelete))
+                            {
+                                var leadDayToDelete = existingLeadDays.FirstOrDefault(ld => ld.Id == idToDelete);
+                                if (leadDayToDelete != null)
+                                {
+                                    _unitOfWork.LeadDay.Remove(leadDayToDelete);
+                                }
+                            }
+                        }
+                    }
                 }
+
+                // Handle LeadDays
+
 
                 if (obj.IsPaid)
                 {
@@ -128,7 +232,7 @@ namespace ZoomTourism.Areas.Admin.Controllers
                     }
                 }
 
-                if(obj.Status.ToString().ToLower() == "finished")
+                if (obj.Status.ToString().ToLower() == "finished")
                 {
                     var existingReview = _unitOfWork.ReviewLink.GetFirstOrDefault(s => s.LeadId == obj.Id);
 
@@ -146,16 +250,259 @@ namespace ZoomTourism.Areas.Admin.Controllers
 
                         string reviewUrl = $"https://localhost:44346/Customer/Home/ReviewUpsert?token={reviewToken}";
 
-                        return RedirectToAction("SendSms", "Sms", new { reviewLink = reviewUrl , phoneNumber = phoneNum });
+                        return RedirectToAction("SendSms", "Sms", new { reviewLink = reviewUrl, phoneNumber = phoneNum });
                     }
                 }
 
                 _unitOfWork.Save();
-                return RedirectToAction("Index");
+                return RedirectToAction("Leads");
             }
 
             return View(leadVm);
         }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult Upsert(LeadVM leadVm)
+        //{
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        Lead obj = leadVm.Lead;
+
+        //        if (!string.IsNullOrEmpty(obj.CallCenterUserId))
+        //        {
+        //            // Assign Call Center user based on obj.CallCenterUserId
+        //            var callCenterUser = _userManager.FindByIdAsync(obj.CallCenterUserId).Result;
+        //            obj.CallCenter = (ApplicationUser)callCenterUser;
+        //        }
+
+        //        if (!string.IsNullOrEmpty(obj.BookingDepUserId))
+        //        {
+        //            // Assign Booking Department user based on obj.BookingDepUserId
+        //            var bookingDepUser = _userManager.FindByIdAsync(obj.BookingDepUserId).Result;
+        //            obj.BookingDep = (ApplicationUser)bookingDepUser;
+        //        }
+
+        //        if (!string.IsNullOrEmpty(obj.DriverUserId))
+        //        {
+        //            // Assign Driver user based on obj.DriverUserId
+        //            var driverUser = _userManager.FindByIdAsync(obj.DriverUserId).Result;
+        //            obj.Driver = (ApplicationUser)driverUser;
+        //        }
+
+        //        if (obj.Id == 0)
+        //        {
+        //            _unitOfWork.Lead.Add(obj);
+        //            _unitOfWork.Save(); // Save to get the generated Lead Id
+
+        //            // Now you have the Lead Id, so you can set it for LeadDays
+        //            if (leadVm.LeadDay != null)
+        //            {
+        //                foreach (var leadDay in leadVm.LeadDay)
+        //                {
+        //                    leadDay.LeadId = obj.Id; // Set the LeadId to the newly generated Lead's Id
+        //                    _unitOfWork.LeadDay.Add(leadDay);
+        //                }
+        //            }
+        //        }
+        //        else
+        //        {
+        //            _unitOfWork.Lead.Update(obj);
+
+        //            // Fetch existing LeadDays for the Lead
+        //            var existingLeadDays = _unitOfWork.LeadDay.GetAll(ld => ld.LeadId == obj.Id).ToList();
+
+        //            // Create a dictionary to track which LeadDays to update
+        //            var leadDaysToUpdate = new Dictionary<int, LeadDay>();
+
+        //            // Process the LeadDays in the view model
+        //            if (leadVm.LeadDay != null)
+        //            {
+        //                foreach (var leadDay in leadVm.LeadDay)
+        //                {
+        //                    leadDay.LeadId = obj.Id; // Set the LeadId to match the Lead being updated
+
+        //                    // Check if the LeadDay with the same Id already exists
+        //                    var existingLeadDay = existingLeadDays.FirstOrDefault(ld => ld.Id == leadDay.Id);
+
+        //                    if (existingLeadDay != null)
+        //                    {
+        //                        // Update the existing LeadDay with the new data
+        //                        existingLeadDay.Destination = leadDay.Destination;
+        //                        existingLeadDay.numOfDays = leadDay.numOfDays;
+        //                        leadDaysToUpdate.Add(existingLeadDay.Id, existingLeadDay);
+        //                    }
+        //                    else
+        //                    {
+        //                        // Add the LeadDay as it's new
+        //                        _unitOfWork.LeadDay.Add(leadDay);
+        //                    }
+        //                }
+        //            }
+
+        //            // Remove LeadDays that were marked for deletion
+        //            var deleteLeadDayIds = Request.Form["deleteLeadDay"];
+        //            if (deleteLeadDayIds.Count > 0)
+        //            {
+        //                foreach (var deleteLeadDayId in deleteLeadDayIds)
+        //                {
+        //                    if (int.TryParse(deleteLeadDayId, out int idToDelete))
+        //                    {
+        //                        var leadDayToDelete = existingLeadDays.FirstOrDefault(ld => ld.Id == idToDelete);
+        //                        if (leadDayToDelete != null)
+        //                        {
+        //                            _unitOfWork.LeadDay.Remove(leadDayToDelete);
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+
+        //        // Handle LeadDays
+
+
+        //        if (obj.IsPaid)
+        //        {
+        //            var existingSale = _unitOfWork.Sale.GetFirstOrDefault(s => s.LeadId == obj.Id);
+
+        //            if (existingSale != null)
+        //            {
+        //                existingSale.SaleAmount = obj.SaleAmount;
+        //                _unitOfWork.Sale.Update(existingSale);
+        //            }
+        //            else
+        //            {
+        //                var sale = new Sale
+        //                {
+        //                    ProductType = obj.LeadType,
+        //                    SaleAmount = obj.SaleAmount,
+        //                    SaleDate = DateTime.Now,
+        //                    LeadId = obj.Id
+        //                };
+        //                _unitOfWork.Sale.Add(sale);
+        //            }
+        //        }
+
+        //        if (obj.Status.ToString().ToLower() == "finished")
+        //        {
+        //            var existingReview = _unitOfWork.ReviewLink.GetFirstOrDefault(s => s.LeadId == obj.Id);
+
+        //            if (existingReview == null)
+        //            {
+        //                string reviewToken = GenerateReviewToken();
+        //                string phoneNum = obj.Phone;
+        //                var reviewLink = new ReviewLink
+        //                {
+        //                    Token = reviewToken,
+        //                    LeadId = obj.Id
+        //                };
+        //                _unitOfWork.ReviewLink.Add(reviewLink);
+        //                _unitOfWork.Save();
+
+        //                string reviewUrl = $"https://localhost:44346/Customer/Home/ReviewUpsert?token={reviewToken}";
+
+        //                return RedirectToAction("SendSms", "Sms", new { reviewLink = reviewUrl, phoneNumber = phoneNum });
+        //            }
+        //        }
+
+        //        _unitOfWork.Save();
+        //        return RedirectToAction("Leads");
+        //    }
+
+        //    return View(leadVm);
+        //}
+
+        //public IActionResult Upsert(LeadVM leadVm, LeadDayVM leadDays)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        Lead obj = leadVm.Lead;
+        //        if (!string.IsNullOrEmpty(obj.CallCenterUserId))
+        //        {
+        //            // Assign Call Center user based on obj.CallCenterUserId
+        //            var callCenterUser = _userManager.FindByIdAsync(obj.CallCenterUserId).Result;
+        //            obj.CallCenter = (ApplicationUser)callCenterUser;
+        //        }
+
+        //        if (!string.IsNullOrEmpty(obj.BookingDepUserId))
+        //        {
+        //            // Assign Booking Department user based on obj.BookingDepUserId
+        //            var bookingDepUser = _userManager.FindByIdAsync(obj.BookingDepUserId).Result;
+        //            obj.BookingDep = (ApplicationUser)bookingDepUser;
+        //        }
+
+        //        if (!string.IsNullOrEmpty(obj.DriverUserId))
+        //        {
+        //            // Assign Driver user based on obj.DriverUserId
+        //            var driverUser = _userManager.FindByIdAsync(obj.DriverUserId).Result;
+        //            obj.Driver = (ApplicationUser)driverUser;
+        //        }
+
+
+
+        //        if (obj.Id == 0)
+        //        {
+        //            _unitOfWork.Lead.Add(obj);
+        //        }
+        //        else
+        //        {
+        //            _unitOfWork.Lead.Update(obj);
+        //        }
+
+        //           // Handle LeadDays
+
+
+
+        //        if (obj.IsPaid)
+        //        {
+        //            var existingSale = _unitOfWork.Sale.GetFirstOrDefault(s => s.LeadId == obj.Id);
+
+        //            if (existingSale != null)
+        //            {
+        //                existingSale.SaleAmount = obj.SaleAmount;
+        //                _unitOfWork.Sale.Update(existingSale);
+        //            }
+        //            else
+        //            {
+        //                var sale = new Sale
+        //                {
+        //                    ProductType = obj.LeadType,
+        //                    SaleAmount = obj.SaleAmount,
+        //                    SaleDate = DateTime.Now,
+        //                    LeadId = obj.Id
+        //                };
+        //                _unitOfWork.Sale.Add(sale);
+        //            }
+        //        }
+
+        //        if(obj.Status.ToString().ToLower() == "finished")
+        //        {
+        //            var existingReview = _unitOfWork.ReviewLink.GetFirstOrDefault(s => s.LeadId == obj.Id);
+
+        //            if (existingReview == null)
+        //            {
+        //                string reviewToken = GenerateReviewToken();
+        //                string phoneNum = obj.Phone;
+        //                var reviewLink = new ReviewLink
+        //                {
+        //                    Token = reviewToken,
+        //                    LeadId = obj.Id
+        //                };
+        //                _unitOfWork.ReviewLink.Add(reviewLink);
+        //                _unitOfWork.Save();
+
+        //                string reviewUrl = $"https://localhost:44346/Customer/Home/ReviewUpsert?token={reviewToken}";
+
+        //                return RedirectToAction("SendSms", "Sms", new { reviewLink = reviewUrl , phoneNumber = phoneNum });
+        //            }
+        //        }
+
+        //        _unitOfWork.Save();
+        //        return RedirectToAction("Leads");
+        //    }
+
+        //    return View(leadVm);
+        //}
 
         private string GenerateReviewToken()
         {

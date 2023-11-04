@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Twilio.TwiML.Voice;
 using ZoomTourism.DataAccess.Repository.IRepository;
@@ -31,7 +32,10 @@ namespace ZoomTourism.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            IEnumerable<ATask> userTasks = _unitOfWork.ATask.GetAll()
+                    .Where(task => task.AssignedUserId == userId); 
+            return View(userTasks);
         }
 
       
