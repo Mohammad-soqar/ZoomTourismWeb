@@ -12,6 +12,12 @@ namespace ZoomTourism.Models.ViewModels
     public class LeadVM
     {
         public Lead Lead { get; set; }
+       
+
+        [ValidateNever]
+        public List<LeadDay> LeadDay { get; set; }
+        [ValidateNever]
+        public IEnumerable<SelectListItem> CarList { get; set; }
 
         [ValidateNever]
         public IEnumerable<SelectListItem> CallCenterList { get; set; }

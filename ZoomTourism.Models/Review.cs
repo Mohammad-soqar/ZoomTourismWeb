@@ -25,5 +25,6 @@ namespace ZoomTourism.Models
         [ValidateNever]
 
         public Lead Lead { get; set; }
+
     }
 }

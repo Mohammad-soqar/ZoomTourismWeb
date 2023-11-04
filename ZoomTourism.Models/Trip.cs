@@ -22,6 +22,11 @@ namespace ZoomTourism.Models
 
         [ValidateNever]
         public int numOfReviews { get; set; } = 0;
+
+        [ValidateNever]
+        public int? Price { get; set; } = null;
+
+        public DateTime CreatedDate { get; set; }
     }
 
 }

@@ -15,6 +15,7 @@ namespace ZoomTourism.Models
         public DateTime DueDate { get; set; }
 
         public string AssignedUserId { get; set; }
+        [ValidateNever]
         public ApplicationUser AssignedUser { get; set; }
 
         [ValidateNever]

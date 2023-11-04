@@ -1,23 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc.Rendering;
-
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ZoomTourism.Models.ViewModels
 {
-    public class CarVM
+    public class TripVM
     {
-        public Car Car{ get; set; }
+        public Trip trip { get; set; }
         [ValidateNever]
-        public List<CarImages> Images { get; set; }
+        public IEnumerable<SelectListItem> CategoryList { get; set; }
         [ValidateNever]
-        public IEnumerable<Car> Cars { get; set; }
-
-
+        public IEnumerable<Trip> Trips { get; set; }
     }
 }
