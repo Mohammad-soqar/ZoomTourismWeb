@@ -3,6 +3,7 @@
 *@
 @{
 }
+@using CodyleOffical.Utility;
 @using Microsoft.AspNetCore.Identity
 @using System.Security.Claims
 ﻿@using Microsoft.AspNetCore.Http
@@ -14,7 +15,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,102 +23,117 @@
     <link rel="stylesheet" href="~/css/Crmsite.css" asp-append-version="true" />
 </head>
 <body>
-   
-        <section class="container">
+    <div id="page-container" style="display: none;">
+
+    <section class="container">
         <div class="sidebar-button-container">
 
             <div class="sidebar">
 
+                <button class="close-button">&#x2715</button>
 
                 <div class="logo">
                     <a href="Dashboard.html">
-                        <img src="~/assets/Icons/Logo.png" alt="">
+                        <img src="~/assets/icons/Logo.png" alt="">
                     </a>
                 </div>
                 <div class="account-dropdown mobile-sidebar account-dropdown-mobile">
-                    <img src="~/assets/Icons/User-Icon.png" alt="Profile Picture">
+                    <img src="~/assets/icons/User-Icon.png" alt="Profile Picture">
                     <span id="username">John Deo </span>
-                    <img id="DownArrow-username" src="~/assets/Icons/DownArrow.png" alt="" height="15px">
+                    <img id="DownArrow-username" src="~/assets/icons/DownArrow.png" alt="" height="15px">
 
                 </div>
                 <div class="search-container mobile-sidebar">
                     <button type="submit">
                         <img src="~/assets/Icons/Search-icon.png" alt="Search">
                     </button>
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Search..." class="translate" data-translate-key="search_placeholder">
                 </div>
                 <div class="icons">
+                        @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_CodyleSupport))
+                        {
                     <div class="dashboard">
-                        <a href="Dashboard.html">
-                            <img src="~/assets/Icons/Dashboard-icon.png" alt="" height="35px">
-                            <p>Dashboard</p>
+                        <a asp-action="AdminDashboard" asp-controller="Home" asp-area="Admin">
+                            <img src="~/assets/icons/Dashboard-icon.png" alt="" height="35px">
+                            <p class="translate" data-translate-key="dashboard">Dashboard</p>
                         </a>
                     </div>
-
+                        }
                     <div class="Leads">
-                        <a href="">
-                            <img src="~/assets/Icons/Leads-icon.png" alt="" height="35px">
-                            <p>Leads</p>
+                        <a asp-action="Leads" asp-controller="Lead" asp-area="Admin">
+                            <img src="~/assets/icons/Leads-icon.png" alt="" height="35px">
+                            <p class="translate" data-translate-key="leads">Leads</p>
                         </a>
                     </div>
                     <div class="Tasks">
-                        <a href="">
-                            <img src="~/assets/Icons/Tasks-icon.png" alt="" height="35px">
-                            <p>Tasks</p>
+                            <a asp-action="Index" asp-controller="Task" asp-area="Admin">
+                                <img src="~/assets/icons/Tasks-icon.png" alt="" height="35px">
+                            <p class="translate" data-translate-key="tasks">Tasks</p>
                         </a>
                     </div>
-                    <div class="guide">
+                        @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_CodyleSupport))
+                        {
+                            <div class="Leads">
+                                <a asp-action="Employees" asp-controller="Employee" asp-area="Admin">
+                                    <img src="~/assets/icons/Leads-icon.png" alt="" height="35px">
+                                    <p class="translate" data-translate-key="employees">Employees</p>
+                                </a>
+                            </div>
+                            <div class="Leads">
+                                <a asp-action="WebsiteContentManagement" asp-controller="Home" asp-area="Admin">
+                                    <img src="~/assets/icons/settings2.png" alt="" height="35px">
+                                    <p class="translate" data-translate-key="content">Content Management</p>
+                                </a>
+                            </div>
+
+                        }
+
+                     
+
+                        <div class="guide">
                         <a href="">
-                            <img src="~/assets/Icons/Guide-icon.png" alt="" height="35px">
-                            <p>Guide</p>
+                            <img src="~/assets/icons/Guide-icon.png" alt="" height="35px">
+                            <p class="translate" data-translate-key="guide">Guide</p>
                         </a>
                     </div>
+                     
+
                     <div class="notification notification-mobile mobile-sidebar">
                         <a href="#">
-                            <img src="~/assets/Icons/Notification-icon.png" alt="" height="35px">
-                            <p>Notification</p>
+                            <img src="~/assets/icons/Notification-icon.png" alt="" height="35px">
+                            <p class="translate" data-translate-key="notification">Notification</p>
                         </a>
 
-                        <!--    <div class="notificationContiner">
-                            <div class="notifications">
-                                <div class="notification1">
-                                    <span>Notification #1</span>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and </p>
-                                </div>
-                                <div class="notification2">
-                                    <span>Notification #2</span>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and Lorem Ipsum is simply dummy text of the printing andLorem Ipsum is simply dummy text of the printing andLorem Ipsum is simply dummy text of the printing andLorem Ipsum is simply dummy text of the printing and </p>
-
-                                </div>
-                                <div class="notification3">
-                                    <span>Notification #3</span>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and </p>
-                                </div>
-                            </div>
-                        </div> -->
+                    
                     </div>
                     <div class="language-dropdown mobile-sidebar language-dropdown-mobile">
-                        <img class="FlagContainer" src="~/assets/Icons/britainFlag.png" alt="" height="30px">
-                        <select id="language-select">
-                            <option value="en">EN</option>
-                            <option value="AR">AR</option>
-                        </select>
+                        <img class="FlagContainer" src="~/assets/icons/britainFlag.png" alt="" height="30px">
+                      
                     </div>
 
 
                     <div class="logout-support">
                         <div class="logout">
-                            <a href="Login.html">
-                                <img src="~/assets/Icons/Logout-icon.png" alt="" height="27px">
-                                <p>Logout</p>
-                            </a>
+                                <li class="nav-item">
+                                    <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                        <button id="logout" type="submit" class="nav-link btn btn-link ">Logout</button>
+                                    </form>
+                                </li>
                         </div>
                         <div class="support">
-                            <a href="Support.html">
-                                <img src="~/assets/Icons/Support-icon.png" alt="">
-                                <p>Support</p>
+                            <a asp-action="SupportReport" asp-controller="Home" asp-area="Admin">
+                                <img src="~/assets/icons/Support-icon.png" alt="">
+                                <p class="translate" data-translate-key="support">Support</p>
                             </a>
                         </div>
+
+                        @if (User.IsInRole(SD.Role_CodyleSupport))
+                        {
+                            <a asp-action="Reports" asp-controller="Support" asp-area="Codyle">
+                                <img src="~/assets/icons/Support-icon.png" alt="">
+                                <p>Codyle</p>
+                            </a>
+                        }
 
                     </div>
 
@@ -125,31 +141,32 @@
 
             </div>
         </div>
-   
+        <!-- sidebar -->
+
 
         <div class="content">
             <div class="mobilesidebar-headerbox">
                 <button class="show-sidebar-button">
-                    <img src="~/assets/Icons/Menu-icon.png" alt="" height="35px">
+                    <img src="~/assets/icons/Menu-icon.png" alt="" height="35px">
                 </button>
                 <div class="header-box">
                     <div class="search-container">
                         <button type="submit">
-                            <img src="~/assets/Icons/Search-icon.png" alt="Search">
+                            <img src="~/assets/icons/Search-icon.png" alt="Search">
                         </button>
                         <input type="text" placeholder="Search...">
                     </div>
                     <div class="LanguageAndAccountContainer">
                         <div class="language-dropdown">
-                            <img class="FlagContainer" src="~/assets/Icons/britainFlag.png" alt="" height="30px">
-                            <select id="language-select">
+                            <img class="FlagContainer" src="~/assets/icons/britainFlag.png" alt="" height="30px">
+                            <select id="languageSelector">
                                 <option value="en">EN</option>
-                                <option value="AR">AR</option>
+                                <option value="ar">AR</option>
                             </select>
                         </div>
                         <div class="notification">
                             <button id="NotificationButton">
-                                <img src="~/assets/Icons/Notification-icon.png" alt=""
+                                <img src="~/assets/icons/Notification-icon.png" alt=""
                                      height="35px">
                             </button>
                             <div class="notificationContiner">
@@ -177,14 +194,21 @@
                             </div>
                         </div>
 
+                         
+                                
+
                         <div class="account-dropdown">
-                            <img src="~/assets/Icons/User-Icon.png" alt="Profile Picture">
-                            <span id="username">John Deo </span>
-                            <img src="~/assets/Icons/DownArrow.png" alt="" height="15px">
+                            <img src="~/assets/icons/User-Icon.png" alt="Profile Picture">
+                            <span id="username"></span>
+                            <img src="~/assets/icons/DownArrow.png" alt="" height="15px">
                             <div class="account-menu">
                                 <ul>
                                     <li><a href="#">Profile</a></li>
-                                    <li><a href="#">Settings</a></li>
+                                        <li class="nav-item">
+                                            <a id="manage" class="nav-link " style="color:#C4942F; text-decoration:none;" asp-controller="Home" asp-area="Customer" asp-action="Index" title="Manage">Website</a>
+                                        </li>
+
+                                        <li><a href="#">Settings</a></li>
                                     <li><a href="#">Logout</a></li>
                                 </ul>
                             </div>
@@ -192,13 +216,71 @@
                     </div>
                 </div>
             </div>
-            <div class="conentContainer">
-                @RenderBody()
-                </div>
+
+            @RenderBody()
         </div>
-       </section>
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    </section>
+
+    </div>
+    <script>
+        setTimeout(function () {
+            console.log("1# function one reached")
+            document.getElementById('page-container').style.display = 'block';
+        }, 400);
+        console.log("2# function one executed")
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script>
+        var currentLayout = "adminlayout";
+
+        $(document).ready(function () {
+            // Load the user's preferred language from localStorage, if available
+            var userLanguage = localStorage.getItem('userLanguage');
+            if (userLanguage) {
+                // Set the language selector to the user's preferred language
+                $('#languageSelector').val(userLanguage);
+                loadLanguageLayout(userLanguage);
+            } else {
+                // If no preference is set, load the default language (English)
+                loadLanguageLayout('en');
+            }
+
+            // Handle language selection change
+            $('#languageSelector').change(function () {
+
+                var selectedLanguage = $(this).val();
+
+                // Store the user's language preference in localStorage
+                localStorage.setItem('userLanguage', selectedLanguage);
+
+                loadLanguageLayout(selectedLanguage);
+            });
+        });
+
+        function loadLanguageLayout(language) {
+            // Determine the current page from the JavaScript variable
+            var currentLayout = window.currentLayout;
+
+            $.getJSON('/Translation/LayoutTranslation.json', function (data) {
+                var translations = data[language][currentLayout];
+                $('.translate').each(function () {
+                    var key = $(this).data('translate-key');
+                    $(this).text(translations[key]);
+                });
+            }).done(function () {
+                console.log('JSON file loading completed.');
+            }).fail(function (jqxhr, textStatus, error) {
+                console.error('Error loading JSON file:', textStatus, error);
+            });
+        }
+
+    </script>
+
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
         <script src="~/js/site.js" asp-append-version="true"></script>
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -208,6 +290,7 @@
         <script src="//cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script src="https://cdn.tiny.cloud/1/n94ifuzvl80pchikopiwgz2esrw8n28dwcywvpejlqrregfp/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-        @await RenderSectionAsync("Scripts", required: false)
+        
+        @await RenderSectionAsync("Scripts", required: false)}
 </body>
 </html>
