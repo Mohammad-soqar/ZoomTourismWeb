@@ -13,14 +13,16 @@ namespace ZoomTourism.Models
         public string LeadType { get; set; }
 
         //General
-        public string Name { get; set; }
+        public string Name { get; set; }//
         [ValidateNever]
         public string? Email { get; set; }
-        public string Phone { get; set; }
+        public string Phone { get; set; }//
+        [ValidateNever]
         public DateTime CreatedDate { get; set; } //no need
-       
+
         public LeadStatus Status { get; set; } //no need
-        public string Notes { get; set; }
+        [ValidateNever]
+        public string? Notes { get; set; }
 
         [ValidateNever]
         public decimal? SaleAmount { get; set; } //only when IsPaid is checked
@@ -30,12 +32,12 @@ namespace ZoomTourism.Models
         public string CallCenterUserId { get; set; }
         [ValidateNever]
         public ApplicationUser CallCenter { get; set; }
-        public string BookingDepUserId { get; set; }
+        public string? BookingDepUserId { get; set; }
         [ValidateNever]
-        public ApplicationUser BookingDep { get; set; }
-        public string DriverUserId { get; set; }
+        public ApplicationUser? BookingDep { get; set; }
+        public string? DriverUserId { get; set; }
         [ValidateNever]
-        public ApplicationUser Driver { get; set; }
+        public ApplicationUser? Driver { get; set; }
 
 
 
@@ -73,15 +75,20 @@ namespace ZoomTourism.Models
 
         //Car Rental
         //nothing yet
+        public Lead()
+        {
+            // Initialize CreatedDate to the current date and time when a new Lead is created
+            CreatedDate = DateTime.Now;
+        }
 
     }
 
     public enum LeadStatus
     {
         New,
-        Contacted,
-        Converted,
-        Lost,
-        Finished
+        Pending,
+        InProgress,
+        Finished,
+        Lost
     }
 }
