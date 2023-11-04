@@ -31,9 +31,11 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="wwwroot\Images\CarThumb\" />
     <Folder Include="wwwroot\assets\SocialMedia\" />
     <Folder Include="wwwroot\Images\Blogs\" />
     <Folder Include="wwwroot\Images\Cars\" />
+    <Folder Include="wwwroot\Images\Reports\" />
     <Folder Include="wwwroot\Images\Trips\" />
   </ItemGroup>
 

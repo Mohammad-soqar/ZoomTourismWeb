@@ -226,6 +226,41 @@ namespace ZoomTourism.DataAccess.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("ZoomTourism.Models.ATask", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AssignedUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("LeadId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssignedUserId");
+
+                    b.HasIndex("LeadId");
+
+                    b.ToTable("Tasks");
+                });
+
             modelBuilder.Entity("ZoomTourism.Models.Blog", b =>
                 {
                     b.Property<int>("Id")
@@ -273,6 +308,9 @@ namespace ZoomTourism.DataAccess.Migrations
 
                     b.Property<string>("CarBrand")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CarCardImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("DailyCharge")
@@ -379,7 +417,6 @@ namespace ZoomTourism.DataAccess.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("BookingDepUserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CallCenterId")
@@ -405,7 +442,6 @@ namespace ZoomTourism.DataAccess.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("DriverUserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -435,7 +471,6 @@ namespace ZoomTourism.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Notes")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("NumberOfDays")
@@ -468,6 +503,60 @@ namespace ZoomTourism.DataAccess.Migrations
                     b.HasIndex("SelectedCarId");
 
                     b.ToTable("Leads");
+                });
+
+            modelBuilder.Entity("ZoomTourism.Models.LeadDay", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Destination")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("LeadId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("numOfDays")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LeadId");
+
+                    b.ToTable("LeadDays");
+                });
+
+            modelBuilder.Entity("ZoomTourism.Models.Report", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Reports");
                 });
 
             modelBuilder.Entity("ZoomTourism.Models.Review", b =>
@@ -573,9 +662,15 @@ namespace ZoomTourism.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Price")
+                        .HasColumnType("int");
 
                     b.Property<int?>("Rating")
                         .HasColumnType("int");
@@ -657,6 +752,23 @@ namespace ZoomTourism.DataAccess.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ZoomTourism.Models.ATask", b =>
+                {
+                    b.HasOne("ZoomTourism.Models.ApplicationUser", "AssignedUser")
+                        .WithMany()
+                        .HasForeignKey("AssignedUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ZoomTourism.Models.Lead", "Lead")
+                        .WithMany()
+                        .HasForeignKey("LeadId");
+
+                    b.Navigation("AssignedUser");
+
+                    b.Navigation("Lead");
+                });
+
             modelBuilder.Entity("ZoomTourism.Models.Blog", b =>
                 {
                     b.HasOne("ZoomTourism.Models.Category", "Category")
@@ -704,6 +816,24 @@ namespace ZoomTourism.DataAccess.Migrations
                     b.Navigation("Driver");
 
                     b.Navigation("SelectedCar");
+                });
+
+            modelBuilder.Entity("ZoomTourism.Models.LeadDay", b =>
+                {
+                    b.HasOne("ZoomTourism.Models.Lead", "Lead")
+                        .WithMany()
+                        .HasForeignKey("LeadId");
+
+                    b.Navigation("Lead");
+                });
+
+            modelBuilder.Entity("ZoomTourism.Models.Report", b =>
+                {
+                    b.HasOne("ZoomTourism.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ZoomTourism.Models.Review", b =>

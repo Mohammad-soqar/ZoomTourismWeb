@@ -28,6 +28,8 @@ namespace ZoomTourism.DataAccess.Data
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<ReviewLink> ReviewLinks { get; set; }
         public DbSet<ATask> Tasks { get; set; }
+        public DbSet<LeadDay> LeadDays { get; set; }
+        public DbSet<Report> Reports { get; set; }
 
     }
 }
