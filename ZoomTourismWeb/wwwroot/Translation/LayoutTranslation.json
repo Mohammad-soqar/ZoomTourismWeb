@@ -1,0 +1,30 @@
+﻿{
+  "en": {
+
+    "adminlayout": {
+      "search_placeholder": "Search...",
+      "dashboard": "Dashboard",
+      "leads": "Leads",
+      "tasks": "Tasks",
+      "guide": "Guide",
+      "notification": "Notification",
+      "employees": "Employees",
+      "logout": "Logout",
+      "support": "Support"
+    }
+  },
+  "ar": {
+
+    "adminlayout": {
+      "search_placeholder": "بحث...",
+      "dashboard": "لوحة التحكم",
+      "leads": "زبائن",
+      "tasks": "مهام",
+      "guide": "دليل",
+      "notification": "إشعار",
+      "employees": "موظفين",
+      "logout": "تسجيل الخروج",
+      "support": "الدعم"
+    }
+  }
+}
