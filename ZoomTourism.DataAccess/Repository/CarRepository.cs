@@ -27,6 +27,7 @@ namespace ZoomTourism.DataAccess.Repository
             {
                 objFromDb.CarBrand = obj.CarBrand;
                 objFromDb.ModelName = obj.ModelName;
+                objFromDb.CarCardImage = obj.CarCardImage;
                 objFromDb.ModelYear = obj.ModelYear;
                 objFromDb.TypeOfTransmission = obj.TypeOfTransmission;
                 objFromDb.NumOfSeats = obj.NumOfSeats;

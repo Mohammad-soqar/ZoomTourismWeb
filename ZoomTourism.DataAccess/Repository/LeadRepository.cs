@@ -31,13 +31,13 @@ namespace ZoomTourism.DataAccess.Repository
                 objFromDb.NumberOfPeople = obj.NumberOfPeople;
                 objFromDb.IsPaid = obj.IsPaid;
                 objFromDb.Phone = obj.Phone;
-                objFromDb.CreatedDate = obj.CreatedDate;
                 objFromDb.Status = obj.Status;
                 objFromDb.Notes = obj.Notes;
                 objFromDb.CallCenterUserId = obj.CallCenterUserId;
                 objFromDb.CallCenter = obj.CallCenter;
                 objFromDb.BookingDepUserId = obj.BookingDepUserId;
                 objFromDb.BookingDep = obj.BookingDep;
+
                 objFromDb.DriverUserId = obj.DriverUserId;
                 objFromDb.Driver = obj.Driver;
 

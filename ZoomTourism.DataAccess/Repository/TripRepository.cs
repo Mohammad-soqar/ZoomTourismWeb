@@ -27,8 +27,10 @@ namespace ZoomTourism.DataAccess.Repository
             {
                 objFromDb.Title = obj.Title;
                 objFromDb.Content = obj.Content;
-              
-                if(objFromDb.ImageUrl != null)
+                objFromDb.CreatedDate = obj.CreatedDate;
+                objFromDb.Price = obj.Price;
+
+                if (objFromDb.ImageUrl != null)
                 {
                     objFromDb.ImageUrl = obj.ImageUrl;
                 }

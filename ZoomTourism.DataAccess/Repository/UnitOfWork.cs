@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ZoomTourism.DataAccess.Data;
 using ZoomTourism.DataAccess.Repository.IRepository;
+using ZoomTourism.Models;
 
 namespace ZoomTourism.DataAccess.Repository
 {
@@ -25,6 +26,9 @@ namespace ZoomTourism.DataAccess.Repository
             Review = new ReviewRepository(_db);
             ReviewLink = new ReviewlinkRepository(_db);
             ATask = new TaskRepository(_db);
+            LeadDay = new LeaddayRepository(_db);
+            Report = new ReportRepository(_db);
+            ApplicationUser = new ApplicationuserRepository(_db);
 
 
         }
@@ -39,6 +43,9 @@ namespace ZoomTourism.DataAccess.Repository
         public IReviewRepository Review { get; private set; }
         public IReviewlinkRepository ReviewLink { get; private set; }
         public ITaskRepository ATask { get; private set; }
+        public ILeaddayRepository LeadDay { get; private set; }
+        public IReportRepository Report { get; private set; }
+        public IApplicationuserRepository ApplicationUser { get; private set; }
 
 
         public void Save()
