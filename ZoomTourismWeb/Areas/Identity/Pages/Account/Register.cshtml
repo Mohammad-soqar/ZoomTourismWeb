@@ -1,58 +1,97 @@
 ﻿@page
+@using CodyleOffical.Utility;
 @model RegisterModel
 @{
     ViewData["Title"] = "Register";
 }
+@{
+    Layout = ""; // Specify the user layout
+}
 
-<h1>@ViewData["Title"]</h1>
 
-<div class="row">
-    <div class="col-md-4">
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+<head>
+    <link rel="stylesheet" href="~/css/SignIn.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
+    
+</head>
+
+<div class="background">
+    <div class="layer">
+        <div class="form-container">
+            <form id="registerForm" class="RegisterForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <div class="title">
+                    <img src="~/assets/Brand/Logo.png" width="200px">
+
+                </div>
             <h2>Create a new account.</h2>
-            <hr />
+          
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-floating py-2">
+            <div class="inputQue">
+                    <label asp-for="Input.Name"></label>
+
                 <input asp-for="Input.Name" class="form-control" aria-required="true" />
-                <label asp-for="Input.Name"></label>
                 <span asp-validation-for="Input.Name" class="text-danger"></span>
             </div>
-            <div class="form-floating py-2">
+                <div class="Multiple-Inputs-Line">
+            <div class="inputQue">
+                    <label asp-for="Input.Email"></label>
+
                 <input asp-for="Input.Email" class="form-control" aria-required="true" />
-                <label asp-for="Input.Email"></label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
-            </div>
-            <div class="form-floating py-2">
-                <input asp-for="Input.PhoneNumber" class="form-control" aria-required="true" />
-                <label asp-for="Input.PhoneNumber"></label>
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-floating py-2">
-                <input asp-for="Input.DateOfBirth" class="form-control" aria-required="true" />
-                <label asp-for="Input.DateOfBirth"></label>
+                </div>
+                </div>
+                    @*     <div class="inputQue">
+                            <label for="CountryCode">Country Code</label>
+                            <input id="CountryCode" class="form-control" placeholder="Country Code" />
+
+                            <label asp-for="Input.PhoneNumber">Phone Number</label>
+                            <input type="number" id="PhoneNumberInput" class="form-control" aria-required="true" />
+                            <input asp-for="Input.PhoneNumber" id="HiddenPhoneNumber" class="form-control" aria-required="true" />
+
+                        </div> *@
+
+                <div class="inputQue">
+                    <label asp-for="Input.PhoneNumber"></label>
+                    <input id="phone" class="form-control" />
+                </div>
+
+                <div class="inputQue">
+                    <input asp-for="Input.PhoneNumber" id="hiddenPhone"  />
+                </div>
+
+
+                        <div class="inputQue">
+                    <label asp-for="Input.DateOfBirth"></label>
+                    <input asp-for="Input.DateOfBirth" class="form-control" aria-required="true" />
                 <span asp-validation-for="Input.DateOfBirth" class="text-danger"></span>
             </div>
-            <div class="form-floating py-2">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
-                <label asp-for="Input.Password"></label>
+                <div class="Multiple-Inputs-Line">
+            <div class="inputQue">
+                    <label asp-for="Input.Password"></label>
+                    <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
-            <div class="form-floating py-2">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
-                <label asp-for="Input.ConfirmPassword"></label>
+            <div class="inputQue">
+                    <label asp-for="Input.ConfirmPassword"></label>
+                    <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-
-            <div class="form-floating">
-                <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-control">
+            </div>
+             @if (User.IsInRole(SD.Role_Admin))
+            {
+                <div class="form-floating">
+                    <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-control">
                     <option disabled selected>Select Role</option>
                 </select>
             </div>
-            
-            <button id="registerSubmit" type="submit" class="w-100 btn  btn-primary">Register</button>
+            }
+                <button id="registerSubmit" type="submit" class="w-100 btn btn-lg  btn-primary">Register</button>
+                <a asp-action="Index" asp-controller="Home" asp-area="Customer" class="Cancel-btn">Cancel</a>
         </form>
     </div>
-    <div class="col-md-6 col-md-offset-2">
+  @*   <div class="col-md-6 col-md-offset-2">
         <section>
             <h3>Use another service to register.</h3>
             <hr />
@@ -74,16 +113,41 @@
                                 @foreach (var provider in Model.ExternalLogins!)
                                 {
                                     <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
+                                }W
                             </p>
                         </div>
                     </form>
-                }
+                }W
             }
         </section>
+        </div>
+
+
+    </div> *@
+
     </div>
 </div>
 
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const hiddenPhoneInput = document.querySelector("#hiddenPhone");
+
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        excludeCountries: ["il"], // Exclude Israel
+    });
+
+    // Add an event listener to update the hidden input with the full phone number
+    phoneInputField.addEventListener("input", function () {
+        const fullPhoneNumber = phoneInput.getNumber();
+        hiddenPhoneInput.value = fullPhoneNumber;
+    });
+</script>
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+
+    }
