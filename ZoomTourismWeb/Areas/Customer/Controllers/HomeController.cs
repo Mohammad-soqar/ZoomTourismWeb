@@ -28,7 +28,18 @@ namespace ZoomTourismWeb.Areas.Customer.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Trip> TripList = _unitOfWork.Trip.GetAll();
+
+            IndexVM IndexVM = new()
+            {
+                Trip = TripList
+
+            };
+
+               
+
+
+            return View(IndexVM);
         }
 
         public IActionResult Privacy()
@@ -36,8 +47,68 @@ namespace ZoomTourismWeb.Areas.Customer.Controllers
             return View();
         }
 
-     
+        public IActionResult Trips()
+        {
+            IEnumerable<Trip> TripList = _unitOfWork.Trip.GetAll();
+            return View(TripList);
+        }
+        public IActionResult TripsDetails(int id)
+        {
+            Trip trip = _unitOfWork.Trip.GetFirstOrDefault(r => r.Id == id);
+            return View(trip);
+        }
 
+        public IActionResult Blogs()
+        {
+            IEnumerable<Blog> BlogList = _unitOfWork.Blog.GetAll(includeProperties: "Category");
+            return View(BlogList);
+        }
+        public IActionResult BlogDetails(int id)
+        {
+            BlogVM BlogVM = new()
+            {
+                blog = new()
+            };
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            else
+            {
+                BlogVM.blog = _unitOfWork.Blog.GetFirstOrDefault(u => u.Id == id);
+
+            }
+
+            return View(BlogVM);
+        }
+
+        public IActionResult TripDetails(int id)
+        {
+            IEnumerable<Trip> TripList = _unitOfWork.Trip.GetAll();
+
+            if (id == 0)
+            {
+                return NotFound();
+            }
+
+            var trip = _unitOfWork.Trip.GetFirstOrDefault(u => u.Id == id);
+
+            if (trip == null)
+            {
+                return NotFound();
+            }
+
+ 
+
+            var TripVM = new TripVM
+            {
+                trip = trip,
+                Trips = TripList
+
+            };
+
+            return View(TripVM);
+        }
 
         public IActionResult ReviewUpsert(string token)
         {
