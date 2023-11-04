@@ -1,0 +1,218 @@
+﻿* {
+    scroll-behavior: smooth;
+    font-family: inter;
+}
+
+.blogBox li {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(196, 148, 47, 0.15) 0%, #C4942F 100%);
+}
+
+#search-input {
+    box-sizing: border-box;
+    border: solid #C4942F 2px;
+    border-radius: 14px;
+    padding: 10px 15px;
+}
+
+.Search-Input label {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+
+
+/*--------------welcome-web browser--------*/
+@media only screen and (min-width: 750px) {
+    .welcomegrid {
+        display: flex;
+        margin: 80px 0px 0px 0px;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .weclomephoto {
+        height: 420px;
+    }
+
+    .heading {
+        width: 34%;
+    }
+
+    .BlogSection {
+        margin: 5rem 10rem 0px 10rem;
+    }
+
+    .blogBox {
+        display: grid;
+        grid-gap: 5rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-items: center;
+        list-style: none;
+    }
+
+    .Search-Input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}
+
+.blogBox {
+    margin: 3rem 0rem 0rem 0rem;
+    padding: 0 !important;
+}
+
+/*--------------welcome-mobile--------*/
+@media only screen and (max-width: 750px) {
+    .welcomegrid {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        margin: 50px 0px 0px 0px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .BlogSection {
+        margin: 5rem 0px;
+    }
+
+    .Search-Input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .weclomephoto {
+        height: 300px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+
+    .heading a {
+        padding: 5px 15px 5px 15px;
+        font-size: 16px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .blogBox {
+        margin: 60px 0rem 0px 0rem;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        justify-items: center;
+    }
+}
+
+.blog-right img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.BlogSection a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+.BlogSection h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+
+.BlogSection p {
+    font-size: .8em;
+    color: #252A34;
+}
+
+
+
+
+.blog-right {
+    margin: 0px 0px 0px 0px;
+    width: max-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.blog-right-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    height: 100%;
+    justify-content: space-between;
+}
+
+    .blog-right-text h3 {
+        color: #252A34;
+        font-size: 1.2em;
+        width: 180px;
+    }
+
+
+.show-read-more .more-text {
+    display: none;
+}
+
+
+
+.section-title-text h2 {
+    color: #C4942F;
+    font-size: .9em;
+    font-weight: 600;
+}
+
+.section-title-text h3 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#category-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+    #category-buttons button {
+        background-color: transparent;
+        border: solid #C4942F 2px;
+        color: #C4942F;
+        border-radius: 20px;
+        font-size: .9em;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+        #category-buttons button.active {
+            color: #fff;
+            background-color: #C4942F;
+            /* Add any other styles for the selected button here */
+        }

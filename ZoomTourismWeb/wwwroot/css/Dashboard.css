@@ -1,5 +1,12 @@
+@font-face {
+    font-family: inter;
+    src: url('../assets/Font/Inter-Medium.ttf');
+}
+
+
 * {
-  box-sizing: border-box; /* Apply box-sizing to all elements */
+    box-sizing: border-box; /* Apply box-sizing to all elements */
+    font-family: inter !important;
 }
 :root {
   --shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
@@ -9,19 +16,20 @@
   flex: 1;
 }
 
-.conentContainer {
+.contentContainer {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   margin: 0 2rem;
 }
 
 .leftContainer {
-  /* background-color: aqua; */
-  border-radius: 12px;
-  margin: 0 1rem 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+    /* background-color: aqua; */
+    border-radius: 12px;
+    margin: 0 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: inter !important;
 }
 
 .rightContainer {
@@ -159,21 +167,47 @@ td {
   transform: rotate(-180deg);
 }
 
-.pending div {
-  color: #AE9100;
-  background-color: #FFF8D4 !important;
+.state{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.completed div {
-  color: #007505;
-  background-color: #EBF8EC !important;
+.new div {
+    color: #5B93FF;
+    background-color: #E9FCFF !important;
+    border: 1px solid #5B93FF;
+}
+
+.pending div {
+    color: #AE9100;
+    background-color: #FFF8D4 !important;
+    border: 1px solid #AE9100;
+}
+
+.inprogress div {
+    color: #C4942F;
+    background-color: #FFF8D4 !important;
+    border: 1px solid #C4942F;
+}
+
+.finished div {
+    color: #007505;
+    background-color: #EBF8EC !important;
+    border: 1px solid #007505;
+}
+
+.lost div {
+    color: #EE1E1E;
+    background-color: #FBEFEF !important;
+    border: 1px solid #EE1E1E;
 }
 
 .state div {
-  padding: 0.3rem 0.6rem;
-  border-radius: 19px;
-  font-weight: 500;
-
+    padding: 0.3rem 0.6rem;
+    font-size: .8em;
+    border-radius: 19px;
+    font-weight: 500;
 }
 
 #back-left {
@@ -278,7 +312,7 @@ canvas {
   .newestLeads{
     display: none;
   }
-  .conentContainer {
+  .contentContainer {
     display: flex;
     flex-direction: column;
     margin: 2rem;

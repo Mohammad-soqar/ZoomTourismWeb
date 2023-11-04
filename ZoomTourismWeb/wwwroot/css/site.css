@@ -1,9 +1,10 @@
 @font-face {
     font-family: 'inter';
-    src: url('../fonts/Inter-Medium.ttf');
+    src: url('../assets/Font/Inter-Medium.ttf');
 }
 
-*{
+* {
+    font-family: 'inter';
 }
 
 
@@ -117,6 +118,34 @@ section {
     display: block;
 }
 
+#languageSelector {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 20px; /* Adjust this value to position the flag image as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 6rem;
+    font-size: 16px; /* Adjust the font size as needed */
+    cursor: pointer;
+}
+
+    /* Style individual options */
+    #languageSelector option[value="en"] {
+        background-image: url('/assets/Flags/USA.png'); /* Replace 'usa-flag.png' with the flag image for English */
+    }
+
+    #languageSelector option[value="ar"] {
+        background-image: url('/assets/Flags/Arabic.png'); /* Replace 'arabic-flag.png' with the flag image for Arabic */
+    }
+    #languageSelector option[value="ru"] {
+        background-image: url('/assets/Flags/RUSSIA.png'); /* Replace 'usa-flag.png' with the flag image for English */
+    }
+
+    #languageSelector option[value="tr"] {
+        background-image: url('/assets/Flags/TURKEY.png'); /* Replace 'arabic-flag.png' with the flag image for Arabic */
+    }
+
 button:focus {
     outline: none;
     /* Remove the outline style */
@@ -190,3 +219,7 @@ table {
 
 @media only screen and (max-width: 885px) {
 }
+
+
+
+

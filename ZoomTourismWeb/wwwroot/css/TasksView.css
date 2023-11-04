@@ -1,0 +1,41 @@
+﻿
+@font-face {
+    font-family: 'inter';
+    src: url('../assets/Font/Inter-Medium.ttf');
+}
+
+* {
+    font-family: 'inter';
+}
+.tasks-container {
+    margin: 2rem;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 27px;
+    overflow-y: auto;
+    max-height: 75%;
+}
+
+.task-1 {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 1rem 0;
+    background: #fff8eb;
+    padding: 1rem;
+    border-radius: 17px;
+}
+
+    .task-1 h3 {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+    }
+
+    .task-1 p {
+        line-height: 1.5;
+    }
+
+#task-number {
+  font-size: .7em;
+    font-weight: bold;
+}

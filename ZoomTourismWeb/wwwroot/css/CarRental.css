@@ -1,0 +1,86 @@
+﻿.car-cards {
+    display: grid;
+    grid-gap: 5rem;
+    margin: 3rem 8rem 0rem 8rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    list-style: none;
+}
+
+
+
+.car-card-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    background: #F4EFDF;
+    color: #C4942F;
+    width: 380px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+
+
+.car-card {
+    text-decoration: none;
+    position: relative;
+    color: #C4942F;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 250px;
+    cursor: pointer;
+}
+
+.car-img {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    transition: .3s ease-in;
+}
+
+    .car-img:hover {
+        position: absolute;
+        right: 0px;
+        top: 0;
+        transition: .3s ease-out;
+    }
+
+.cta-buttons {
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    color: #fff;
+    background-color: #C4942F;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+}
+
+    .cta-buttons a {
+        border: none;
+        color: #fff;
+        padding: 1rem 2rem;
+        font-size: 1em;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+.car-details {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.car-specs {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}

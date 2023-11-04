@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'inter';
+    src: url('../assets/Font/Inter-Medium.ttf');
+}
+
+* {
+    font-family: 'inter';
+}
+
+
+.car-cards-Container {
+    display: grid;
+    grid-gap: 2rem;
+    margin: 2rem;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    justify-items: center;
+    list-style: none;
+    height: 70vh;
+    overflow-y: auto;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 1400px) {
+    .car-cards-Container {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .car-cards-Container {
+        grid-template-columns: repeat(1, minmax(250px, 1fr))
+    }
+}
+
+
+
+
+
+
+.car-card-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    background: #ffffff;
+    color: #C4942F;
+    width: 380px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+
+
+.car-card {
+    text-decoration: none;
+    position: relative;
+    color: #C4942F;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 250px;
+    cursor: pointer;
+}
+
+.car-img {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    transition: .3s ease-in;
+}
+
+    .car-img:hover {
+        position: absolute;
+        right: 0px;
+        top: 0;
+        transition: .3s ease-out;
+    }
+
+.cta-buttons {
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    color: #fff;
+    background-color: #C4942F;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.car-details {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.car-specs {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.Edit-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.Delete-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+    .Delete-button p,
+    .Edit-button p,
+    .status-div p {
+        margin: 0 0 0 .5rem;
+        font-size: 17px;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+.status-div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 7rem 0 6rem;
+}
+
+.back-Button,
+.Add-Car {
+    color: #fff;
+    background-color: #C4942F;
+    padding: 0.7rem 3rem;
+    border-radius: 27px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+    .Add-Car img {
+        height: 23px;
+        margin: 0 0 0 0.7rem;
+    }

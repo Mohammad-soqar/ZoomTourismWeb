@@ -1,5 +1,7 @@
 ﻿
-
+.nav-item{
+    list-style: none;
+}
 /* Desktop */
 @media only screen and (min-width: 1300px) {
     .nav-bar {
@@ -41,6 +43,7 @@
     .nav-buttons {
         display: flex;
         gap: 2rem;
+        align-items:center;
     }
 }
 
@@ -102,12 +105,15 @@
     .nav-buttons {
         display: none;
         padding: 0rem 0rem 2rem 0rem;
+        align-items: center;
     }
 
         /* Add this rule to show the buttons when the 'active' class is applied */
         .nav-buttons.active {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
+            align-items: center;
+            
         }
 }
 
