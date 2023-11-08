@@ -37,166 +37,156 @@
         </div>
     </div>
 </div>
-<form method="post" style="margin:0rem 2rem;">
-    <div style="padding:1rem 2rem;">
-        <input type="hidden" asp-for="@Model.Lead.Id" />
+<form method="post" >
+    <input type="hidden" asp-for="@Model.Lead.Id" />
 
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.Name"></label>
-            <input asp-for="@Model.Lead.Name" class="form-control" />
-        </div>
-
-   
-            <input asp-for="@Model.Lead.NumberOfDays" hidden value="2" class="form-control" />
-   
-
-
-        <input asp-for="@Model.Lead.Destinations" hidden value="NaN" class="form-control" />
-        
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.TripStartDate"></label>
-            <input asp-for="@Model.Lead.TripStartDate" type="datetime-local" class="form-control" />
-        </div>
-
-
-        <!-- LeadDays section -->
-        <div id="leadDaysSection">
-            @if (Model.LeadDay != null)
-            {
-                for (int i = 0; i < Model.LeadDay.Count; i++)
-                {
-                    <div class="lead-day">
-                        <h3>Lead Day @(i + 1)</h3>
-                        <input type="hidden" asp-for="@Model.LeadDay[i].Id" /> <!-- Add the hidden input for Id -->
-                        <input asp-for="@Model.LeadDay[i].Destination" class="form-control" placeholder="Destination" />
-                        <input asp-for="@Model.LeadDay[i].numOfDays" class="form-control" placeholder="Number of Days" />
-                    </div>
-                }
-            }
-        </div>
-        <div class="inputQue">
-            <button id="add-lead-day" type="button" class="btn btn-secondary">Add Lead Day</button>
-        </div>
-
-
-
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.NumberOfPeople"></label>
-            <input asp-for="@Model.Lead.NumberOfPeople" class="form-control" />
-        </div>
-
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.IsPaid"></label>
-            <input type="checkbox" asp-for="@Model.Lead.IsPaid" />
-        </div>
-        <div class="Multiple-Inputs-Line">
-            <div class="inputQue">
-                <label asp-for="@Model.Lead.Email"></label>
-                <input asp-for="@Model.Lead.Email" class="form-control" />
-            </div>
-
-            <div class="inputQue">
-                <label asp-for="@Model.Lead.Phone"></label>
-                <input asp-for="@Model.Lead.Phone" class="form-control" />
-            </div>
-        </div>
-        <div class="inputQue" hidden>
-            <label asp-for="@Model.Lead.CreatedDate"></label>
-            <input asp-for="@Model.Lead.CreatedDate" class="form-control" type="datetime-local" />
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.Status"></label>
-            <select asp-for="@Model.Lead.Status" class="form-control">
-                <option selected disabled>Select</option>
-                <option>New</option>
-                <option>Pending</option>
-                <option>InProgress</option>
-                <option>Finished</option>
-                <option>Lost</option>
-            </select>
-        </div>
-
-
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.Notes"></label>
-            <textarea asp-for="@Model.Lead.Notes" class="form-control" rows="3"></textarea>
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="Lead.CallCenterUserId">Call Center User</label>
-            @Html.DropDownListFor(model => model.Lead.CallCenterUserId, Model.CallCenterList, "Select Call Center", new { @class = "form-control" })
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="Lead.BookingDepUserId">Booking Department User</label>
-            @Html.DropDownListFor(model => model.Lead.BookingDepUserId, Model.BookingList, "Select Booking Department", new { @class = "form-control" })
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="Lead.DriverUserId">Driver User</label>
-            @Html.DropDownListFor(model => model.Lead.DriverUserId, Model.DriverList, "Select Driver", new { @class = "form-control" })
-        </div>
-
-        <div class="inputQue">
-            <label>Category</label>
-
-            <select asp-for="@Model.Lead.SelectedCarId" asp-items="@Model.CarList" class="selectC">
-                <option disabled selected>Select Car</option>
-            </select>
-            <span asp-validation-for="@Model.Lead.SelectedCarId" class="alert-warning"></span>
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.CarPickupDate"></label>
-            <input asp-for="@Model.Lead.CarPickupDate" class="form-control" type="datetime-local" />
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.CarReturnDate"></label>
-            <input asp-for="@Model.Lead.CarReturnDate" class="form-control" type="datetime-local" />
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.HotelCheckInDate"></label>
-            <input asp-for="@Model.Lead.HotelCheckInDate" class="form-control" type="datetime-local" />
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.HotelCheckOutDate"></label>
-            <input asp-for="@Model.Lead.HotelCheckOutDate" class="form-control" type="datetime-local" />
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.HotelName"></label>
-            <input asp-for="@Model.Lead.HotelName" class="form-control" />
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.HotelTotalCost"></label>
-            <input asp-for="@Model.Lead.HotelTotalCost" class="form-control" />
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.SaleAmount"></label>
-            <input asp-for="@Model.Lead.SaleAmount" class="form-control" />
-        </div>
-
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.LeadType"></label>
-            <select asp-for="@Model.Lead.LeadType" class="form-control">
-                <option selected disabled>Select</option>
-                <option>Public Trip</option>
-                <option>Private Trip</option>
-                <option>Car Rental</option>
-
-            </select>
-        </div>
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.Name"></label>
+        <input asp-for="@Model.Lead.Name" class="form-control" />
     </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.NumberOfDays"></label>
+        <input asp-for="@Model.Lead.NumberOfDays" class="form-control" />
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.Destinations"></label>
+        <input asp-for="@Model.Lead.Destinations" class="form-control" />
+    </div>
+
+
+
+    <!-- LeadDays section -->
+    <div id="leadDaysSection">
+        @if (Model.LeadDay != null)
+        {
+            for (int i = 0; i < Model.LeadDay.Count; i++)
+            {
+                <div class="lead-day">
+                    <h3>Lead Day @(i + 1)</h3>
+                    <input type="hidden" asp-for="@Model.LeadDay[i].Id" /> <!-- Add the hidden input for Id -->
+                    <input asp-for="@Model.LeadDay[i].Destination" class="form-control" placeholder="Destination" />
+                    <input asp-for="@Model.LeadDay[i].numOfDays" class="form-control" placeholder="Number of Days" />
+                </div>
+            }
+        }
+    </div>
+    <div class="inputQue">
+    <button id="add-lead-day" type="button" class="btn btn-secondary">Add Lead Day</button>
+    </div>
+
+
+
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.NumberOfPeople"></label>
+        <input asp-for="@Model.Lead.NumberOfPeople" class="form-control" />
+    </div>
+
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.IsPaid"></label>
+        <input type="checkbox" asp-for="@Model.Lead.IsPaid"   />
+    </div>
+    <div class="Multiple-Inputs-Line">
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.Email"></label>
+        <input asp-for="@Model.Lead.Email" class="form-control" />
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.Phone"></label>
+        <input asp-for="@Model.Lead.Phone" class="form-control" />
+    </div>
+    </div>
+    <div class="inputQue" hidden>
+        <label asp-for="@Model.Lead.CreatedDate"></label>
+        <input asp-for="@Model.Lead.CreatedDate" class="form-control" type="datetime-local" />
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.Status"></label>
+        <select asp-for="@Model.Lead.Status" class="form-control">
+            <option selected disabled>Select</option>
+            <option>New</option>
+            <option>Pending</option>
+            <option>InProgress</option>
+            <option>Finished</option>
+            <option>Lost</option>
+        </select>
+    </div>
+
    
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.Notes"></label>
+        <textarea asp-for="@Model.Lead.Notes" class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="Lead.CallCenterUserId">Call Center User</label>
+        @Html.DropDownListFor(model => model.Lead.CallCenterUserId, Model.CallCenterList, "Select Call Center", new { @class = "form-control" })
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="Lead.BookingDepUserId">Booking Department User</label>
+        @Html.DropDownListFor(model => model.Lead.BookingDepUserId, Model.BookingList, "Select Booking Department", new { @class = "form-control" })
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="Lead.DriverUserId">Driver User</label>
+        @Html.DropDownListFor(model => model.Lead.DriverUserId, Model.DriverList, "Select Driver", new { @class = "form-control" })
+    </div>
+
+    <div class="inputQue">
+        <label>Category</label>
+
+        <select asp-for="@Model.Lead.SelectedCarId" asp-items="@Model.CarList" class="selectC">
+            <option disabled selected>Select Car</option>
+        </select>
+        <span asp-validation-for="@Model.Lead.SelectedCarId" class="alert-warning"></span>
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.CarPickupDate"></label>
+        <input asp-for="@Model.Lead.CarPickupDate" class="form-control" type="datetime-local" />
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.CarReturnDate"></label>
+        <input asp-for="@Model.Lead.CarReturnDate" class="form-control" type="datetime-local" />
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.HotelCheckInDate"></label>
+        <input asp-for="@Model.Lead.HotelCheckInDate" class="form-control" type="datetime-local" />
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.HotelCheckOutDate"></label>
+        <input asp-for="@Model.Lead.HotelCheckOutDate" class="form-control" type="datetime-local" />
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.HotelName"></label>
+        <input asp-for="@Model.Lead.HotelName" class="form-control" />
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.HotelTotalCost"></label>
+        <input asp-for="@Model.Lead.HotelTotalCost" class="form-control" />
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.SaleAmount"></label>
+        <input asp-for="@Model.Lead.SaleAmount" class="form-control" />
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Lead.LeadType"></label>
+        <input asp-for="@Model.Lead.LeadType" class="form-control" />
+    </div>
 
     <button type="submit" class="btn btn-primary">Save</button>
     <a asp-controller="Lead" asp-action="Leads" asp-area="Admin">Cancel</a>

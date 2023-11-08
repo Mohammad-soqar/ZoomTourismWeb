@@ -10,8 +10,7 @@
       "notification": "Notification",
       "employees": "Employees",
       "logout": "Logout",
-      "support": "Support",
-      "content": "Content Management"
+      "support": "Support"
     }
   },
   "ar": {
@@ -25,9 +24,7 @@
       "notification": "إشعار",
       "employees": "موظفين",
       "logout": "تسجيل الخروج",
-      "support": "الدعم",
-      "content": "محتوى الموقع"
-
+      "support": "الدعم"
     }
   }
 }

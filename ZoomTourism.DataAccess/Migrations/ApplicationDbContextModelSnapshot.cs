@@ -283,10 +283,6 @@ namespace ZoomTourism.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Language")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -495,9 +491,6 @@ namespace ZoomTourism.DataAccess.Migrations
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
-
-                    b.Property<DateTime>("TripStartDate")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

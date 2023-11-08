@@ -8,36 +8,15 @@ using ZoomTourism.Utility;
 using Twilio.Clients;
 using ZoomTourismWeb;
 using Microsoft.Extensions.Options;
-using Hangfire;
-using System.Configuration;
-using Hangfire.SqlServer;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("appsettings.json");
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection"); // Use your own connection string
 
 // Add services to the container.
-builder.Services.AddScoped<SmsReminderService>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
  builder.Configuration.GetConnectionString("DefaultConnection")
     ));
-
-
-builder.Services.AddHangfire(config => config
-    .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
-    .UseSimpleAssemblyNameTypeSerializer()
-    .UseRecommendedSerializerSettings()
-    .UseSqlServerStorage(connectionString, new SqlServerStorageOptions
-    {
-        CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
-        SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
-        QueuePollInterval = TimeSpan.Zero,
-        UseRecommendedIsolationLevel = true,
-        UsePageLocksOnDequeue = true,
-        DisableGlobalLocks = true
-    }));
-
 
 var twilioSettings = new TwilioSettings();
 builder.Configuration.GetSection("Twilio").Bind(twilioSettings);
@@ -86,8 +65,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseHangfireDashboard();
-app.UseHangfireServer();
+
 app.UseRouting();
 app.UseAuthentication(); 
 

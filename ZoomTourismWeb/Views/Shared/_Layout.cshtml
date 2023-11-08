@@ -47,22 +47,18 @@
 
                 @if (SignInManager.IsSignedIn(User))
                 {
-                    @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_CodyleSupport))
+                    @if (User.IsInRole(SD.Role_Admin))
                     {
                         <li class="nav-item">
                             <a id="manage" class="nav-link " style="color:#C4942F; text-decoration:none;" asp-controller="Home" asp-area="Admin" asp-action="AdminDashboard" title="Manage">CRM</a>
                         </li>
                     }
-                    else if (User.IsInRole(SD.Role_CallCenter) || User.IsInRole(SD.Role_Booking) || User.IsInRole(SD.Role_Driver))
-                    {
-                        <li class="nav-item">
-                            <a id="manage" class="nav-link " style="color:#C4942F; text-decoration:none;" asp-controller="Lead" asp-area="Admin" asp-action="Leads" title="Manage">CRM</a>
-                        </li>
-                    }
                     <li class="nav-item">
                         <a id="manage" class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><img src="~/assets/icons/User-Icon.png" alt="Profile Picture"></a>
                     </li>
-                   
+                    <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button id="logout" type="submit" class="nav-link btn btn-link ">Logout</button>
+                    </form>
                    
                 }
                 else
@@ -81,10 +77,10 @@
 
                 <div class="language-selector">
                     <select id="languageSelector">
-                        <option value="en"><img src="/assets/Flags/USA.png" />EN</option>
-                        <option value="ar"><img src="/assets/Flags/Arabic.png" />AR</option>
-                        <option value="ru"><img src="/assets/Flags/RUSSIA.png" />RU</option>
-                        <option value="tr"><img src="/assets/Flags/TURKEY.png" />TR</option>
+                        <option value="en"><img src="/assets/Flags/USA.png" />English</option>
+                        <option value="ar"><img src="/assets/Flags/Arabic.png" />Arabic</option>
+                        <option value="ru"><img src="/assets/Flags/RUSSIA.png" />Russian</option>
+                        <option value="tr"><img src="/assets/Flags/TURKEY.png" />Turkish</option>
                     </select>
                 </div>
 
@@ -99,50 +95,8 @@
             @RenderBody()
         </main>
     </div>
-    <section class="footerSection">
-    <footer class="footer">
-        <div class="logoInfo">
-            <img alt="Codyle" src="~/assets/Brand/Logo.png" height="60px" draggable="false">
-            <p>Codyle makes it easy __ all in one platform! It is a platform where business owners, business starters, university students and technology enthusiasts meet.</p>
-        </div>
 
-        <div class="footer-heading footer-1">
-            <h2>Links</h2>
-
-            <a asp-action="Trips" asp-controller="Home" asp-area="Customer"> Trips </a>
-            <a asp-action="CarRental" asp-controller="car" asp-area="Customer"> Car Rental </a>
-            <a asp-action="Blogs" asp-controller="Home" asp-area="Customer"> Blogs </a>
-        </div>
-
-        <div class="footer-heading footer-2">
-            <h2>Explore</h2>
-
-            <a asp-controller="Home" asp-action="Events" asp-area="User">Events</a>
-            <a asp-area="User" asp-controller="Home" asp-action="Aboutus"> About us </a>
-            <a asp-controller="Home" asp-action="CSC" asp-area="User">Codyle Student Club</a>
-        </div>
-
-        <div class="footer-heading footer-3">
-            <h2>Contacts</h2>
-            <a href="mailto: support@zoomtourism.com">support@zoomtourism.com</a>
-            @* <a>Phone Number</a>*@
-            <div class="SocialmediaIcons">
-                <a href="https://www.instagram.com/codyle_official/" target="_blank"> <img alt="Codyle Instegram" src="/Photos/socialMedia/Instegram2.png" height="30px" draggable="false"></a>
-
-                @*  <a href="https://www.facebook.com/profile.php?id=100068896367166" target="_blank"> <img alt="Codyle Facebook" src="/Photos/socialMedia/Facebook2.png" height="30px" draggable="false"></a>*@
-
-                <a href="https://twitter.com/CodyleOfficial" target="_blank"> <img alt="Codyle Twitter" src="/Photos/socialMedia/Twitter2.png" height="34px" draggable="false"></a>
-
-                <a href="https://youtube.com/@@codyle" target="_blank"> <img alt="Codyle Youtube" src="/Photos/socialMedia/Youtube2.png" height="34px" draggable="false"> </a>
-
-                <a href="https://www.tiktok.com/@@_codyle" target="_blank"> <img alt="Codyle Tiktok" src="/Photos/socialMedia/TikTok.png" height="34px " draggable="false"></a>
-            </div>
-
-        </div>
-
-    </footer>
-        <p class="copyrights">© All Rights Reserved. Zoom Tourism<a asp-area="User" asp-controller="Home" asp-action="Privacy"> Privacy Policy</a><br /> website made by Codyle</p>
-    </section>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   

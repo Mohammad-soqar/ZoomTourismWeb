@@ -4,7 +4,7 @@
 }
 
 * {
-    font-family: 'inter' !important;
+    font-family: 'inter';
 }
 
 
@@ -125,7 +125,7 @@ section {
     padding-right: 20px; /* Adjust this value to position the flag image as needed */
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 3rem;
+    width: 6rem;
     font-size: 16px; /* Adjust the font size as needed */
     cursor: pointer;
 }
@@ -222,91 +222,4 @@ table {
 
 
 
-
-.footer {
-    margin: 0px 0px 0px 0px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: space-around;
-}
-
-    .footer h2 {
-        color: #ffffff;
-        font-size: 20px;
-        font-family: 'MontserratMedium';
-    }
-
-.copyrights {
-    color: #ffffff;
-    font-family: 'MontserratMedium';
-    font-size: 14px;
-    text-align: center;
-    margin: 20px 0px 20px 0px;
-}
-
-.footerSection {
-    margin: 140px 0px 0px 0px;
-    background-color: #1A1D23;
-    padding: 20px 0px 20px 0px;
-}
-
-
-
-
-
-
-.footer-heading a {
-    margin: 15px 64px 0px 0px;
-}
-
-.SocialmediaIcons a {
-    margin: 0px 6px 0px 6px;
-}
-
-.footer a {
-    color: #ffffffdc;
-    font-family: 'MontserratMedium';
-    text-decoration: none;
-    font-size: 16px;
-}
-
-    .footer a:hover {
-        color: #FF2E63;
-        transition: 0.5s;
-    }
-
-
-
-
-.footer p {
-    color: #ffffff;
-    font-size: 16px;
-    margin: 20px 0px 20px 0px;
-    font-family: 'MontserratMedium';
-}
-
-.footer-heading {
-    display: flex;
-    flex-direction: column;
-}
-
-.SocialmediaIcons {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0px 20px 0px;
-}
-
-
-.logoInfo {
-    margin: 10px 0px 0px 0px;
-}
-
-    .logoInfo p {
-        font-size: 14px;
-        width: 280px;
-        color: #ffffff;
-        font-family: 'MontserratMedium';
-    }
 
