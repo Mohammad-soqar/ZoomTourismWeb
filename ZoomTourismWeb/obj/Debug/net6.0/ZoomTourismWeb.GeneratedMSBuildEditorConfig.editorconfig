@@ -132,6 +132,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Mohammad Ahmad/source/repos/ZoomTourismWeb/ZoomTourismWeb/Areas/Customer/Views/Home/PrivateTrips.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxQcml2YXRlVHJpcHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Mohammad Ahmad/source/repos/ZoomTourismWeb/ZoomTourismWeb/Areas/Customer/Views/Home/ReviewUpsert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxSZXZpZXdVcHNlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -25,5 +25,8 @@ namespace ZoomTourism.Models
         public int CategoryId { get; set; }
         [ValidateNever]
         public Category Category { get; set; }
+
+        public string Language { get; set; }
+
     }
 }

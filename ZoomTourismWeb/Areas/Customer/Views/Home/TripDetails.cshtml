@@ -46,18 +46,29 @@
             <div class="Event-Details-Sec-Right">
                 <div class="Reserve-btn">
                     <div class="form-container">
-                        <div class="rental-dates">
-                            <label class="form-label" for="pickup-date">Pickup Date:</label>
-                            <input class="form-input" type="date" id="pickup-date">
+                        <div class="trip-details">
+                            <div style="
+                                 width: 70%;">
+                                <label class="form-label" for="full-name">Name Surname:</label>
+                                <input class="form-input" type="text" id="full-name">
+                            </div >
+                            <div style="
+                                 width: 70%;">
+                                <label class="form-label" for="phone-number">Phone Number:</label>
+                                <input class="form-input" type="text" id="phone-number">
+                            </div>
+                            <div style="
+                                 width: 70%;">
+                                <label class="form-label" for="origin-location">Where Are You From:</label>
+                                <select class="form-input" id="origin-location">
+                                    <option value="">Select a country</option>
+                                </select>
+                            </div>
+                           
 
-                            <label class="form-label" for="pickup-time">Pickup Time:</label>
-                            <input class="form-input" type="time" id="pickup-time">
+                            
 
-                            <label class="form-label" for="pickup-location">Pickup Location:</label>
-                            <input class="form-input" type="text" id="pickup-location">
-
-                            <label class="form-label" for="dropoff-location">Drop-off Location:</label>
-                            <input class="form-input" type="text" id="dropoff-location">
+                            
 
                             <button id="whatsapp-button">WhatsApp</button>
                         </div>
@@ -73,7 +84,7 @@
 </div>
 
 <section class="other-cars">
-    <h3>Other Cars</h3>
+    <h3>Other Destinations</h3>
     <div class="carousel-container">
         
         @foreach (var Trip in filteredTrips)
@@ -96,7 +107,7 @@
                         </div>
 
                         <div class="rating">
-                            <div class="star-rating"><img src="../assets/Icons/StarReview.png" alt="star">4.6</div>
+                            <div class="star-rating"><img src="~/assets/Icons/StarReview.png" alt="star">4.6</div>
                             <span>(@Trip.numOfReviews)</span>
                         </div>
                     </div>
@@ -132,7 +143,56 @@
         }
     </div>
 </section>
+<script>
+    fetch("https://restcountries.com/v3.1/all")
+        .then(response => response.json())
+        .then(data => {
+            // Sort the countries alphabetically by name
+            data.sort((a, b) => a.name.common.localeCompare(b.name.common));
 
+            const select = document.getElementById("origin-location");
+
+            // Iterate through the sorted list of countries and create options
+            data.forEach(country => {
+                if (country.name.common !== "Israel") {
+                    const option = document.createElement("option");
+                    option.value = country.cca2; // Use the country code as the value
+                    option.textContent = country.name.common; // Display the full country name
+                    select.appendChild(option);
+                }
+            });
+        })
+        .catch(error => console.error("Error fetching country data: " + error));
+    document.getElementById("whatsapp-button").addEventListener("click", function () {
+        const fullName = document.getElementById("full-name").value;
+        const phoneNumber = document.getElementById("phone-number").value;
+        const originLocation = document.getElementById("origin-location").value;
+
+        if (!fullName) {
+            alert("Please enter your Name Surname.");
+            return;
+        }
+
+        if (!phoneNumber) {
+            alert("Please enter your Phone Number.");
+            return;
+        }
+
+        if (!originLocation) {
+            alert("Please select your country.");
+            return;
+        }
+
+        // Continue with WhatsApp message generation and URL opening
+        // ...
+
+        // If everything is valid, proceed with generating the WhatsApp message and opening the URL
+        const message = `Hi, I am from ${originLocation} and my name is ${fullName}. My phone number is ${phoneNumber}. Can you assist me with something?`;
+        const whatsappURL = `https://wa.me/+905388782103/?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL);
+    });
+
+</script>
 @section Scripts{
     <script>
         var currentPage = "TripDetails";
@@ -140,7 +200,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="~/js/IndexTranslation.js"></script>
-    <script src="~/js/TripmessageSending.js"></script>
-
+  
 
 }

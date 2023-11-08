@@ -32,7 +32,7 @@
                @foreach (var Trip in Model.OrderByDescending(p => p.CreatedDate).ToList())
             {
                 <li>
-                    <a asp-action="TripsDetails" asp-route-id="@Trip.Id">
+                    <a asp-action="TripDetails" asp-route-id="@Trip.Id">
                         <div class="carousel-item">
                             <div class="Thumbnail">
                                 @if (Trip.Price != 0 || Trip.Price != null)

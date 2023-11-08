@@ -2,9 +2,18 @@
 
 body {
     margin: 0px;
-    background-color: #252A34;
+    background-color: #fff;
+}
+.nav-item a {
+    color: #282828;
+    text-decoration:none;
 }
 
+.nav-pills{
+    display:flex;
+    flex-direction:column;
+    gap:3rem;
+}
 
 @media only screen and (min-width: 750px) {
     .profile {
@@ -16,7 +25,7 @@ body {
     .linksSide {
         display: flex;
         flex-direction: column;
-        background-color: #1a1d24bb;
+        background-color: #c4942f82;
         padding: 40px 50px;
         border-radius: 16px;
         margin: 0px 80px 0px 0px;

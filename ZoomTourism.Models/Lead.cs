@@ -20,6 +20,10 @@ namespace ZoomTourism.Models
         [ValidateNever]
         public DateTime CreatedDate { get; set; } //no need
 
+
+        [ValidateNever]
+        public DateTime TripStartDate { get; set; } //no need
+
         public LeadStatus Status { get; set; } //no need
         [ValidateNever]
         public string? Notes { get; set; }

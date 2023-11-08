@@ -23,7 +23,7 @@
 <div class="newestLeads">
     <div class="add-employee-button-container">
         <a asp-action="AdminDashboard" asp-controller="Home" asp-area="Admin" class="back-Button">← back</a>
-        <a href="/HTML/addNew-Employee.html" class="add-employee-button">Add New Employee</a>
+        <a asp-area="Identity" asp-page="/Account/Register">Add New Employee</a>
     </div>
     <div class="table-container">
         <div class="widgetHeader">
@@ -89,3 +89,14 @@
         </div>
     </div>
 </div>
+
+@section Scripts{
+       
+    <script>
+        var currentPage = "employees";
+    </script>
+    <script src="~/js/LeadTable.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Dashboard.js"></script>
+    <script src="~/js/IndexTranslation.js"></script>
+}

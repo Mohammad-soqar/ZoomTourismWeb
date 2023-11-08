@@ -26,6 +26,7 @@ namespace ZoomTourism.DataAccess.Repository
             if (objFromDb != null)
             {
                 objFromDb.Name = obj.Name;
+                objFromDb.TripStartDate = obj.TripStartDate;
                 objFromDb.NumberOfDays = obj.NumberOfDays;
                 objFromDb.Destinations = obj.Destinations;
                 objFromDb.NumberOfPeople = obj.NumberOfPeople;

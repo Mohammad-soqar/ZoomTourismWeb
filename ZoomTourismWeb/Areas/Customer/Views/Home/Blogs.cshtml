@@ -6,10 +6,7 @@
     <link rel="stylesheet" href="~/css/Blogs.css" asp-append-version="true" />
 
 </head>
-<select id="languageSelector">
-    <option value="en">English</option>
-    <option value="ar">العربية</option>
-</select>
+
 <section class="BlogSection">
 
     <div class="section-title">
@@ -37,8 +34,9 @@
     <ul id="blog-list" class="blogBox">
         @foreach (var Blog in Model.OrderByDescending(p => p.DatePosted).ToList())
         {
-            <li>
-                <a asp-action="BlogDetails" asp-route-id="@Blog.Id">
+         
+                <li class="blog-item" >
+                <a id="@Blog.Language" class="blog-card" asp-action="BlogDetails" asp-route-id="@Blog.Id">
                     <div class="blog-right">
                         <img alt="@Blog.Title" src="@Blog.ImageUrl" height="200" draggable="false">
                         <div class="blog-right-text">
@@ -58,14 +56,20 @@
     </ul>
 
 </section>
+
+
 @section Scripts{
     <script>
         // Define a JavaScript variable for the current page
         var currentPage = "blogs";
     </script>
+
+    
     <script src="~/js/IndexTranslation.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
 <script src="../Javascript/app.js"></script>
     <script src="../Javascript/search.js"></script>
 

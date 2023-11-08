@@ -3,8 +3,26 @@ body {
     height: 100%;
 }
 
+@font-face {
+    font-family: 'inter';
+    src: url('../assets/Font/Inter-Medium.ttf');
+}
+
 * {
-    font-family: 'MontserratMedium' !important;
+    font-family: 'inter';
+}
+
+.trip-title h3{
+    font-size:1.3em !important;
+}
+
+.carousel-item-details{
+    text-decoration:none;
+    color:#282828;
+}
+
+.carousel-container{
+    margin: 0rem 5rem;
 }
 
 html,

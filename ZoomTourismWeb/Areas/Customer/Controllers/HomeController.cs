@@ -52,6 +52,13 @@ namespace ZoomTourismWeb.Areas.Customer.Controllers
             IEnumerable<Trip> TripList = _unitOfWork.Trip.GetAll();
             return View(TripList);
         }
+
+        public IActionResult PrivateTrips()
+        {
+            IEnumerable<Trip> TripList = _unitOfWork.Trip.GetAll();
+            return View(TripList);
+        }
+
         public IActionResult TripsDetails(int id)
         {
             Trip trip = _unitOfWork.Trip.GetFirstOrDefault(r => r.Id == id);

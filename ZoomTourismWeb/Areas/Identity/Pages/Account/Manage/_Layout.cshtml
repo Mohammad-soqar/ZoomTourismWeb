@@ -1,31 +1,93 @@
-﻿@{
-    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
-    {
-        Layout = (string)parentLayout;
-    }
-    else
-    {
-        Layout = "/Areas/Identity/Pages/_Layout.cshtml";
-    }
-}
+﻿@using CodyleOffical.Utility;
+@using Microsoft.AspNetCore.Identity
+@using System.Security.Claims
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 <head>
     <link rel="stylesheet" href="~/css/profile.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/NavBar.css" asp-append-version="true" />
 </head>
-<h1>Manage your  asdasd account</h1>
+<header>
+    <nav class="nav-bar">
+        <div class="nav-header">
+            <a asp-action="Index" asp-controller="Home" asp-area="Customer"><img src="~/assets/Brand/Logo.png" alt="Logo" class="logo"></a>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <ul class="nav-list">
+            <a href="aboutus.html">
+            <li class="nav-links">About Us</li>
+            </a>
+            <a asp-action="Trips" asp-controller="Home" asp-area="Customer">
+            <li class="nav-links">Trips</li>
+            </a>
+            <a asp-action="Blogs" asp-controller="Home" asp-area="Customer">
+            <li class="nav-links">Blogs</li>
+            </a>
+            <a asp-action="CarRental" asp-controller="Car" asp-area="Customer">
+            <li class="nav-links">Car Rental</li>
+            </a>
+        </ul>
+        <div class="nav-buttons">
 
-<div>
-    <h2>Change your account settings</h2>
-    <hr />
-    <div class="row">
-        <div class="col-md-3">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                @if (User.IsInRole(SD.Role_Admin))
+                {
+                    <li class="nav-item">
+                        <a id="manage" class="nav-link " style="color:#C4942F; text-decoration:none;" asp-controller="Home" asp-area="Admin" asp-action="AdminDashboard" title="Manage">CRM</a>
+                    </li>
+                }
+                <li class="nav-item">
+                    <a id="manage" class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><img src="~/assets/icons/User-Icon.png" alt="Profile Picture"></a>
+                </li>
+              
+
+            }
+            else
+            {
+                <div class="nav-buttons">
+                    <li style="list-style:none;" class="nav-item">
+                        <a class="nav-link Transperent-brand-btn" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                    </li>
+
+                    <li style="list-style:none;" class="nav-item">
+                        <a class="nav-link brand-background-btn" id="register" asp-area="Identity" asp-page="/Account/Register">Sign up</a>
+                    </li>
+                </div>
+
+            }
+
+            <div class="language-selector">
+                <select id="languageSelector">
+                    <option value="en"><img src="/assets/Flags/USA.png" />English</option>
+                    <option value="ar"><img src="/assets/Flags/Arabic.png" />Arabic</option>
+                    <option value="ru"><img src="/assets/Flags/RUSSIA.png" />Russian</option>
+                    <option value="tr"><img src="/assets/Flags/TURKEY.png" />Turkish</option>
+                </select>
+            </div>
+
+
+        </div>
+    </nav>
+</header>
+
+    <div class="profile">
+        <div class="linksSide">
             <partial name="_ManageNav" />
         </div>
-        <div class="col-md-9">
+        <div class="inputSide">
             @RenderBody()
         </div>
     </div>
 </div>
 
-@section Scripts {
-    @RenderSection("Scripts", required: false)
-}
+@RenderSection("Scripts", required: false)
+

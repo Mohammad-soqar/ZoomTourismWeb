@@ -22,8 +22,8 @@ function loadDataTable() {
                 "render": function (data) {
                     return `
                      <div class="editdelete">
-                        <a class="edit" href = "/Admin/Blog/Upsert?id=${data}">ss<img src="https://i.ibb.co/M8CWKSM/Group-416.png" height="25px"></a >
-                            <a class="delete" onClick=Delete('/Admin/Blog/DeletePost/${data}')>ss<img src="https://i.ibb.co/PWwbzb3/Group-417.png" height="25px"></a>
+                        <a class="edit" href = "/Admin/Blog/Upsert?id=${data}">Edit<img src="https://i.ibb.co/M8CWKSM/Group-416.png" height="25px"></a >
+                            <a class="delete" onClick=Delete('/Admin/Blog/DeletePost/${data}')>Delete<img src="https://i.ibb.co/PWwbzb3/Group-417.png" height="25px"></a>
                         </div >`
 
 

@@ -1,0 +1,89 @@
+﻿* {
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'inter' !important;
+    /*to stop blue highlight while clicking on mobile phones*/
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../assets/Font/Inter-Medium.ttf');
+}
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+@media only screen and (max-width: 770px) {
+
+   
+
+    .adminButtons {
+        display: grid;
+        justify-content: center;
+        margin: 10px 20px 0px 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+
+        .adminButtons a {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            margin: 20px 5px 20px 5px;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(196, 148, 47, 0.15) 0%, #C4942F 100%);
+            color: #ffffff;
+            padding: 40px 0px;
+            border-radius: 14px;
+            font-family: 'MontserratMedium';
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+   
+
+    .adminButtons img {
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+@media only screen and (min-width: 770px) {
+  
+
+    .adminButtons {
+        display: grid;
+        justify-content: center;
+        margin: 80px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+
+        .adminButtons a {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 50px 20px 50px;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(196, 148, 47, 0.15) 0%, #C4942F 100%);
+            color: #ffffff;
+            padding: 40px 0px;
+            border-radius: 14px;
+            font-family: 'MontserratMedium';
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+    .adminButtons img {
+        margin: 0px 0px 20px 0px;
+    }
+}
