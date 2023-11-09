@@ -32,6 +32,8 @@ namespace ZoomTourism.DataAccess.Repository
                 objFromDb.Lead = obj.Lead;
                 objFromDb.AssignedUserId = obj.AssignedUserId;
                 objFromDb.AssignedUser = obj.AssignedUser;
+                objFromDb.TaskPriority = obj.TaskPriority;
+                objFromDb.TaskStatus = obj.TaskStatus;
 
             }
         }

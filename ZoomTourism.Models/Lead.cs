@@ -10,7 +10,7 @@ namespace ZoomTourism.Models
     public class Lead
     {
         public int Id { get; set; }//no need
-        public string LeadType { get; set; }
+     
 
         //General
         public string Name { get; set; }//
@@ -19,10 +19,8 @@ namespace ZoomTourism.Models
         public string Phone { get; set; }//
         [ValidateNever]
         public DateTime CreatedDate { get; set; } //no need
+        public string LeadType { get; set; }
 
-
-        [ValidateNever]
-        public DateTime TripStartDate { get; set; } //no need
 
         public LeadStatus Status { get; set; } //no need
         [ValidateNever]
@@ -48,6 +46,8 @@ namespace ZoomTourism.Models
         //Private Trip
         [ValidateNever]
         public string? Destinations { get; set; }
+        [ValidateNever]
+        public DateTime TripStartDate { get; set; } //no need
         [ValidateNever]
         public int? NumberOfPeople { get; set; }
         [ValidateNever]

@@ -248,6 +248,13 @@ namespace ZoomTourism.DataAccess.Migrations
                     b.Property<int?>("LeadId")
                         .HasColumnType("int");
 
+                    b.Property<string>("TaskPriority")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TaskStatus")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

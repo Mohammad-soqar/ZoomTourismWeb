@@ -369,6 +369,10 @@
       "PackagePath": "staticwebassets\\assets\\Icons\\britainFlag.png"
     },
     {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\calender.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\calender.png"
+    },
+    {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\Fuel.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\cars\\Fuel.png"
     },
@@ -437,6 +441,10 @@
       "PackagePath": "staticwebassets\\assets\\Icons\\starBadge.png"
     },
     {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\threedots.png",
+      "PackagePath": "staticwebassets\\assets\\Icons\\threedots.png"
+    },
+    {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\transmission-Icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\transmission-Icon.png"
     },
@@ -473,8 +481,20 @@
       "PackagePath": "staticwebassets\\assets\\Pictures\\man-suitcase.png"
     },
     {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\private-trip.jpg",
+      "PackagePath": "staticwebassets\\assets\\Pictures\\private-trip.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\privatetrip.jpg",
+      "PackagePath": "staticwebassets\\assets\\Pictures\\privatetrip.jpg"
+    },
+    {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\reviews-map.png",
       "PackagePath": "staticwebassets\\assets\\Pictures\\reviews-map.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\signinPage.jpg",
+      "PackagePath": "staticwebassets\\assets\\Pictures\\signinPage.jpg"
     },
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\New-Maidens-Tower-Yeni-Kiz-Kulesi-Istanbul-Tourist-Information.png",

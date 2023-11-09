@@ -14,13 +14,32 @@ namespace ZoomTourism.Models
         public string Description { get; set; }
         public DateTime DueDate { get; set; }
 
+        public string TaskPriority { get; set; }
+
+        public TaskStatus TaskStatus { get; set; }
+
         public string AssignedUserId { get; set; }
         [ValidateNever]
         public ApplicationUser AssignedUser { get; set; }
 
         [ValidateNever]
+
         public int? LeadId { get; set; }
         [ValidateNever]
         public Lead Lead { get; set; }
+    }
+
+    public enum TaskPriority
+    {
+        Low,
+        Meduim,
+        High
+    }
+
+    public enum TaskStatus
+    {
+        ToDo,
+        InProgress,
+        Done
     }
 }

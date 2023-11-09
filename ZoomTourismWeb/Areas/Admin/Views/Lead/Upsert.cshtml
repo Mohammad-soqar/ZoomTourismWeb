@@ -22,8 +22,6 @@
     <title>Create a Lead</title>
 </head>
 
-<span class="close-button">X</span>
-<p id="new-lead-p">New Lead</p>
 <div class="lead-type-container">
     <div class="lead-type-buttons-container">
         <div class="lead-type-buttons">
@@ -42,6 +40,18 @@
         <input type="hidden" asp-for="@Model.Lead.Id" />
 
         <div class="inputQue">
+            <label asp-for="@Model.Lead.Status"></label>
+            <select asp-for="@Model.Lead.Status" class="form-control">
+                <option selected disabled>Select</option>
+                <option>New</option>
+                <option>Pending</option>
+                <option>InProgress</option>
+                <option>Finished</option>
+                <option>Lost</option>
+            </select>
+        </div>
+
+        <div class="inputQue">
             <label asp-for="@Model.Lead.Name"></label>
             <input asp-for="@Model.Lead.Name" class="form-control" />
         </div>
@@ -53,7 +63,7 @@
 
         <input asp-for="@Model.Lead.Destinations" hidden value="NaN" class="form-control" />
         
-        <div class="inputQue">
+        <div class="inputQue specific-inputs specific-private-inputs">
             <label asp-for="@Model.Lead.TripStartDate"></label>
             <input asp-for="@Model.Lead.TripStartDate" type="datetime-local" class="form-control" />
         </div>
@@ -81,7 +91,7 @@
 
 
 
-        <div class="inputQue">
+        <div class="inputQue specific-inputs specific-private-inputs">
             <label asp-for="@Model.Lead.NumberOfPeople"></label>
             <input asp-for="@Model.Lead.NumberOfPeople" class="form-control" />
         </div>
@@ -102,22 +112,11 @@
                 <input asp-for="@Model.Lead.Phone" class="form-control" />
             </div>
         </div>
-        <div class="inputQue" hidden>
-            <label asp-for="@Model.Lead.CreatedDate"></label>
-            <input asp-for="@Model.Lead.CreatedDate" class="form-control" type="datetime-local" />
-        </div>
+      
+            <input asp-for="@Model.Lead.CreatedDate" hidden class="form-control" type="datetime-local" />
+      
 
-        <div class="inputQue">
-            <label asp-for="@Model.Lead.Status"></label>
-            <select asp-for="@Model.Lead.Status" class="form-control">
-                <option selected disabled>Select</option>
-                <option>New</option>
-                <option>Pending</option>
-                <option>InProgress</option>
-                <option>Finished</option>
-                <option>Lost</option>
-            </select>
-        </div>
+       
 
 
 
@@ -141,7 +140,7 @@
             @Html.DropDownListFor(model => model.Lead.DriverUserId, Model.DriverList, "Select Driver", new { @class = "form-control" })
         </div>
 
-        <div class="inputQue">
+        <div class="inputQue specific-inputs specific-car-rental-inputs">
             <label>Category</label>
 
             <select asp-for="@Model.Lead.SelectedCarId" asp-items="@Model.CarList" class="selectC">
@@ -150,35 +149,42 @@
             <span asp-validation-for="@Model.Lead.SelectedCarId" class="alert-warning"></span>
         </div>
 
-        <div class="inputQue">
+        <div class="Multiple-Inputs-Line">
+        <div class="inputQue specific-inputs specific-car-rental-inputs">
             <label asp-for="@Model.Lead.CarPickupDate"></label>
             <input asp-for="@Model.Lead.CarPickupDate" class="form-control" type="datetime-local" />
         </div>
 
-        <div class="inputQue">
+        <div class="inputQue specific-inputs specific-car-rental-inputs">
             <label asp-for="@Model.Lead.CarReturnDate"></label>
             <input asp-for="@Model.Lead.CarReturnDate" class="form-control" type="datetime-local" />
         </div>
+        </div>
 
-        <div class="inputQue">
+        <div class="Multiple-Inputs-Line">
+        <div class="inputQue specific-inputs specific-private-inputs">
             <label asp-for="@Model.Lead.HotelCheckInDate"></label>
             <input asp-for="@Model.Lead.HotelCheckInDate" class="form-control" type="datetime-local" />
         </div>
-
-        <div class="inputQue">
+       
+        <div class="inputQue specific-inputs specific-private-inputs">
             <label asp-for="@Model.Lead.HotelCheckOutDate"></label>
             <input asp-for="@Model.Lead.HotelCheckOutDate" class="form-control" type="datetime-local" />
         </div>
+        </div>
 
-        <div class="inputQue">
+        <div class="Multiple-Inputs-Line">
+        <div class="inputQue specific-inputs specific-private-inputs">
             <label asp-for="@Model.Lead.HotelName"></label>
             <input asp-for="@Model.Lead.HotelName" class="form-control" />
         </div>
 
-        <div class="inputQue">
+        <div class="inputQue specific-inputs specific-private-inputs">
             <label asp-for="@Model.Lead.HotelTotalCost"></label>
             <input asp-for="@Model.Lead.HotelTotalCost" class="form-control" />
         </div>
+        </div>
+
 
         <div class="inputQue">
             <label asp-for="@Model.Lead.SaleAmount"></label>
@@ -228,6 +234,36 @@
             });
         });
 
+        $(document).ready(function () {
+            // Function to toggle input fields based on lead type selection
+            function toggleInputFields(leadType) {
+                // General inputs
+                $('.inputQue').show();
+
+                // Hide all specific inputs
+                $('.specific-inputs').hide();
+
+                if (leadType === 'Public') {
+                    // Show specific inputs for Public lead type
+                } else if (leadType === 'Private') {
+                    // Show specific inputs for Private lead type
+                    $('.specific-private-inputs').show();
+                } else if (leadType === 'Car Rental') {
+                    // Show specific inputs for Car Rental lead type
+                    $('.specific-car-rental-inputs').show();
+                }
+            }
+
+            // Initial state
+            toggleInputFields($('input[name="tabs"]:checked').next().text());
+
+            // Event listener for lead type radio button changes
+            $('input[name="tabs"]').change(function () {
+                var selectedLeadType = $(this).next().text();
+                toggleInputFields(selectedLeadType);
+            });
+        });
+
 
 
         tinymce.init({
@@ -236,6 +272,8 @@
             toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
         });
     </script>
+
+
 @* 
     <script>
         $(document).ready(function () {

@@ -1,7 +1,10 @@
 ﻿.trips-choosing-container {
+    display: flex;
+    gap: 1rem;
     border: #C4942F solid 3px;
     padding: 2rem;
     border-radius: 22px;
+    flex-direction: column;
 }
 
 .trips-choosing-container h2 {
@@ -40,9 +43,16 @@
 .trip-choosing-content {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    padding: 1rem 2rem;
+    justify-content: space-between;
 }
+
+    .trip-choosing-content img {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .trip-choosing-content a {
+        margin: 0rem 1rem 0rem 0rem;
+    }
 
 .trip-choosing-content h3 {
     color: #fff;
@@ -83,4 +93,42 @@ input[type="checkbox"]:checked+.trip-choosing-content {
     flex-direction:column;
     gap:2rem;
     margin: 5rem 12rem;
+    background-color:#fff;
+    padding:2rem 3rem;
+    border-radius: 22px;
 }
+
+
+body {
+    background-image: url("/assets/Pictures/private-trip.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-bar {
+    background-color: #ffffffce;
+    padding-bottom: 1rem;
+}
+
+.whatsapp-btn {
+    display:flex;
+    justify-content:center;
+
+}
+
+#whatsapp-button {
+    background-color: #25d366;
+    color: #fff;
+    font-size: 1.3em;
+    border-radius: 27px;
+    padding: 1rem 3rem;
+}
+
+
+/*.private-trip-backgroundImage img{
+    top:0;
+    left:0;
+    position:sticky;
+    z-index:-1;
+    height:100vh;
+}*/

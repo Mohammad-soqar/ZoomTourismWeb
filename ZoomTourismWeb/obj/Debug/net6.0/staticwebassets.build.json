@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7pERGtpRWU1OUwNxecwAQEcK+3m39caQYSJnAdMpC3A=",
+  "Hash": "vPyMyuAcZvkqziCdbCT9qDek47t/YEVgryws60OLjX8=",
   "Source": "ZoomTourismWeb",
   "BasePath": "_content/ZoomTourismWeb",
   "Mode": "Default",
@@ -1530,6 +1530,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\Icons\\britainFlag.png"
     },
     {
+      "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\calender.png",
+      "SourceId": "ZoomTourismWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\",
+      "BasePath": "_content/ZoomTourismWeb",
+      "RelativePath": "assets/Icons/calender.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Icons\\calender.png"
+    },
+    {
       "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Car-Icon.png",
       "SourceId": "ZoomTourismWeb",
       "SourceType": "Discovered",
@@ -2176,6 +2193,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\Icons\\Tasks-icon.png"
     },
     {
+      "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\threedots.png",
+      "SourceId": "ZoomTourismWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\",
+      "BasePath": "_content/ZoomTourismWeb",
+      "RelativePath": "assets/Icons/threedots.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Icons\\threedots.png"
+    },
+    {
       "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\transmission.png",
       "SourceId": "ZoomTourismWeb",
       "SourceType": "Discovered",
@@ -2482,6 +2516,40 @@
       "OriginalItemSpec": "wwwroot\\assets\\Pictures\\man-suitcase.png"
     },
     {
+      "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\privatetrip.jpg",
+      "SourceId": "ZoomTourismWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\",
+      "BasePath": "_content/ZoomTourismWeb",
+      "RelativePath": "assets/Pictures/privatetrip.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Pictures\\privatetrip.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\private-trip.jpg",
+      "SourceId": "ZoomTourismWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\",
+      "BasePath": "_content/ZoomTourismWeb",
+      "RelativePath": "assets/Pictures/private-trip.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Pictures\\private-trip.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\reviews-map.png",
       "SourceId": "ZoomTourismWeb",
       "SourceType": "Discovered",
@@ -2497,6 +2565,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\Pictures\\reviews-map.png"
+    },
+    {
+      "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\signinPage.jpg",
+      "SourceId": "ZoomTourismWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\",
+      "BasePath": "_content/ZoomTourismWeb",
+      "RelativePath": "assets/Pictures/signinPage.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Pictures\\signinPage.jpg"
     },
     {
       "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\trips\\Bursa.png",

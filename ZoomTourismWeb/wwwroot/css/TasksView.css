@@ -1,41 +1,196 @@
-﻿
-@font-face {
-    font-family: 'inter';
-    src: url('../assets/Font/Inter-Medium.ttf');
+﻿@media screen and (max-width: 840px) {
+    .tasks-board {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 2rem;
+        flex: 1;
+        overflow-y: hidden;
+    }
+
+    .tasks-column {
+        display: flex;
+        gap: 1rem;
+        border-top: 1px solid #282828;
+        border-bottom: 1px solid #282828;
+        width: 100%;
+        flex-direction: column;
+        background-color: #28282805;
+        padding: 1rem 1rem 1rem 1rem;
+        flex: 1;
+        overflow-y: auto;
+    }
 }
 
-* {
-    font-family: 'inter';
+@media screen and (min-width: 840px) {
+    .tasks-board {
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+        
+        flex: 1;
+        overflow-y: hidden;
+    }
+
+    .tasks-column {
+        display: flex;
+        gap: 1rem;
+        border-left: 1px solid #28282819;
+        border-right: 1px solid #28282819;
+        width: 100%;
+        flex-direction: column;
+        background-color: #28282805;
+        padding: 1rem 1rem 0rem 1rem;
+        flex: 1;
+        overflow-y: auto;
+    }
 }
-.tasks-container {
-    margin: 2rem;
-    background-color: #ffffff;
-    padding: 1rem 2rem;
-    border-radius: 27px;
+
+
+
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    color: #282828;
+}
+
+    .column-header a {
+        text-decoration: none;
+        color: #282828;
+    }
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0rem 1rem;
     overflow-y: auto;
-    max-height: 75%;
 }
 
-.task-1 {
-    /* display: flex; */
+.task {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 22px;
+    box-shadow: 0px 3px 11px #2828281e;
+    background-color: #fff;
+    padding: 2rem;
+    transition: .3s;
+    border: 1px solid #9b9b9b;
+}
+
+    .task:hover {
+        box-shadow: 0px 5px 11px #28282836;
+        transition: .3s;
+        padding-bottom: 2.3rem;
+    }
+
+.task-header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 0 1rem 0;
-    background: #fff8eb;
-    padding: 1rem;
-    border-radius: 17px;
 }
 
-    .task-1 h3 {
-        font-size: 24px;
-        margin: 0 0 10px 0;
+.Priority {
+    padding: .5rem;
+    border-radius: 12px;
+}
+
+.high {
+    background-color: #fcb6b6;
+    color: #c00000;
+}
+
+.medium {
+    background-color: #fceeb6;
+    color: #c09300;
+}
+
+.low {
+    background-color: #c3fbf6;
+    color: #00aac0;
+}
+
+.task-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #282828;
+}
+
+    .task-content h3 {
+        font-weight: 800;
     }
 
-    .task-1 p {
-        line-height: 1.5;
+    .task-content p {
+        font-weight: 500;
     }
 
-#task-number {
-  font-size: .7em;
-    font-weight: bold;
+.task-calender {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-calender {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.task-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.no-task {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: 3rem 0rem 0rem 0rem;
+}
+
+    .no-task h3 {
+        height: 2rem;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+    .dropdown .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0px 5px 11px #28282836;
+        border-radius: 10px;
+        right: 0;
+        z-index: 1;
+        min-width: 150px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        /* Add padding to create space between options */
+    }
+
+
+
+.status-dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown .dropdown-content a {
+    display: block;
+    margin: 5px 0;
+    /* Add margin to create space between options */
+}
+
+.dropdown-content a:hover {
+    background-color: #28282820;
 }

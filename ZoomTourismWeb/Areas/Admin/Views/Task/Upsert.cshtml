@@ -33,7 +33,27 @@
         <input asp-for="@Model.Task.DueDate" class="form-control" />
     </div>
 
+    <div class="inputQue">
+        <label asp-for="@Model.Task.TaskPriority"></label>
+        <select asp-for="@Model.Task.TaskPriority" class="form-control">
+            <option selected disabled>Select</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
 
+        </select>
+    </div>
+
+    <div class="inputQue">
+        <label asp-for="@Model.Task.TaskStatus"></label>
+        <select asp-for="@Model.Task.TaskStatus" class="form-control">
+            <option selected disabled>Select</option>
+            <option>ToDo</option>
+            <option>InProgress</option>
+            <option>Done</option>
+
+        </select>
+    </div>
 
     <div class="form-group">
         <label asp-for="Task.AssignedUserId">Select User</label>

@@ -139,8 +139,9 @@ namespace ZoomTourism.Areas.Admin.Controllers
 
             _unitOfWork.ATask.Remove(obj);
             _unitOfWork.Save();
-            return Json(new { success = true, message = "blog deleted successfuly" });
-            return RedirectToAction("Index");
+
+            string script = "window.location.reload();";
+            return Content("<script>" + script + "</script>");
 
             return View(Id);
 

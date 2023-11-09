@@ -113,8 +113,20 @@ body {
     overflow-x: hidden;
 }
 
-ol,
-ul {
+.logoutbtn {
+    background: none !important;
+}
+
+    .logoutbtn button {
+        background: #C4942F;
+        padding:.4rem 1rem;
+        color:#fff;
+        border-radius:22px;
+        margin: .5rem 0rem 0rem 0rem;
+        border: none;
+    }
+
+    ol, ul {
     list-style: none;
 }
 
