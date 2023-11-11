@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\ZoomTourismWeb.csproj": {}
+    "C:\\Github projects\\ZoomTourismWeb\\ZoomTourismWeb\\ZoomTourismWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.DataAccess\\ZoomTourism.DataAccess.csproj": {
+    "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.DataAccess\\ZoomTourism.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.DataAccess\\ZoomTourism.DataAccess.csproj",
+        "projectUniqueName": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.DataAccess\\ZoomTourism.DataAccess.csproj",
         "projectName": "ZoomTourism.DataAccess",
-        "projectPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.DataAccess\\ZoomTourism.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Mohammad Ahmad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.DataAccess\\obj\\",
+        "projectPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.DataAccess\\ZoomTourism.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\mhmda\\.nuget\\packages\\",
+        "outputPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Mohammad Ahmad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mhmda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj": {
-                "projectPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj"
+              "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj": {
+                "projectPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj"
               }
             }
           }
@@ -104,25 +99,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj": {
+    "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj",
+        "projectUniqueName": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj",
         "projectName": "ZoomTourism.Models",
-        "projectPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj",
-        "packagesPath": "C:\\Users\\Mohammad Ahmad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Models\\obj\\",
+        "projectPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj",
+        "packagesPath": "C:\\Users\\mhmda\\.nuget\\packages\\",
+        "outputPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Mohammad Ahmad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mhmda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,7 +121,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -208,25 +198,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj": {
+    "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj",
+        "projectUniqueName": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj",
         "projectName": "ZoomTourism.Utility",
-        "projectPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj",
-        "packagesPath": "C:\\Users\\Mohammad Ahmad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Utility\\obj\\",
+        "projectPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj",
+        "packagesPath": "C:\\Users\\mhmda\\.nuget\\packages\\",
+        "outputPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Utility\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Mohammad Ahmad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mhmda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -234,7 +220,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -312,25 +297,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\ZoomTourismWeb.csproj": {
+    "C:\\Github projects\\ZoomTourismWeb\\ZoomTourismWeb\\ZoomTourismWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\ZoomTourismWeb.csproj",
+        "projectUniqueName": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourismWeb\\ZoomTourismWeb.csproj",
         "projectName": "ZoomTourismWeb",
-        "projectPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\ZoomTourismWeb.csproj",
-        "packagesPath": "C:\\Users\\Mohammad Ahmad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\obj\\",
+        "projectPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourismWeb\\ZoomTourismWeb.csproj",
+        "packagesPath": "C:\\Users\\mhmda\\.nuget\\packages\\",
+        "outputPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourismWeb\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Mohammad Ahmad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mhmda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -338,21 +319,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.DataAccess\\ZoomTourism.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.DataAccess\\ZoomTourism.DataAccess.csproj"
+              "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.DataAccess\\ZoomTourism.DataAccess.csproj": {
+                "projectPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.DataAccess\\ZoomTourism.DataAccess.csproj"
               },
-              "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj": {
-                "projectPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj"
+              "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj": {
+                "projectPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj"
               },
-              "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj": {
-                "projectPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj"
+              "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj": {
+                "projectPath": "C:\\Github projects\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj"
               }
             }
           }
@@ -441,7 +421,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
