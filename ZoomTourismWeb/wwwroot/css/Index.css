@@ -1,11 +1,19 @@
 ﻿.img-text-section {
     display: flex;
+   
+}
+
+.background-image-welcome {
+    background-image: url("/assets/Pictures/signinPage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #28282893;
 }
 
 @media only screen and (min-width: 1300px) {
-
     .img-text-section {
-        margin: 3rem 12rem;
+        padding: 3rem 12rem 10rem 12rem;
         align-items: stretch;
     }
 
@@ -24,7 +32,7 @@
 
         .text-side h1 {
             font-size: 5em;
-            color: #292929;
+            color: #fff;
             font-weight: 600;
             position: relative;
         }
@@ -52,11 +60,15 @@
     .text-side p,
     .CustomTrip-text p {
         font-size: 1.2em;
-        color: #7A7A7A;
+        color: #7A7a7a;
         width: 60%;
         text-align: justify;
         font-weight: 500;
         position: relative;
+    }
+
+    .text-side p {
+        color: #cfcfcf !important;
     }
 
     .CustomTrip p {
@@ -82,7 +94,6 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 1rem;
-        margin: 10rem 0rem 0rem 0rem;
         padding: 0rem 8rem;
     }
 

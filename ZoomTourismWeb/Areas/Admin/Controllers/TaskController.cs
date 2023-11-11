@@ -140,13 +140,52 @@ namespace ZoomTourism.Areas.Admin.Controllers
             _unitOfWork.ATask.Remove(obj);
             _unitOfWork.Save();
 
-            string script = "window.location.reload();";
-            return Content("<script>" + script + "</script>");
+            return RedirectToAction("Index");
 
             return View(Id);
 
         }
+        public IActionResult TaskStatusDone(int? Id)
+        {
+            var Task = _unitOfWork.ATask.GetFirstOrDefault(u => u.Id == Id);
+            if(Task.TaskStatus.ToString().ToLower() != "done")
+            {
+                Task.TaskStatus = Models.TaskStatus.Done;
+                _unitOfWork.Save();
+                return RedirectToAction("Index");
 
+            }
+            return RedirectToAction("Index");
+
+        }
+
+        public IActionResult TaskStatusToDo(int? Id)
+        {
+            var Task = _unitOfWork.ATask.GetFirstOrDefault(u => u.Id == Id);
+            if (Task.TaskStatus.ToString().ToLower() != "todo")
+            {
+                Task.TaskStatus = Models.TaskStatus.ToDo;
+                _unitOfWork.Save();
+                return RedirectToAction("Index");
+
+            }
+            return RedirectToAction("Index");
+
+        }
+
+        public IActionResult TaskStatusInProgress(int? Id)
+        {
+            var Task = _unitOfWork.ATask.GetFirstOrDefault(u => u.Id == Id);
+            if (Task.TaskStatus.ToString().ToLower() != "inprogress")
+            {
+                Task.TaskStatus = Models.TaskStatus.InProgress;
+                _unitOfWork.Save();
+                return RedirectToAction("Index");
+
+            }
+            return RedirectToAction("Index");
+
+        }
 
         #endregion
 

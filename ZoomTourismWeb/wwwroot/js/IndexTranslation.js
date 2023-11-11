@@ -15,6 +15,7 @@ $(document).ready(function () {
     // Handle language selection change
     $('#languageSelector').change(function () {
         var selectedLanguage = $(this).val();
+      
         // Store the user's language preference in localStorage
         localStorage.setItem('userLanguage', selectedLanguage);
         loadLanguage(selectedLanguage);
@@ -22,9 +23,9 @@ $(document).ready(function () {
 });
 
 function loadLanguage(language) {
-    // Determine the current page from the JavaScript variable
+  
     var currentPage = window.currentPage;
-
+   
     $.getJSON('/Translation/languages.json', function (data) {
         var translations = data[language][currentPage];
         $('.translate').each(function () {

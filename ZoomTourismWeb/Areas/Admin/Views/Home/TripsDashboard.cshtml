@@ -1,0 +1,113 @@
+﻿@using ZoomTourism.Models;
+@using System;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.AspNetCore.Mvc
+
+@{
+    Layout = "_AdminLayout"; // Specify the user layout
+}
+
+@model IEnumerable<Trip>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ZoomTourismWeb</title>
+    <link rel="stylesheet" href="~/css/CarsDashboard.css" asp-append-version="true" />
+
+</head>
+
+
+<!--         add the content here        -->
+<div class="buttons-container">
+    <a asp-action="AdminDashboard" asp-controller="Home" asp-area="Admin" class="back-Button">&#x2190; back</a>
+    <a asp-action="Upsert" asp-controller="Car" asp-area="Admin" class="Add-Car">Add Car<img src="/Images/icons/Add-icon.png" alt=""></a>
+</div>
+
+<div class="car-cards-Container">
+
+
+    @foreach (var Trip in Model.OrderByDescending(p => p.CreatedDate).ToList())
+    {
+      
+            <a asp-action="TripDetails" asp-route-id="@Trip.Id">
+                <div class="carousel-item">
+                    <div class="Thumbnail">
+                        @if (Trip.Price != 0 || Trip.Price != null)
+                        {
+                            <span>@Trip.Price</span>
+                        }
+                        <img src="@Trip.ImageUrl" style="max-height: 300px;" alt="Trip 1">
+                    </div>
+
+                    <div class="trip-description">
+                        <div class="trip-title">
+                            <h3>Enjoy the Beauty of @Trip.Title</h3>
+                            <p>@Trip.Title</p>
+                        </div>
+
+                        <div class="rating">
+                            <div class="star-rating"><img src="~/assets/Icons/StarReview.png" alt="star">4.6</div>
+                            <span>(@Trip.numOfReviews)</span>
+                        </div>
+                    </div>
+                <div class="cta-buttons">
+
+
+                    <a href="/Admin/Trip/Upsert?id=@Trip.Id" class="Edit-button">
+                        <img src="~/assets/icons/Edit-Icon.png" alt="">
+                        <p>Edit</p>
+                    </a>
+                    <a onClick=Delete('/Admin/Trip/DeletePost/@Trip.Id') class="Delete-button">
+                        <img src="~/assets/icons/Delete-Icon.png" alt="">
+                        <p>Delete</p>
+                    </a>
+                </div>
+            </a>
+     
+
+
+    }
+
+</div>
+
+<script>
+    function Delete(url) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: url,
+                    type: 'DELETE',
+                    success: function (data) {
+                        if (data.success) {
+                            dataTable.ajax.reload();
+                            toastr.success(data.message);
+                        }
+                        else {
+                            toastr.error(data.message);
+                        }
+                    }
+                })
+            }
+        })
+    }
+</script>
+
+@section Scripts{
+
+    <script>
+        var currentPage = "carsPage";
+    </script>
+    <script src="~/js/LeadTable.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Dashboard.js"></script>
+    <script src="~/js/IndexTranslation.js"></script>
+}

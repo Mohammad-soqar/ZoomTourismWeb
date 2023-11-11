@@ -80,6 +80,11 @@
       "inprogress_lable": "InProgress",
       "finished_lable": "Finished",
       "lost_lable": "Lost"
+    },
+    "tripsPage": {
+      "section_title": "Our Trips",
+      "explore_our_trips": "Explore our Trips"
+
     }
   },
   "ar": {
@@ -164,6 +169,10 @@
       "inprogress_lable": "قيد التنفيذ",
       "finished_lable": "مكتمل",
       "lost_lable": "غير ناجح"
+    },
+    "tripsPage": {
+      "section_title": "رحلاتنا",
+      "explore_our_trips": "استكشف اكثر عن رحلاتنا"
     }
   }
   }

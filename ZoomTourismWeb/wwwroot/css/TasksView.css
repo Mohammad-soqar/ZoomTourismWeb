@@ -112,11 +112,18 @@
     color: #00aac0;
 }
 
+.column-title{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
 .task-content {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     color: #282828;
+    cursor: pointer;
 }
 
     .task-content h3 {
