@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using ZoomTourism.DataAccess.Repository.IRepository;
 using ZoomTourism.Models;
+using ZoomTourism.Models.ViewModels;
 
 namespace ZoomTourismWeb.Areas.Admin.Controllers
 {
@@ -26,9 +27,39 @@ namespace ZoomTourismWeb.Areas.Admin.Controllers
         }
         public IActionResult Employees()
         {
+            var users = _userManager.Users.ToList(); // Fetch users from the database
+            var filteredUsers = users
+                .Where(user => !_userManager.IsInRoleAsync(user, SD.Role_Customer).Result)
+                .ToList(); // Filter out users with the "Customer" role
 
-            var users = _userManager.Users.ToList(); 
-            return View(users);
+            var usersWithRolesAndNames = new List<UserVM>();
+
+            foreach (var user in filteredUsers)
+            {
+                var roles = _userManager.GetRolesAsync(user).Result; // Blocking call
+
+                var Id = user.Id;
+                var ApplicationUser = _unitOfWork.ApplicationUser.GetFirstOrDefault(u => u.Id == Id);
+                var name = ApplicationUser?.Name;
+
+                var userViewModel = new UserVM
+                {
+                    UserId = user.Id,
+                    UserName = user.UserName,
+                    Name = name, // Replace with the actual property in your ApplicationUser model
+                    Roles = roles.ToList()
+                };
+
+                usersWithRolesAndNames.Add(userViewModel);
+            }
+
+            return View(usersWithRolesAndNames);
         }
+
+
+
+
+
+
     }
 }

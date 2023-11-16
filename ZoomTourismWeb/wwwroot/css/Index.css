@@ -3,13 +3,6 @@
    
 }
 
-.background-image-welcome {
-    background-image: url("/assets/Pictures/signinPage.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: multiply;
-    background-color: #28282893;
-}
 
 @media only screen and (min-width: 1300px) {
     .img-text-section {
@@ -32,7 +25,7 @@
 
         .text-side h1 {
             font-size: 5em;
-            color: #fff;
+            color: #292929;
             font-weight: 600;
             position: relative;
         }
@@ -68,7 +61,7 @@
     }
 
     .text-side p {
-        color: #cfcfcf !important;
+        color: #7a7a7a !important;
     }
 
     .CustomTrip p {
@@ -349,7 +342,7 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        gap: 6rem;
+        gap: 10rem;
         margin-top: 5rem;
         padding: 3rem 6rem;
         background-image: url(../assets/elements/ExperienceVector.png);

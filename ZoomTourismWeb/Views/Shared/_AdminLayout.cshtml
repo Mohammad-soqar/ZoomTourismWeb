@@ -47,7 +47,7 @@
                     <button type="submit">
                         <img src="~/assets/Icons/Search-icon.png" alt="Search">
                     </button>
-                    <input type="text" placeholder="Search..." class="translate" data-translate-key="search_placeholder">
+                        <input type="text" placeholder="Search..." class="translate" data-translate-key="search_placeholder">
                 </div>
                 <div class="icons">
                         @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_CodyleSupport))
@@ -152,7 +152,11 @@
                         <button type="submit">
                             <img src="~/assets/icons/Search-icon.png" alt="Search">
                         </button>
-                        <input type="text" placeholder="Search...">
+                            <input id="searchInput" type="text" placeholder="Search...">
+                            <div>
+                                <ul id="resultsList"></ul>
+
+                            </div>
                     </div>
                     <div class="LanguageAndAccountContainer">
                         <div class="language-dropdown">
@@ -214,7 +218,6 @@
                     </div>
                 </div>
             </div>
-
             @RenderBody()
         </div>
 
@@ -223,7 +226,54 @@
     </div>
 
 
-    
+   
+
+    <!-- Your existing CRM links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        var crmLinks = [
+            { name: "Cars Dashboard", area: "Admin", controller: "Home", action: "CarsDashboard" },
+            // Add more links as needed
+        ];
+    </script>
+    <script>
+        document.getElementById("searchInput").addEventListener("input", function () {
+            var searchInput = this.value.toLowerCase();
+            var resultsList = document.getElementById("resultsList");
+            resultsList.innerHTML = ""; // Clear previous results
+
+            // Filter links based on search input
+            var matchingLinks = crmLinks.filter(function (link) {
+                return link.name.toLowerCase().includes(searchInput);
+            });
+
+            // Display matching links
+            if (matchingLinks.length > 0) {
+                matchingLinks.forEach(function (link) {
+                    var listItem = document.createElement("li");
+                    var linkElement = document.createElement("a");
+
+                    // Construct the URL based on link information
+                    var url = "/" + (link.area ? link.area + "/" : "") +
+                        (link.controller ? link.controller + "/" : "") +
+                        (link.action ? link.action : "");
+
+                    linkElement.href = url;
+                    linkElement.textContent = link.name;
+                    listItem.appendChild(linkElement);
+                    resultsList.appendChild(listItem);
+                });
+            } else {
+                // Optionally, you can display a message when no results are found
+                var noResultsItem = document.createElement("li");
+                noResultsItem.textContent = "No results found";
+                resultsList.appendChild(noResultsItem);
+            }
+        });
+
+
+
+    </script>
     <script>
         setTimeout(function () {
             console.log("1# function one reached")
@@ -231,7 +281,7 @@
         }, 400);
         console.log("2# function one executed")
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
     <script>
@@ -281,7 +331,6 @@
     </script>
 
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
         <script src="~/js/site.js" asp-append-version="true"></script>
         <script src="~/lib/jquery/dist/jquery.min.js"></script>

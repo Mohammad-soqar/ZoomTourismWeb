@@ -1,0 +1,67 @@
+﻿@model ZoomTourism.Models.ATask
+
+<head>
+    <link rel="stylesheet" href="~/css/TasksView.css" asp-append-version="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="description" content="@Model.Title">
+    <meta name="keywords" content="Writing, Blog, Blogs">
+    <title>@Model.Title</title>
+</head>
+
+<div class="buttons-container-tasks">
+    <a asp-action="Index" asp-controller="Task" asp-area="Admin" class="back-Button">&#x2190; back</a>
+</div>
+
+<div class="task taskview">
+    <div class="task-header">
+        <div class="@Model.TaskPriority.ToString().ToLower() Priority">
+            <p>@Model.TaskPriority.ToString()</p>
+
+        </div>
+        <div class="dropdown">
+            <div class="three-dots">
+                <img src="/Images/icons/threedots.png" height="20px" alt="">
+            </div>
+            <div class="dropdown-content">
+                <a asp-action="Upsert" asp-route-id="@Model.Id">Edit</a>
+                <a onClick=Delete('/Admin/Task/DeletePost/@Model.Id') class="Delete-button">Delete</a>
+                <div class="status-dropdown">
+                    @if(Model.TaskStatus.ToString().ToLower() == "done")
+                    {
+                        <a asp-action="TaskStatusToDo" asp-route-id="@Model.Id">To Do</a>
+                        <a asp-action="TaskStatusInProgress" asp-route-id="@Model.Id">In Progress</a>
+                    }
+                    else if (Model.TaskStatus.ToString().ToLower() == "inprogress")
+                    {
+                        <a asp-action="TaskStatusToDo" asp-route-id="@Model.Id">To Do</a>
+                        <a asp-action="TaskStatusDone" asp-route-id="@Model.Id">Done</a>
+                    }
+                    else
+                    {
+                        <a asp-action="TaskStatusInProgress" asp-route-id="@Model.Id">In Progress</a>
+                        <a asp-action="TaskStatusDone" asp-route-id="@Model.Id">Done</a>
+                    }
+                    <a href="#">To Do</a>
+                    <a href="#">In Progress</a>
+                    <a href="#">Done</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="task-content">
+        <h3>@Model.Title</h3>
+
+        <p>@Model.Description</p>
+
+    </div>
+
+    <div class="task-footer">
+        <div class="task-calender">
+            <img src="/assets/Icons/calender.png" height="30px" alt="calender">
+            <p>@Model.DueDate</p>
+        </div>
+      
+    </div>
+</div>

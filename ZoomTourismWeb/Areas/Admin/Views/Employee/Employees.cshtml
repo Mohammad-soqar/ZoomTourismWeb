@@ -1,8 +1,8 @@
 ﻿@using CodyleOffical.Utility;
-@using Microsoft.AspNetCore.Identity;
+@using ZoomTourism.Models.ViewModels;
 
 
-@model List<IdentityUser>
+@model List<UserVM>
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -58,32 +58,30 @@
                 </thead>
                 <tbody>
                 <tbody>
-                     @foreach (var user in Model)
-        {
-                            @if (!User.IsInRole(SD.Role_Customer))
-                            {
+                        @foreach (var user in Model)
+                        {
+                           
+                            
                             <tr>
-                                <td class="td-name">@user.UserName</td>
-                                <td></td>
-                             @*    <td class=" center state Online">
-                                    <div>Online</div>
-                                </td> *@
+                                <td class="td-name">@user.Name</td>
+                                <td>@string.Join(", ", user.Roles)</td>
+
                                 <td class="center">
                                     <div class="div-container">
                                         <div class="task_container">
-                                            <p>24</p>
                                             <img src="~/assets/icons/Tasks-icon.png" alt="" height="30px">
                                             <a asp-action="Upsert" asp-controller="Task" asp-area="Admin">
-                                                <img src="~/assets/icons/Add-icon-with-circle.png" alt=""
-                                                     height="30px">
+                                                <img src="~/assets/icons/Add-icon-with-circle.png" alt="" height="30px">
                                             </a>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
-                            }
-                           
-                }
+                            
+                        }
+
+
+
                 </tbody>
             </table>
         </div>

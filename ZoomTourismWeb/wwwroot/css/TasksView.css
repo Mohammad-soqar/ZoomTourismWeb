@@ -21,7 +21,11 @@
         overflow-y: auto;
     }
 }
-
+.taskview {
+    flex: 1;
+    margin: 2rem;
+    justify-content: space-around !important;
+}
 @media screen and (min-width: 840px) {
     .tasks-board {
         display: flex;
@@ -76,15 +80,38 @@
     box-shadow: 0px 3px 11px #2828281e;
     background-color: #fff;
     padding: 2rem;
-    transition: .3s;
     border: 1px solid #9b9b9b;
 }
 
-    .task:hover {
-        box-shadow: 0px 5px 11px #28282836;
-        transition: .3s;
-        padding-bottom: 2.3rem;
-    }
+.buttons-container-tasks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem !important;
+}
+.back-Button,
+.Add-Car {
+    color: #fff;
+    background-color: #C4942F;
+    padding: 0.7rem 3rem;
+    border-radius: 27px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.taskhover {
+    transition: .3s;
+}
+
+.taskhover:hover {
+    box-shadow: 0px 5px 11px #28282836;
+    transition: .3s;
+    padding-bottom: 2.3rem;
+}
+
 
 .task-header {
     display: flex;

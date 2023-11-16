@@ -48,7 +48,7 @@
                     @foreach (var task in todoTasks.OrderByDescending(p => p.DueDate).ToList())
                     {
 
-                        <div class="task">
+                        <div class="task taskhover">
                             <div class="task-header">
                                 <div class="@task.TaskPriority.ToString().ToLower() Priority">
                                     <p>@task.TaskPriority.ToString()</p>
@@ -68,7 +68,9 @@
                                 </div>
                             </div>
                             <div class="task-content collapsed">
-                                <h3>@task.Title</h3>
+                                <a asp-action="taskview" asp-route-id="@task.Id">
+                                    <h3>@task.Title</h3>
+                                </a>
                                 <p>@task.Description</p>
 
                             </div>
@@ -114,7 +116,7 @@
                     @foreach (var task in inprogressTasks.OrderByDescending(p => p.DueDate).ToList())
                     {
 
-                        <div class="task">
+                        <div class="task taskhover">
                             <div class="task-header">
                                 <div class="@task.TaskPriority.ToString().ToLower() Priority">
                                     <p>@task.TaskPriority.ToString()</p>
@@ -134,7 +136,9 @@
                                 </div>
                             </div>
                             <div class="task-content collapsed">
-                                <h3>@task.Title</h3>
+                                <a asp-action="taskview" asp-route-id="@task.Id">
+                                    <h3>@task.Title</h3>
+                                </a>
                                 <p>@task.Description</p>
 
                             </div>
@@ -178,7 +182,7 @@
                     @foreach (var task in doneTasks.OrderByDescending(p => p.DueDate).ToList())
                     {
 
-                        <div class="task">
+                        <div class="task taskhover">
                             <div class="task-header">
                                 <div class="@task.TaskPriority.ToString().ToLower() Priority">
                                     <p>@task.TaskPriority.ToString()</p>
@@ -198,7 +202,9 @@
                                 </div>
                             </div>
                             <div class="task-content">
-                                <h3>@task.Title</h3>
+                                <a asp-action ="taskview" asp-route-id="@task.Id">
+                                    <h3>@task.Title</h3>
+                                </a>
                                 <p>@task.Description</p>
 
                             </div>

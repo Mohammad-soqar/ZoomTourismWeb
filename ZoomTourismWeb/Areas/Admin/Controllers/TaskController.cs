@@ -38,7 +38,12 @@ namespace ZoomTourism.Areas.Admin.Controllers
             return View(userTasks);
         }
 
-      
+        public IActionResult taskview(int id)
+        {
+            ATask task = _unitOfWork.ATask.GetFirstOrDefault(r => r.Id == id);
+            return View(task);
+        }
+
 
 
         public IActionResult Upsert(int? Id)
