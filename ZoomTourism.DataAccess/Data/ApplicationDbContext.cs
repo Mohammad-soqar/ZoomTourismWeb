@@ -30,6 +30,7 @@ namespace ZoomTourism.DataAccess.Data
         public DbSet<ATask> Tasks { get; set; }
         public DbSet<LeadDay> LeadDays { get; set; }
         public DbSet<Report> Reports { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
 
     }
 }

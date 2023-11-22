@@ -11,17 +11,25 @@ namespace ZoomTourism.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public string TitleAR { get; set; }
+        public string TitleTR { get; set; }
         public string Description { get; set; }
+        public string DescriptionAR { get; set; }
+        public string DescriptionTR { get; set; }
         public string Type { get; set; }
+        public DateTime CreatedDate { get; set; } //no need
         public string AssignedUserId { get; set; }
         [ValidateNever]
         public ApplicationUser AssignedUser { get; set; }
         public bool IsRead { get; set; }
         [ValidateNever]
-        public string leadLink { get; set; }
+        public string? leadLink { get; set; }
         [ValidateNever]
-        public string taskLink { get; set; }
+        public string? taskLink { get; set; }
 
-
+        public Notification()
+        {
+            CreatedDate = DateTime.Now;
+        }
     }
 }

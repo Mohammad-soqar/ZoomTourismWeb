@@ -90,7 +90,7 @@ namespace ZoomTourism.Areas.Admin.Controllers
 
 
                 _unitOfWork.Save();
-                return RedirectToAction("Index");
+                return RedirectToAction("TripsDashboard","Home");
             }
 
             return View(obj);
@@ -122,25 +122,36 @@ namespace ZoomTourism.Areas.Admin.Controllers
 
         public IActionResult DeletePost(int? Id)
         {
-            var obj = _unitOfWork.Trip.GetFirstOrDefault(u => u.Id == Id);
-
-            if (obj == null)
+          
+            try
             {
-                return Json(new { success = false, message = "Error while deleting" });
+                var obj = _unitOfWork.Trip.GetFirstOrDefault(u => u.Id == Id);
+
+                if (obj == null)
+                {
+                    return Json(new { success = false, message = "Error while deleting" });
+                }
+
+                var oldImagePath = Path.Combine(_HostEnvironment.WebRootPath, obj.ImageUrl.TrimStart('\\'));
+                if (System.IO.File.Exists(oldImagePath))
+                {
+                    System.IO.File.Delete(oldImagePath);
+                }
+
+                _unitOfWork.Trip.Remove(obj);
+                _unitOfWork.Save();
+                return Json(new { success = true, message = "Deleted successfully" });
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine($"Exception: {ex.Message}");
+
+                // Return an error response
+                return Json(new { success = false, message = $"Error: {ex.Message}" });
             }
 
-            var oldImagePath = Path.Combine(_HostEnvironment.WebRootPath, obj.ImageUrl.TrimStart('\\'));
-            if (System.IO.File.Exists(oldImagePath))
-            {
-                System.IO.File.Delete(oldImagePath);
-            }
 
-            _unitOfWork.Trip.Remove(obj);
-            _unitOfWork.Save();
-            return Json(new { success = true, message = "blog deleted successfuly" });
-            return RedirectToAction("Index");
-
-            return View(Id);
 
         }
 

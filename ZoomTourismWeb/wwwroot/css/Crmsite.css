@@ -251,7 +251,7 @@ body {
 
 .dashboard p,
 .Leads p,
-.Tasks p,
+
 .guide p,
 .Messages p {
     font-size: 20px;
@@ -484,10 +484,17 @@ body {
 .notification2,
 .notification3 {
     background-color: #fff8ea;
+    display: flex;
     padding: 1rem;
     margin: 1rem 0;
+    width: 100%;
     border-radius: 27px;
     height: fit-content;
+    flex-direction: column;
+}
+
+.notification2 {
+    background-color: #c0baad !important;
 }
 
     .notification1 p,
@@ -891,7 +898,7 @@ body {
 
 .dashboard p,
 .Leads p,
-.Tasks p,
+
 .guide p,
 .Messages p {
     font-size: 20px;

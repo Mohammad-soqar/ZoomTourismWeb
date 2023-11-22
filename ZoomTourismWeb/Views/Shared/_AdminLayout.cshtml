@@ -1,21 +1,13 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-@using CodyleOffical.Utility;
+﻿@using CodyleOffical.Utility;
 @using Microsoft.AspNetCore.Identity
 @using System.Security.Claims
 ﻿@using Microsoft.AspNetCore.Http
-
+@using ZoomTourism.Models;
 @inject IHttpContextAccessor HttpContextAccessor
-
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
-
-
 <!DOCTYPE html>
-<html >
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +16,6 @@
 </head>
 <body>
     <div id="page-container" style="display: none;">
-
     <section class="container">
         <div class="sidebar-button-container">
 
@@ -172,27 +163,7 @@
                                      height="35px">
                             </button>
                             <div class="notificationContiner">
-                                <div class="notifications">
-                                    <div class="notification1">
-                                        <span>Notification #1</span>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and </p>
-                                    </div>
-                                    <div class="notification2">
-                                        <span>Notification #2</span>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and Lorem Ipsum is simply
-                                            dummy
-                                            text of the printing andLorem Ipsum is simply dummy text of the printing
-                                            andLorem Ipsum is simply dummy text of the printing andLorem Ipsum is simply
-                                            dummy text of the printing and
-                                        </p>
-
-                                    </div>
-                                    <div class="notification3">
-                                        <span>Notification #3</span>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and </p>
-                                    </div>
-                                </div>
+                                        @await Component.InvokeAsync("Notification")
                             </div>
                         </div>
 
@@ -210,8 +181,14 @@
                                             <a id="manage" class="nav-link " style="color:#C4942F; text-decoration:none;" asp-controller="Home" asp-area="Customer" asp-action="Index" title="Manage">Website</a>
                                         </li>
 
-                                     
-                                    <li><a href="#">Logout</a></li>
+
+                                        <li>
+                                            <div class="logout">
+                                                <form id="logoutForm" class="form-inline logoutbtn" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                                    <button id="logout" type="submit" class="nav-link btn btn-link ">Logout</button>
+                                                </form>
+                                            </div>
+                                        </li>
                                 </ul>
                             </div>
                         </div>

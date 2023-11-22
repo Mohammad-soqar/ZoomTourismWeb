@@ -23,6 +23,7 @@ namespace ZoomTourism.DataAccess.Repository.IRepository
         ILeaddayRepository LeadDay { get; }
         IReportRepository Report { get; }
         IApplicationuserRepository ApplicationUser { get; }
+        INotificationRepository Notification { get; }
 
 
         void Save();

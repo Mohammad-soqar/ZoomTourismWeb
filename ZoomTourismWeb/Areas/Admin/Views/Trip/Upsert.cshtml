@@ -20,10 +20,6 @@
         <img src="@Model.ImageUrl" width="60%" />
     </div>
 
-    <div class="form-group">
-        <label for="Images">Upload Images:</label>
-        <input type="file" name="Images" id="Images" multiple />
-    </div>
 
     <form width="100%" method="post" class="WebForm" asp-action="Upsert" enctype="multipart/form-data">
         <input asp-for="@Model.Id" hidden />

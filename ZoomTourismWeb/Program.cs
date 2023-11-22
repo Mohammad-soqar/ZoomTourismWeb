@@ -19,6 +19,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 // Add services to the container.
 builder.Services.AddScoped<SmsReminderService>();
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<NotificationViewComponent>();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
  builder.Configuration.GetConnectionString("DefaultConnection")
     ));

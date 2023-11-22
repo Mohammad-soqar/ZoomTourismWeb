@@ -88,6 +88,9 @@ namespace ZoomTourism.Areas.Admin.Controllers
                     var assignedUser = _userManager.FindByIdAsync(obj.AssignedUserId).Result;
                     obj.AssignedUser = (ApplicationUser)assignedUser;
                 }
+
+
+
                 string wwwRootPath = _HostEnvironment.WebRootPath;
              
                 if (obj.Id == 0)
@@ -99,8 +102,28 @@ namespace ZoomTourism.Areas.Admin.Controllers
                     _unitOfWork.ATask.Update(obj);
                 }
 
+                
+               
 
                 _unitOfWork.Save();
+                Notification notification = new Notification
+                {
+                    Title = "New Task Assigned to you",
+                    TitleAR = "مهمة جديدة",
+                    TitleTR = "Yeni görev",
+                    Description = $"A new task with the following name has been added: {obj.Title}",
+                    DescriptionAR = $"تمت إضافة مهمة جديدة بالاسم {obj.Title}",
+                    DescriptionTR = $"Aşağıdaki adda yeni bir görev eklendi {obj.Title}",
+                    Type = "TaskAdded", // You can customize the type as needed
+                    AssignedUserId = obj.AssignedUserId,
+                    AssignedUser = obj.AssignedUser,
+                    IsRead = false,
+                    taskLink = $"/Admin/Task/taskview/{obj.Id}",
+                };
+
+                _unitOfWork.Notification.Add(notification);
+                _unitOfWork.Save();
+
                 return RedirectToAction("Index");
             }
 

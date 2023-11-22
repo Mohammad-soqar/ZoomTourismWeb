@@ -1,0 +1,24 @@
+﻿@using ZoomTourism.Models;
+<!-- Views/Shared/Components/Notification/Default.cshtml -->
+@model List<Notification>
+
+<div class="notifications">
+    @foreach (var notification in Model.OrderByDescending(p => p.CreatedDate).ToList())
+    {
+        if(notification.IsRead == true)
+        {
+            <a asp-action="NotificationDetails" asp-area="Admin" asp-controller="Notification" asp-route-id="@notification.Id" class="notification2">
+                <span>@notification.Title</span>
+                <p>@notification.Description </p>
+            </a>
+        }
+        else if (notification.IsRead == false)
+        {
+            <a asp-action="NotificationDetails" asp-area="Admin" asp-controller="Notification" asp-route-id="@notification.Id" class="notification1">
+                <span>@notification.Title</span>
+                <p>@notification.Description </p>
+            </a>
+        }
+
+    }
+</div>

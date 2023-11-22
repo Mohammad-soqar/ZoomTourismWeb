@@ -1,0 +1,33 @@
+﻿@model ZoomTourism.Models.Notification
+
+<head>
+    <link rel="stylesheet" href="~/css/TasksView.css" asp-append-version="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="description" content="@Model.Title">
+    <meta name="keywords" content="Writing, Blog, Blogs">
+    <title>@Model.Title</title>
+</head>
+
+<div class="buttons-container-tasks">
+    <a asp-action="AdminDashboard" asp-controller="Home" asp-area="Admin" class="back-Button">&#x2190; back</a>
+</div>
+
+<div class="task taskview">
+
+    <div class="task-content">
+        <h3>@Model.Title</h3>
+
+        <p>@Model.Description</p>
+        <a href="@Model.taskLink">Go to your task</a>
+    </div>
+
+    <div class="task-footer">
+        <div class="task-calender">
+            <img src="/assets/Icons/calender.png" height="30px" alt="calender">
+            <p>@Model.CreatedDate.ToString("dd/mmm/yy")</p>
+        </div>
+
+    </div>
+</div>

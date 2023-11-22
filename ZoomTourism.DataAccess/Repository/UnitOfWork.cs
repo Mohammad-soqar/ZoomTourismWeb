@@ -29,6 +29,7 @@ namespace ZoomTourism.DataAccess.Repository
             LeadDay = new LeaddayRepository(_db);
             Report = new ReportRepository(_db);
             ApplicationUser = new ApplicationuserRepository(_db);
+            Notification = new NotificationRepository(_db);
 
 
         }
@@ -46,6 +47,7 @@ namespace ZoomTourism.DataAccess.Repository
         public ILeaddayRepository LeadDay { get; private set; }
         public IReportRepository Report { get; private set; }
         public IApplicationuserRepository ApplicationUser { get; private set; }
+        public INotificationRepository Notification { get; private set; }
 
 
         public void Save()

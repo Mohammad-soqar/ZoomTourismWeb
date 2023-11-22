@@ -220,7 +220,7 @@ namespace ZoomTourism.Areas.Admin.Controllers
                     // Calculate the time 12 hours before the trip starts
                     var sendTime = obj.TripStartDate.AddHours(-12);
                     var sendTime2 = obj.TripStartDate.AddHours(-6);
-                    var sendTime3 = obj.TripStartDate.AddMinutes(-2);
+                    var sendTime3 = obj.TripStartDate.AddHours(-3);
                     if (sendTime > DateTime.Now || sendTime3 > DateTime.Now)
                     {
                         // Get the driver's phone number from the 'Driver' property of the Lead
