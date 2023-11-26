@@ -187,9 +187,11 @@ select,
         background-color: #ffffff;
         border-radius: 18px;
         display: flex;
+        flex: 1;
         align-items: center;
         flex-direction: column;
-        margin: 4rem 16rem;
+        margin: 4rem 16rem 0rem 16rem;
+        overflow-y: auto;
     }
 
     .WebForm {
@@ -228,10 +230,12 @@ select,
         font: 14px 'MontserratMedium', sans-serif;
         background-color: #ffffff;
         border-radius: 18px;
-        margin: 4rem 2rem;
+        margin: 4rem 2rem 0rem 2rem;
         display: flex;
+        flex: 1;
         align-items: center;
         flex-direction: column;
+        overflow-y: auto;
     }
 
     .WebForm {

@@ -83,6 +83,12 @@ namespace ZoomTourismWeb.Areas.Admin.Controllers
             return View(TripList);
         }
 
+        public IActionResult BlogsDashboard()
+        {
+            IEnumerable<Blog> BlogList = _unitOfWork.Blog.GetAll();
+            return View(BlogList);
+        }
+
         public IActionResult CallCenterDashboard()
         {
             return View();

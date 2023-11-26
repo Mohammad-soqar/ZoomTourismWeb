@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4vm5ymKI7jc5eQ40ax6IRoJJnztD2Uqx6D/sFyrQGS4=",
+  "Hash": "1qmME9SRwWsBc62uX27Ycfi+c5TQCCvCpbh5Wpp/Ybc=",
   "Source": "ZoomTourismWeb",
   "BasePath": "_content/ZoomTourismWeb",
   "Mode": "Default",
@@ -2635,6 +2635,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\trips\\Trabzon.png"
     },
     {
+      "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\account.css",
+      "SourceId": "ZoomTourismWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\",
+      "BasePath": "_content/ZoomTourismWeb",
+      "RelativePath": "css/account.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\account.css"
+    },
+    {
       "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\BlogDetails.css",
       "SourceId": "ZoomTourismWeb",
       "SourceType": "Discovered",
@@ -2769,6 +2786,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Dashboard.css"
+    },
+    {
+      "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Email.css",
+      "SourceId": "ZoomTourismWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\",
+      "BasePath": "_content/ZoomTourismWeb",
+      "RelativePath": "css/Email.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Email.css"
     },
     {
       "Identity": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Employees.css",

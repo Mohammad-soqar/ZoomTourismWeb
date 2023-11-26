@@ -1,0 +1,278 @@
+﻿.row {
+    background-color: #F4F4F4;
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+    border-radius: 17px;
+}
+
+.input-group {
+    display: none;
+}
+
+.form-control {
+    display: block;
+    /* width: 40%; */
+    width: 45%;
+    padding: 10px 10px;
+    border: solid #c8943b 2px;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+}
+
+#change-email-button {
+    background-color: #c8943b;
+    border: none;
+    border-radius: 27px;
+    color: #f4f4f4;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 1rem 0 0 0;
+}
+
+button#email-verification {
+    background-color: #c8943b;
+    border: none;
+    border-radius: 27px;
+    color: #f4f4f4;
+    /* width: 24%; */
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 1rem 0 0 0;
+}
+
+@media screen and (max-width: 840px) {
+    .form-control {
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+/* 
+:root {
+    --shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Account-Content {
+    background-color: #ffffff;
+    box-shadow: var(--shadow);
+    border-radius: 21px;
+    padding: 2rem;
+    display: flex;
+    margin: 2rem 2rem 2rem 2rem;
+    flex: 1;
+
+}
+
+#line {
+    width: 2px;
+    background-color: #F4F4F4;
+}
+
+.nav-pills {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.nav-pills a {
+    padding: 1rem 0 1rem 1rem;
+    display: block;
+}
+
+
+.selected {
+    background-color: #29292978;
+}
+
+.right-side-panel {
+    padding: 0rem 2rem;
+    width: 100%;
+}
+
+.MyProfile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MyProfile h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#AccountSettings {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.PersonalInforamtion {
+    background-color: #F4F4F4;
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+    border-radius: 17px;
+}
+
+.PersonalInforamtion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.PersonalInforamtion-button button {
+    background-color: #c8943b;
+    border: none;
+    border-radius: 27px;
+    color: #F4F4F4;
+    width: 6rem;
+    padding: .5rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.PersonalInforamtion-button {
+    font-size: 1.5rem;
+}
+
+.EmailAddress2,
+.PhoneNumber {
+    display: flex;
+    flex-direction: column;
+}
+
+.PhoneNumber {
+    margin-top: .5rem;
+}
+
+.EmailAddress2 p,
+.PhoneNumber p {
+    margin: .5rem 0 1rem 0;
+}
+
+.PersonalInforamtion input[type=text] {
+    width: 45%;
+    padding: 10px 10px;
+    border: solid #c8943b 2px;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+}
+
+.sendButton {
+    text-align: end;
+    display: none;
+}
+
+.PhoneNumber button,
+#saveButton2 {
+    background-color: #c8943b;
+    border: none;
+    border-radius: 27px;
+    color: #F4F4F4;
+    width: 6rem;
+    padding: .5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.AddressDistrict p {
+    margin: .5rem 0 1rem 0;
+}
+
+.sendButton2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#saveButton2 {
+    display: none;
+}
+
+.Adress {
+    background-color: #F4F4F4;
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+    border-radius: 17px;
+}
+
+.textboxAndPinDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border: none;
+    background-color: #F7F7F7;
+}
+
+.call-to-action-btns button {
+    margin: 0rem 1rem;
+}
+
+.notificationContiner{
+    top: 7%;
+    right: 9.5%;
+}
+.messagingboxContiner{
+    top: 7% !important;
+    right: 13.5% !important;
+}
+.Account{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logout{
+    background: #C4942F;
+    padding: 0.5rem 4rem;
+    color: #fff;
+    border-radius: 22px;
+    margin: 0.5rem 1rem 0rem 0rem;
+    border: none;
+}
+#logoutForm {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 840px) {
+    .Account-Content{
+        flex-direction: column;
+    }
+    .nav-pills{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .nav-pills a {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+    .right-side-panel {
+        padding: 0rem;
+        width: 100%;
+    }
+    .PersonalInforamtion input[type=text] {
+        width: 95%;
+    }
+    #line {
+        width: 100%;
+        background-color: #292929;
+        height: 2px;
+        margin: 0 0 2rem 0;
+    }
+    #logoutForm{
+        display: none;
+    }
+} */

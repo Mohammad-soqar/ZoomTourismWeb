@@ -7,9 +7,11 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 <head>
-    <link rel="stylesheet" href="~/css/profile.css" asp-append-version="true" />
+  
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/NavBar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/account.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Email.css" asp-append-version="true" />
 </head>
 <header>
     <nav class="nav-bar">
@@ -79,11 +81,11 @@
     </nav>
 </header>
 
-    <div class="profile">
+<div class="Account-Content">
         <div class="linksSide">
             <partial name="_ManageNav" />
         </div>
-        <div class="inputSide">
+    <div class="right-side-panel">
             @RenderBody()
         </div>
     </div>

@@ -1,0 +1,122 @@
+﻿:root {
+    --shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Account-Content {
+    background-color: #ffffff;
+    box-shadow: var(--shadow);
+    border-radius: 21px;
+    padding: 2rem;
+    display: flex;
+    margin: 2rem 2rem 2rem 2rem;
+    flex: 1;
+}
+
+#line {
+    width: 2px;
+    background-color: #F4F4F4;
+}
+
+.nav-pills {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.nav-link {
+    padding: 1rem 0 1rem 1rem;
+    display: block;
+}
+
+
+.selected {
+    background-color: #29292978;
+}
+
+.right-side-panel {
+    padding: 0rem 2rem;
+    width: 100%;
+}
+
+.MyProfile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+    .MyProfile h3 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+#AccountSettings {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+
+.Account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logout {
+    background: #C4942F;
+    padding: 0.5rem 3rem;
+    color: #fff;
+    border-radius: 22px;
+    border: none;
+}
+
+#logoutForm {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 840px) {
+    .Account-Content {
+        flex-direction: column;
+    }
+
+    .nav-pills {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        overflow-x: auto;
+    }
+
+        .nav-pills a {
+            padding: 1rem 0.5rem 1rem 0.5rem;
+        }
+
+    .right-side-panel {
+        padding: 0rem;
+        width: 100%;
+    }
+
+    .PersonalInforamtion input[type=text] {
+        width: 95%;
+    }
+
+    #line {
+        width: 100%;
+        background-color: #292929;
+        height: 2px;
+        margin: 0 0 2rem 0;
+    }
+
+    #logoutForm {
+        display: none;
+    }
+
+    .nav-item {
+        width: 4rem;
+        margin: 0 1rem 0 1rem;
+    }
+}

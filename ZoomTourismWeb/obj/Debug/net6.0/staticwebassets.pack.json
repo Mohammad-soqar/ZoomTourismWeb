@@ -577,6 +577,10 @@
       "PackagePath": "staticwebassets\\css\\Dashboard.css"
     },
     {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Email.css",
+      "PackagePath": "staticwebassets\\css\\Email.css"
+    },
+    {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Employees.css",
       "PackagePath": "staticwebassets\\css\\Employees.css"
     },
@@ -611,6 +615,10 @@
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Trips.css",
       "PackagePath": "staticwebassets\\css\\Trips.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\account.css",
+      "PackagePath": "staticwebassets\\css\\account.css"
     },
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\form.css",
