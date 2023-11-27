@@ -65,29 +65,9 @@ namespace ZoomTourismWeb.Areas.Admin.Controllers
             return View(dashboardData);
         }
 
+      
 
-        public IActionResult WebsiteContentManagement()
-        {
-            return View();
-        }
-
-        public IActionResult CarsDashboard()
-        {
-            IEnumerable<Car> CarList = _unitOfWork.Car.GetAll();
-            return View(CarList);
-        }
-
-        public IActionResult TripsDashboard()
-        {
-            IEnumerable<Trip> TripList = _unitOfWork.Trip.GetAll();
-            return View(TripList);
-        }
-
-        public IActionResult BlogsDashboard()
-        {
-            IEnumerable<Blog> BlogList = _unitOfWork.Blog.GetAll();
-            return View(BlogList);
-        }
+      
 
         public IActionResult CallCenterDashboard()
         {
@@ -169,6 +149,7 @@ namespace ZoomTourismWeb.Areas.Admin.Controllers
 
         }
 
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_CodyleSupport)]
 
         public IActionResult SalesChart()
         {
@@ -194,6 +175,33 @@ namespace ZoomTourismWeb.Areas.Admin.Controllers
                 .ToList();
 
             return PartialView("_SalesChartPartial", salesByMonth);
+        }
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_CodyleSupport)]
+
+        public IActionResult WebsiteContentManagement()
+        {
+            return View();
+        }
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_CodyleSupport)]
+
+        public IActionResult TripsDashboard()
+        {
+            IEnumerable<Trip> TripList = _unitOfWork.Trip.GetAll();
+            return View(TripList);
+        }
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_CodyleSupport)]
+
+        public IActionResult BlogsDashboard()
+        {
+            IEnumerable<Blog> BlogList = _unitOfWork.Blog.GetAll();
+            return View(BlogList);
+        }
+
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_CodyleSupport)]
+        public IActionResult CarsDashboard()
+        {
+            IEnumerable<Car> CarList = _unitOfWork.Car.GetAll();
+            return View(CarList);
         }
     }
 }

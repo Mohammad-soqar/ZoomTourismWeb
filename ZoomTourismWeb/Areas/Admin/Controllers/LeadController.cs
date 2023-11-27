@@ -18,7 +18,7 @@ using ZoomTourismWeb;
 namespace ZoomTourism.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = SD.Role_Admin + "," + SD.Role_CallCenter + "," + SD.Role_CodyleSupport)]
+    [Authorize(Roles = SD.Role_Admin + "," + SD.Role_CallCenter + "," + SD.Role_CodyleSupport + "," + SD.Role_Booking)]
     public class LeadController : Controller
     {
      

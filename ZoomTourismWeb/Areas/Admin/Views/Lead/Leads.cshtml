@@ -22,7 +22,7 @@
             <a asp-action="Upsert" asp-controller="Lead" asp-area="Admin" id="create-lead-button" class="show-popup translate" data-translate-key="create_lead_button">Create Lead</a>
         </div>
         <div class="search-box">
-            <input type="text" placeholder="Search for a lead...">
+            <input type="text" id="leadSearchInput" oninput="searchLeads()" placeholder="Search for a lead...">
             <button type="submit">
                 <img src="~/assets/icons/Search-icon.png" alt="Search" >
             </button>
@@ -33,27 +33,33 @@
 <div class="lead-type-container">
     <div class="lead-type-buttons-container">
         <div class="lead-type-buttons">
-            <input type="radio" id="radio1" name="tabs" checked />
-            <label class="tab2 translate" for="radio1" data-translate-key="private_trips">Private Trips</label>
+            <input type="radio" id="radio1" name="tabs" />
+            <label class="tab2 translate" for="radio1" onclick="filterLeads('Private Trip')">Private Trips</label>
+
             <input type="radio" id="radio2" name="tabs" />
-            <label class="tab2 translate" for="radio2" data-translate-key="public_trips">Public Trips</label>
+            <label class="tab2 translate" for="radio2" onclick="filterLeads('Public Trip')">Public Trips</label>
+
             <input type="radio" id="radio3" name="tabs" />
-            <label class="tab2 translate" for="radio3" data-translate-key="car_rental">Car Rental</label>
-            <span class="glider2"></span>
+            <label class="tab2 translate" for="radio3" onclick="filterLeads('Car Rental')">Car Rental</label>
+
+            <span class="glider2" style="display: none;
+    align-items: center;
+    z-index: 2;
+    padding: 0rem 1rem;" onclick="clearFilter()">X</span>
         </div>
     </div>
 </div>
 <div class="leads-container">
-    <div class="new-leads-container">
+    <div class="new-leads-container lead-container" data-lead-type="new">
         <div class="label-container new-lable">
             <p class="translate" data-translate-key="lead_status_new">New</p>
         </div>
-          @foreach (var Lead in Model.ToList())
+        @foreach (var Lead in Model.OrderByDescending(p => p.CreatedDate).ToList())
         {
             @if (Lead.Status.ToString().ToLower() == "new")
             {
-                
-                <div class="new-lead">
+
+                <div class="new-lead" data-lead-type="@Lead.LeadType" data-lead-name="@Lead.Name">
                     
                         <div class="Lead-Left-Side">
                      
@@ -101,17 +107,17 @@
            
         }
     </div>
-    <div class="communication-container">
+    <div class="communication-container lead-container" data-lead-type="pending">
         <div class="label-container pending-lable">
             <p class="translate" data-translate-key="lead_status_pending">Pending</p>
         </div>
-        @foreach (var Lead in Model.ToList())
+        @foreach (var Lead in Model.OrderByDescending(p => p.CreatedDate).ToList())
         {
             @if (Lead.Status.ToString().ToLower() == "pending")
             {
-                <div class="new-lead">
+                <div class="new-lead" data-lead-type="@Lead.LeadType" data-lead-name="@Lead.Name">
 
-                    <div class="Lead-Left-Side">
+                    <div class="Lead-Left-Side" >
 
                         <a class="LeadLink" asp-action="Upsert" asp-route-id="@Lead.Id">  <h3>@Lead.Name</h3>  </a>
                         <div class="Lead-Item">
@@ -157,16 +163,16 @@
 
         }
     </div>
-    <div class="un-intrested-container">
+    <div class="un-intrested-container lead-container" data-lead-type="inProgress">
         <div class="label-container inprogress-lable">
             <p class="translate" data-translate-key="lead_status_inprogress">InProgress</p>
         </div>
-        @foreach (var Lead in Model.ToList())
+        @foreach (var Lead in Model.OrderByDescending(p => p.CreatedDate).ToList())
         {
             @if (Lead.Status.ToString().ToLower() == "inprogress")
             {
 
-                <div class="new-lead">
+                <div class="new-lead" data-lead-type="@Lead.LeadType" data-lead-name="@Lead.Name">
 
                     <div class="Lead-Left-Side">
 
@@ -214,16 +220,16 @@
 
         }
     </div>
-    <div class="intressted-container">
+    <div class="intressted-container lead-container" data-lead-type="finished">
         <div class="label-container finished-lable">
             <p class="translate" data-translate-key="lead_status_finished">Finished</p>
         </div>
-        @foreach (var Lead in Model.ToList())
+        @foreach (var Lead in Model.OrderByDescending(p => p.CreatedDate).ToList())
         {
             @if (Lead.Status.ToString().ToLower() == "finished")
             {
-              
-                      <div class="new-lead">
+
+                <div class="new-lead" data-lead-type="@Lead.LeadType" data-lead-name="@Lead.Name">
 
                         <div class="Lead-Left-Side">
                      
@@ -270,16 +276,16 @@
         }
 
     </div>
-    <div class="set-meeting-container">
+    <div class="set-meeting-container lead-container" data-lead-type="lost">
         <div class="label-container lost-lable">
             <p class="translate" data-translate-key="lead_status_lost">Lost</p>
         </div>
-        @foreach (var Lead in Model.ToList())
+        @foreach (var Lead in Model.OrderByDescending(p => p.CreatedDate).ToList())
         {
             @if (Lead.Status.ToString().ToLower() == "lost")
             {
 
-                <div class="new-lead">
+                <div class="new-lead" data-lead-type="@Lead.LeadType" data-lead-name="@Lead.Name">
 
                     <div class="Lead-Left-Side">
 
@@ -333,6 +339,58 @@
     <script>
         var currentPage = "leadsPage";
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function filterLeads(leadType) {
+            $('.new-lead').hide(); // Hide all leads
+
+            if (leadType) {
+                $('.new-lead[data-lead-type="' + leadType + '"]').show(); // Show leads for the selected type
+                $(' .glider2').show(); // Show the clear filter button
+            }
+        }
+
+        function clearFilter() {
+            $('.new-lead').show(); // Show all leads
+            $('input[name="tabs"]').prop('checked', false); // Uncheck all radio buttons
+            $('.glider2').hide(); // Hide the clear filter button
+        }
+    
+    </script>
+
+    <script>
+        function filterLeads(leadType) {
+           
+            $('.new-lead').hide(); // Hide all leads
+
+            if (leadType) {
+                $('.new-lead[data-lead-type="' + leadType + '"]').show(); // Show leads for the selected type
+                $('.lead-type-buttons .glider2').show(); // Show the clear filter button
+            }
+        }
+
+        function clearFilter() {
+            $('.new-lead').show(); // Show all leads
+            $('input[name="tabs"]').prop('checked', false); // Uncheck all radio buttons
+            $('.lead-type-buttons .glider2').hide(); // Hide the clear filter button
+            $('#leadSearchInput').val(''); // Clear the search input
+        }
+
+        function searchLeads() {
+        
+            var searchTerm = $('#leadSearchInput').val().toLowerCase();
+            $('.new-lead').hide(); // Hide all leads
+
+            if (searchTerm !== '') {
+                $('.new-lead[data-lead-name*="' + searchTerm + '"]').show(); // Show leads matching the search term
+            } else {
+                // If search term is empty, show leads based on the selected filter
+                var selectedFilter = $('input[name="tabs"]:checked').attr('data-translate-key');
+                filterLeads(selectedFilter);
+            }
+        }
+    </script>
+
     <script src="~/js/LeadTable.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/Dashboard.js"></script>
