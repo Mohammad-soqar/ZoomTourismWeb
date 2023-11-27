@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ZoomTourism.Models\ZoomTourism.Models.csproj" />
+    <ProjectReference Include="..\ZoomTourism.Utility\ZoomTourism.Utility.csproj" />
   </ItemGroup>
 
 </Project>

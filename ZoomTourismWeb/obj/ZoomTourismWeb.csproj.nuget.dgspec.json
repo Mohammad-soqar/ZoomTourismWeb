@@ -35,6 +35,9 @@
             "projectReferences": {
               "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj": {
                 "projectPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Models\\ZoomTourism.Models.csproj"
+              },
+              "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj": {
+                "projectPath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourism.Utility\\ZoomTourism.Utility.csproj"
               }
             }
           }

@@ -4812,7 +4812,8 @@
           "Microsoft.EntityFrameworkCore": "6.0.15",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.15",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.15",
-          "ZoomTourism.Models": "1.0.0"
+          "ZoomTourism.Models": "1.0.0",
+          "ZoomTourism.Utility": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ZoomTourism.DataAccess.dll": {}

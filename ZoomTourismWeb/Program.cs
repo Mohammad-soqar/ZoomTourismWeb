@@ -11,6 +11,7 @@ using Microsoft.Extensions.Options;
 using Hangfire;
 using System.Configuration;
 using Hangfire.SqlServer;
+using ZoomTourism.DataAccess.DbInitializer;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("appsettings.json");
@@ -64,6 +65,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
     .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 builder.Services.AddRazorPages();
 
@@ -90,6 +92,7 @@ app.UseStaticFiles();
 app.UseHangfireDashboard();
 app.UseHangfireServer();
 app.UseRouting();
+SeedDatabase();
 app.UseAuthentication(); 
 
 app.UseAuthorization();
@@ -99,3 +102,12 @@ app.MapControllerRoute(
     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+void SeedDatabase()
+{
+    using(var scope  = app.Services.CreateScope())
+    {
+        var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+        dbInitializer.Intialize();
+    }
+}
