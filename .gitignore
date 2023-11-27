@@ -275,5 +275,8 @@ __pycache__/
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore
 /ZoomTourism.DataAccess/DbInitializer/DbInitializer.cs
+*.dll
 
+
+*.cache
 /ZoomTourismWeb/appsettings.json
