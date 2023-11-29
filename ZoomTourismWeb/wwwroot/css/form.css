@@ -13,7 +13,23 @@ body{
     margin:0 ;
 }
 
+.btn-secondary{
+    background-color: #C4942F;
+    width: 100%;
+    padding: .7rem;
+    color: #fff;
+    border: none;
+    font-size: 1.5em;
+    border-radius: 18px;
+}
 
+.inputs-line {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    flex-direction: column;
+    margin: 0rem 2rem;
+}
 form {
     overflow:auto;
     padding: 20px;
@@ -21,6 +37,7 @@ form {
     min-height: 10rem;
     background-color: #ffffff;
     gap: .5rem;
+
 }
 
 

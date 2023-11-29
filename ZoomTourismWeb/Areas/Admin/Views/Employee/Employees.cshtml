@@ -70,7 +70,7 @@
                                     <div class="div-container">
                                         <div class="task_container">
                                             <img src="~/assets/icons/Tasks-icon.png" alt="" height="30px">
-                                            <a asp-action="Upsert" asp-controller="Task" asp-area="Admin">
+                                            <a asp-action="Upsert" asp-controller="Task" asp-area="Admin" asp-route-userid="@user.UserId">
                                                 <img src="~/assets/icons/Add-icon-with-circle.png" alt="" height="30px">
                                             </a>
                                         </div>

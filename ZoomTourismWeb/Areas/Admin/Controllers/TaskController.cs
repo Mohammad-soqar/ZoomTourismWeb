@@ -46,11 +46,11 @@ namespace ZoomTourism.Areas.Admin.Controllers
 
 
 
-        public IActionResult Upsert(int? Id)
+        public IActionResult Upsert(int? Id, string? userid)
         {
             TaskVM taskVM = new()
             {
-                Task = new()
+                Task = new(),
             };
 
 
@@ -61,6 +61,10 @@ namespace ZoomTourism.Areas.Admin.Controllers
 
             if (Id == null || Id == 0)
             {
+                if (!string.IsNullOrEmpty(userid))
+                {
+                    taskVM.Task.AssignedUserId = userid;
+                }
                 return View(taskVM);
             }
             else
@@ -82,6 +86,7 @@ namespace ZoomTourism.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 ATask obj = taskVM.Task;
+
                 if (!string.IsNullOrEmpty(obj.AssignedUserId))
                 {
                     // Assign Call Center user based on obj.CallCenterUserId

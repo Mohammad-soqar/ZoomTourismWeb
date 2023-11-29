@@ -36,7 +36,7 @@
     </div>
 </div>
 <form method="post" style="margin:0rem 2rem;">
-    <div style="padding:1rem 2rem;">
+    <div class="inputs-line" style="padding:1rem 2rem;">
         <input type="hidden" asp-for="@Model.Lead.Id" />
 
         <div class="inputQue">
@@ -78,8 +78,11 @@
                     <div class="lead-day">
                         <h3>Lead Day @(i + 1)</h3>
                         <input type="hidden" asp-for="@Model.LeadDay[i].Id" /> <!-- Add the hidden input for Id -->
-                        <input asp-for="@Model.LeadDay[i].Destination" class="form-control" placeholder="Destination" />
-                        <input asp-for="@Model.LeadDay[i].numOfDays" class="form-control" placeholder="Number of Days" />
+                        <div style="display:flex; gap:.5rem;">
+                            <input asp-for="@Model.LeadDay[i].Destination" class="form-control" placeholder="Destination" />
+                            <input asp-for="@Model.LeadDay[i].numOfDays" class="form-control" placeholder="Number of Days" />
+                        </div>
+                      
                     </div>
                 }
             }

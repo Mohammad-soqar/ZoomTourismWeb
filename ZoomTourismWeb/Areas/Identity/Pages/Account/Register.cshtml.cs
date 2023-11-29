@@ -121,15 +121,7 @@ namespace ZoomTourismWeb.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            //if (!_roleManager.RoleExistsAsync(SD.Role_Admin).GetAwaiter().GetResult())
-            //{
-            //    _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin)).GetAwaiter().GetResult();
-            //    _roleManager.CreateAsync(new IdentityRole(SD.Role_CallCenter)).GetAwaiter().GetResult();
-            //    _roleManager.CreateAsync(new IdentityRole(SD.Role_Booking)).GetAwaiter().GetResult();
-            //    _roleManager.CreateAsync(new IdentityRole(SD.Role_Driver)).GetAwaiter().GetResult();
-            //    _roleManager.CreateAsync(new IdentityRole(SD.Role_Customer)).GetAwaiter().GetResult();
-            //    _roleManager.CreateAsync(new IdentityRole(SD.Role_CodyleSupport)).GetAwaiter().GetResult();
-            //}
+           
         
 
             ReturnUrl = returnUrl;
