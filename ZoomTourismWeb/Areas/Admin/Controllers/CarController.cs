@@ -76,6 +76,34 @@ namespace ZoomTourism.Areas.Admin.Controllers
                    
                     string wwwRootPath = _HostEnvironment.WebRootPath;
 
+                    if (file != null)
+                    {
+                        string fileName = Guid.NewGuid().ToString();
+                        var uploads = Path.Combine(wwwRootPath, @"Images\CarThumb");
+                        var extension = Path.GetExtension(file.FileName);
+
+                        if (obj.Car.CarCardImage != null)
+                        {
+                            var oldImagePath = Path.Combine(wwwRootPath, obj.Car.CarCardImage.TrimStart('\\'));
+                            if (System.IO.File.Exists(oldImagePath))
+                            {
+                                System.IO.File.Delete(oldImagePath);
+                            }
+
+
+                        }
+                        using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                        {
+                            file.CopyTo(fileStreams);
+                        }
+                        obj.Car.CarCardImage = @"\Images\CarThumb\" + fileName + extension;
+
+                    }
+                    _unitOfWork.Car.Update(obj.Car);
+                    _unitOfWork.Save();
+
+
+
                     if (images != null && images.Count > 0)
                     {
                         foreach (var image in images)
@@ -152,6 +180,7 @@ namespace ZoomTourism.Areas.Admin.Controllers
                     }
                     _unitOfWork.Car.Update(obj.Car);
                     _unitOfWork.Save();
+
                     if (images != null && images.Count > 0)
                     {
                         var objImages = _unitOfWork.CarImage.GetAll(u => u.CarId == obj.Car.Id);

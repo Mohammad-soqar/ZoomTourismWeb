@@ -1,14 +1,14 @@
 ﻿
 //for changing the flag next to the language 
 $(document).ready(function () {
-    $('#languageSelector').change(function () {
+    $('#language-select').change(function () {
         var selectedValue = $(this).val();
         var flagContainer = $('.FlagContainer');
 
         if (selectedValue === 'en') {
-            flagContainer.attr('src', '/Images/icons/britainFlag.png');
+            flagContainer.attr('src', '~/assets/icons/britainFlag.png');
         } else if (selectedValue === 'AR') {
-            flagContainer.attr('src', '/Images/icons/SaudiArabiaFlag.png');
+            flagContainer.attr('src', '~/assets/icons/SaudiArabiaFlag.png');
         }
     });
 });
@@ -50,8 +50,12 @@ $(document).ready(function () {
     });
 });
 
-
+//showing sidebar on click
 $('.show-sidebar-button').click(function () {
+    $('.sidebar').toggle();
+});
+
+$('.close-button').click(function () {
     $('.sidebar').toggle();
 });
 
