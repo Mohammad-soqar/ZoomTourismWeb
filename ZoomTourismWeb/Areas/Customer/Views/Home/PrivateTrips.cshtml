@@ -1,10 +1,15 @@
 ﻿@using ZoomTourism.Models;
 
 @model IEnumerable<Trip>
+@{
+    ViewData["Title"] = "Plan Your Own Trip";
 
+}
 <head>
     <link rel="stylesheet" href="~/css/PrivateTrips.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
+
+
 
 </head>
 <section class="private-trip-form">
@@ -12,41 +17,43 @@
     <div class="form-container">
         <div style="display:flex; flex-direction:column; align-items: center; gap:1rem;">
             <img src="/assets/Brand/Logo.png"/>
-            <h2>Plan your own trip!</h2>
+            <h2 class="translate" data-translate-key="private_title">Plan your own trip!</h2>
 
         </div>
 
         <div class="inputQue">
-            <label class="form-label translate" for="full-name">Full Name:</label>
+            <label class="form-label translate" for="full-name" data-translate-key="full_name_label">Full Name:</label>
             <input class="form-input" type="text" id="full-name">
         </div>
 
         <div class="Multiple-Inputs-Line">
 
         <div class="inputQue">
-            <label class="form-label translate" for="plan-date">When Are you planning to take your trip?</label>
+                <label class="form-label translate" for="plan-date" data-translate-key="plan_date_label">When Are you planning to take your trip?</label>
             <input class="form-input" type="date" id="plan-date">
 
         </div>
 
-        <div class="inputQue">
-            <label class="form-label translate" for="pickup-location">How many days are you planning to stay?</label>
-            <input class="form-input" type="number" id="numOfDays">
-        </div>
+            <div class="inputQue">
+                <label class="form-label translate" for="plan-date" data-translate-key="end_date_label">When Are you planning to finish your trip?</label>
+                <input class="form-input" type="date" id="plan-date">
+
+            </div>
+
 
         </div>
 
         <div class="inputQue">
-            <label class="form-label translate" for="pickup-location">How many people are going?</label>
+            <label class="form-label translate" for="pickup-location" data-translate-key="num_of_people_label">How many people are going?</label>
             <input class="form-input" type="number" id="numOfPeople">
         </div>
 
 
 
         <div class="trips-choosing-container">
-            <h2>Select your desired destinations: </h2>
+            <h2 class="translate" data-translate-key="destinations_title">Select your desired destinations: </h2>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search for trips...">
+                <input class="translate" type="text" id="searchInput" placeholder="Search for trips..." data-translate-key="search_placeholder">
             </div>
 
 
@@ -71,8 +78,8 @@
 
             </ul>
             <input class="form-input" hidden type="text" id="destinations-list">
-            <button id="viewAllButton" style="text-align:center;">View All</button>
-            <button id="showLessButton" style="display: none;">Show Less</button>
+            <button id="viewAllButton" class="translate" style="text-align:center;" data-translate-key="view_all_button">View All</button>
+            <button id="showLessButton" class="translate" style="display: none;" data-translate-key="show_less_button">Show Less</button>
 
         </div>
 
@@ -81,12 +88,12 @@
 
 
         <div class="inputQue">
-            <label class="form-label translate" for="dropoff-location">any other notes you want to add?</label>
+            <label class="form-label translate" for="dropoff-location" data-translate-key="other_notes_label">Any other notes you want to add?</label>
             <input class="form-input" type="text" id="notes">
 
         </div>
         <div class="whatsapp-btn">
-            <button id="whatsapp-button">Send On WhatsApp</button>
+            <button id="whatsapp-button" class="translate" data-translate-key="whatsapp_button">Send On WhatsApp</button>
 
         </div>
 
@@ -94,7 +101,16 @@
 
 </section>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+@section Scripts{
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Define a JavaScript variable for the current page
+        var currentPage = "privateTrip";
+
+    </script>
+    <script src="~/js/IndexTranslation.js"></script>
 <script>
     $(document).ready(function () {
         // Initialize an empty array to store selected destinations
@@ -198,3 +214,4 @@
 
 
 </script>
+}

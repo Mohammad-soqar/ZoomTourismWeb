@@ -3,7 +3,9 @@ C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\bin\D
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.DataAccess.dll
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.DataAccess.pdb
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.Models.dll
+C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.Utility.dll
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.Models.pdb
+C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.Utility.pdb
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.csproj.AssemblyReference.cache
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.AssemblyInfoInputs.cache
@@ -15,5 +17,3 @@ C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\obj\D
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.pdb
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.genruntimeconfig.cache
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ref\ZoomTourism.DataAccess.dll
-C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.Utility.dll
-C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.Utility.pdb

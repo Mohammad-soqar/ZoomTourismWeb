@@ -32,6 +32,16 @@
         justify-items: stretch;
         list-style: none;
     }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 5rem 2rem !important;
+        background-color: #fff;
+        padding: 2rem 1rem !important;
+        border-radius: 22px;
+    }
 }
 
 .trip-choosing {

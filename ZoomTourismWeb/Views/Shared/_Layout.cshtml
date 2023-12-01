@@ -4,7 +4,6 @@
 ﻿@using Microsoft.AspNetCore.Http
 
 @inject IHttpContextAccessor HttpContextAccessor
-
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
@@ -100,50 +99,76 @@
             @RenderBody()
         </main>
     </div>
-    <section class="footerSection">
-    <footer class="footer">
-        <div class="logoInfo">
-            <img alt="Codyle" src="~/assets/Brand/Logo.png" height="60px" draggable="false">
-            <p>Codyle makes it easy __ all in one platform! It is a platform where business owners, business starters, university students and technology enthusiasts meet.</p>
-        </div>
+    <section class="footer-section">
+        <footer>
+            <section class="top">
+                <div class="fotter-logo-container">
 
-        <div class="footer-heading footer-1">
-            <h2>Links</h2>
+                    <img class="footer-logo" src="~/assets/icons/Logo.png" height="60PX">
+                    <p>
+                        With Zoom Tourism unlock the adventures with your personalized travel partner. Discover Turkey
+                        with
+                        Zoom, where every journey is an unforgettable story. We've got all your travel needs covered.
+                        Ready
+                        to embark on your next adventure?
+                    </p>
+                </div>
 
-            <a asp-action="Trips" asp-controller="Home" asp-area="Customer"> Trips </a>
-            <a asp-action="CarRental" asp-controller="car" asp-area="Customer"> Car Rental </a>
-            <a asp-action="Blogs" asp-controller="Home" asp-area="Customer"> Blogs </a>
-        </div>
+                <ul>
+                    <li>
+                        <h3>services</h3>
+                        <a asp-action="PrivateTrips" asp-controller="Home" asp-area="Customer">Private Trips</a>
+                        <a asp-action="Trips" asp-controller="Home" asp-area="Customer">Public Trips</a>
+                        <a asp-action="CarRental" asp-controller="Car" asp-area="Customer">Car rental</a>
+                    </li>
+                    <li>
+                        <h3>Explore</h3>
+                        <a asp-action="Blogs" asp-controller="Home" asp-area="Customer">Blogs</a>
+                        <a href="#">About us</a>
+                        <a href="#">Zoom Group</a>
 
-        <div class="footer-heading footer-2">
-            <h2>Explore</h2>
+                    </li>
+                    <!--  <li>
+                        <h3>ll</h3>
+                        <a href="#">asd</a>
+                        <a href="#">asd</a>
+                    </li> -->
+                    <li class="socialmedia">
+                        <h3>Contacts</h3>
+                        <p>support@zoomtourism.com</p>
+                        <div>
 
-            <a asp-controller="Home" asp-action="Events" asp-area="User">Events</a>
-            <a asp-area="User" asp-controller="Home" asp-action="Aboutus"> About us </a>
-            <a asp-controller="Home" asp-action="CSC" asp-area="User">Codyle Student Club</a>
-        </div>
+                            <a target="_blank" hidden href="https://twitter.com/">
+                                <img src="~/assets/Icons/SocialMedia/Twitter.png" alt=""
+                                     width="30px">
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/zoom.tourism.tr">
+                                <img src="~/assets/Icons/SocialMedia/Facebook.png" alt=""
+                                     width="30px">
+                            </a>
+                            <a target="_blank" href="https://instagram.com/zoomtourismtr">
+                                <img src="~/assets/Icons/SocialMedia/Instagram.png" alt=""
+                                     width="30px">
+                            </a>
+                           @*  <a target="_blank" href="https://www.youtube.com/">
+                                <img src="~/assets/Icons/SocialMedia/YouTube.png" alt=""
+                                     width="30px">
+                            </a> *@
+                        </div>
+                    </li>
+                </ul>
 
-        <div class="footer-heading footer-3">
-            <h2>Contacts</h2>
-            <a href="mailto: support@zoomtourism.com">support@zoomtourism.com</a>
-            @* <a>Phone Number</a>*@
-            <div class="SocialmediaIcons">
-                <a href="https://www.instagram.com/codyle_official/" target="_blank"> <img alt="Codyle Instegram" src="/Photos/socialMedia/Instegram2.png" height="30px" draggable="false"></a>
-
-                @*  <a href="https://www.facebook.com/profile.php?id=100068896367166" target="_blank"> <img alt="Codyle Facebook" src="/Photos/socialMedia/Facebook2.png" height="30px" draggable="false"></a>*@
-
-                <a href="https://twitter.com/CodyleOfficial" target="_blank"> <img alt="Codyle Twitter" src="/Photos/socialMedia/Twitter2.png" height="34px" draggable="false"></a>
-
-                <a href="https://youtube.com/@@codyle" target="_blank"> <img alt="Codyle Youtube" src="/Photos/socialMedia/Youtube2.png" height="34px" draggable="false"> </a>
-
-                <a href="https://www.tiktok.com/@@_codyle" target="_blank"> <img alt="Codyle Tiktok" src="/Photos/socialMedia/TikTok.png" height="34px " draggable="false"></a>
-            </div>
-
-        </div>
-
-    </footer>
-        <p class="copyrights">© All Rights Reserved. Zoom Tourism<a asp-area="User" asp-controller="Home" asp-action="Privacy"> Privacy Policy</a><br /> website made by Codyle</p>
+            </section>
+            <!-- <section class="bottom">©
+                2023 Hologram
+            </section> -->
+        </footer>
+        <p class="copyrights">
+            © All Rights Reserved. Zoom Tourism<a asp-area="Customer" asp-controller="Home"
+                                                  asp-action="Privacy"> Privacy Policy</a><br /> website made by Codyle
+        </p>
     </section>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   

@@ -1,0 +1,72 @@
+﻿@font-face {
+    font-family: 'inter';
+    src: url('../assets/Font/Inter-Medium.ttf');
+}
+
+* {
+    font-family: inter !important;
+}
+
+.PrivacyPolicy {
+    line-height: 1.6;
+    margin: 2rem;
+    padding: 0;
+    color: #333;
+}
+
+  
+
+.PrivacyPolicy h1, .PrivacyPolicy h2 {
+    color: #C4942F;
+    font-size: 30px;
+}
+
+.PrivacyPolicy p {
+    color: #555;
+    font-size: 20px;
+}
+
+.PrivacyPolicy ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.PrivacyPolicy a {
+    color: #C4942F;
+    text-decoration: none;
+}
+
+    .PrivacyPolicy a:hover {
+        text-decoration: underline;
+    }
+
+.PrivacyPolicy h2 {
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.subsection {
+    margin-top: 15px;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #888;
+}

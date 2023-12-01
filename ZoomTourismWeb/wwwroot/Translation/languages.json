@@ -85,6 +85,19 @@
       "section_title": "Our Trips",
       "explore_our_trips": "Explore our Trips"
 
+    },
+    "privateTrip": {
+      "private_title": "Plan Your Own Trip",
+      "full_name_label": "Full Name:",
+      "plan_date_label": "When Are you planning to take your trip?",
+      "end_date_label": "When Are you planning to finish your trip?",
+      "num_of_people_label": "How many people are going?",
+      "destinations_title": "Select your desired destinations:",
+      "search_placeholder": "Search for trips...",
+      "view_all_button": "View All",
+      "show_less_button": "Show Less",
+      "other_notes_label": "Any other notes you want to add?",
+      "whatsapp_button": "Send On WhatsApp"
     }
   },
   "ar": {
@@ -173,6 +186,219 @@
     "tripsPage": {
       "section_title": "رحلاتنا",
       "explore_our_trips": "استكشف اكثر عن رحلاتنا"
+    },
+    "privateTrip": {
+      "private_title": "خطط لرحلتك الخاصة",
+      "full_name_label": "الاسم الكامل",
+      "plan_date_label": "متى تخطط للقيام برحلتك؟",
+      "end_date_label": "متى تخطط لإنهاء رحلتك؟",
+      "num_of_people_label": "كم عدد الأشخاص الذين سيذهبون؟",
+      "destinations_title": "اختر وجهاتك المفضلة: ",
+      "search_placeholder": "ابحث عن الرحلات...",
+      "view_all_button": "عرض الكل",
+      "show_less_button": "إظهار أقل",
+      "other_notes_label": "هل هناك ملاحظات أخرى ترغب في إضافتها؟",
+      "whatsapp_button": "أرسل على WhatsApp"
+    }
+  },
+  "ru": {
+    "homepage": {
+      "welcome_message": "Мы заботимся о вашем путешествии",
+      "trip_description": "Чтобы получить максимум удовольствия от вашего приключения, вам просто нужно уйти и отправиться туда, где вам нравится. Мы ждем вас.",
+      "plan_a_trip": "Запланируйте поездку >",
+      "top_value_title": "Лучшее предложение для вас",
+      "top_value_description": "Попробуйте разнообразные преимущества при использовании наших услуг.",
+      "lot_of_choices_title": "Много вариантов",
+      "lot_of_choices_description": "Всего 25 туров по Турции",
+      "best_tour_guide_title": "Лучший гид",
+      "best_tour_guide_description": "Наш гид с опытом работы более 10 лет",
+      "easy_booking_title": "Простое бронирование",
+      "easy_booking_description": "С легкостью и быстротой бронируйте свое путешествие",
+      "top_destination_title": "ЛУЧШЕЕ НАПРАВЛЕНИЕ",
+      "explore_top_destinations": "Исследуйте лучшие направления",
+      "custom_trip_title": "ИНДИВИДУАЛЬНАЯ ПОЕЗДКА",
+      "custom_trip_description": "Хотите спланировать свою собственную поездку?",
+      "custom_trip_line": "Выберите свое направление, исследуйте достопримечательности, составьте маршрут и забронируйте жилье - все в одном месте.",
+      "let's_go": "Поехали!",
+      "our_experience_title": "Наш опыт",
+      "our_experience_description": "С нашим опытом мы будем вам служить.",
+      "our_experience_line": "Чтобы получить максимум удовольствия от вашего приключения, вам просто нужно уйти и отправиться туда, где вам нравится. Мы ждем вас.",
+      "experience_years": "Годы опыта",
+      "destinations_in_turkey": "Направления в Турции",
+      "happy_customers": "Довольные клиенты",
+      "reviews_title": "Отзывы",
+      "customer_reviews": "Что говорят наши клиенты о нас"
+    },
+    "blogs": {
+      "blogs_heading": "Наши блоги",
+      "explore_blogs_heading": "Исследуйте наши блоги",
+      "all": "Все",
+      "tourism": "Туризм",
+      "politics": "Политика",
+      "celebration": "Праздник"
+    },
+    "adminlayout": {
+      "search_placeholder": "Поиск...",
+      "dashboard": "Панель управления",
+      "leads": "Лиды",
+      "tasks": "Задачи",
+      "guide": "Гид",
+      "notification": "Уведомление",
+      "logout": "Выйти",
+      "support": "Поддержка"
+    },
+    "adminDashboard": {
+      "car_text": "Автомобиль",
+      "users_online_text": "Пользователей в сети",
+      "tasks_text": "Задачи",
+      "leads_text": "Лиды",
+      "search_placeholder": "Поиск...",
+      "leads_header": "Лиды",
+      "name_header": "Имя",
+      "days_header": "Количество дней",
+      "status_header": "Статус",
+      "created_date_header": "Дата создания",
+      "view_header": "Просмотр",
+
+      "total_reviews_text": "Общее количество отзывов",
+      "see_details_text": "Посмотреть детали"
+    },
+    "leadsPage": {
+      "leads_title": "Лиды",
+      "create_lead_button": "Создать лид",
+      "private_trips": "Индивидуальные поездки",
+      "public_trips": "Публичные поездки",
+      "car_rental": "Прокат автомобилей",
+      "lead_status_new": "Новый",
+      "lead_status_pending": "В ожидании",
+      "lead_status_inprogress": "В процессе",
+      "lead_status_finished": "Завершен",
+      "lead_status_lost": "Упущен",
+      "notes": "Примечания:",
+      "status": "Статус:",
+      "created_date": "Дата создания:",
+      "new_lable": "Новый",
+      "pending_lable": "В ожидании",
+      "inprogress_lable": "В процессе",
+      "finished_lable": "Завершен",
+      "lost_lable": "Упущен"
+    },
+    "tripsPage": {
+      "section_title": "Наши поездки",
+      "explore_our_trips": "Исследуйте наши поездки"
+    },
+    "privateTrip": {
+      "private_title": "Запланируйте свою поездку",
+      "full_name_label": "Полное имя:",
+      "plan_date_label": "Когда вы планируете свою поездку?",
+      "num_of_days_label": "Сколько дней вы планируете пробыть?",
+      "num_of_people_label": "Сколько человек поедет?",
+      "destinations_title": "Выберите желаемые направления:",
+      "search_placeholder": "Поиск поездок...",
+      "view_all_button": "Посмотреть все",
+      "show_less_button": "Скрыть",
+      "other_notes_label": "Есть ли еще какие-то заметки, которые вы хотите добавить?",
+      "whatsapp_button": "Отправить в WhatsApp"
+    }
+  },
+  "tr": {
+    "homepage": {
+      "welcome_message": "Seyahatinizle Biz İlgileniyoruz",
+      "trip_description": "Maceranızın en iyisini yaşamak için sadece ayrılmanız ve istediğiniz yere gitmeniz yeterlidir. Sizi bekliyoruz.",
+      "plan_a_trip": "Gezi Planla >",
+      "top_value_title": "Sizin İçin En Değerli",
+      "top_value_description": "Hizmetlerimizi kullanırken çeşitli avantajları deneyin.",
+      "lot_of_choices_title": "Çok Fazla Seçenek",
+      "lot_of_choices_description": "Türkiye genelinde toplam 25 tur",
+      "best_tour_guide_title": "En İyi Tur Rehberi",
+      "best_tour_guide_description": "10 yılı aşkın deneyime sahip tur rehberlerimiz",
+      "easy_booking_title": "Kolay Rezervasyon",
+      "easy_booking_description": "Seyahatinizi rezerve etmek için kolay ve hızlı bir yol",
+      "top_destination_title": "EN İYİ DESTİNASYON",
+      "explore_top_destinations": "En İyi Destinasyonları Keşfedin",
+      "custom_trip_title": "ÖZEL GEZİ",
+      "custom_trip_description": "Kendi gezinizi planlamak mı istiyorsunuz?",
+      "custom_trip_line": "Hedefinizi seçin, cazibe merkezlerini keşfedin, bir güzergah oluşturun ve konaklamayı tek bir yerden rezerve edin.",
+      "let's_go": "Hadi Gidelim!",
+      "our_experience_title": "Deneyimimiz",
+      "our_experience_description": "Deneyimimizle Sizlere Hizmet Edeceğiz.",
+      "our_experience_line": "Macera yaşamak için sadece ayrılmanız ve istediğiniz yere gitmeniz yeterlidir. Sizi bekliyoruz.",
+      "experience_years": "Deneyim Yılları",
+      "destinations_in_turkey": "Türkiye'deki Destinasyonlar",
+      "happy_customers": "Mutlu Müşteriler",
+      "reviews_title": "Yorumlar",
+      "customer_reviews": "Müşterilerimiz Bizim Hakkımızda Ne Diyor"
+    },
+    "blogs": {
+      "blogs_heading": "Bloglarımız",
+      "explore_blogs_heading": "Bloglarımızı Keşfedin",
+      "all": "Tümü",
+      "tourism": "Turizm",
+      "politics": "Politika",
+      "celebration": "Kutlama"
+    },
+    "adminlayout": {
+      "search_placeholder": "Ara...",
+      "dashboard": "Panel",
+      "leads": "Potansiyel Müşteriler",
+      "tasks": "Görevler",
+      "guide": "Rehber",
+      "notification": "Bildirim",
+      "logout": "Çıkış",
+      "support": "Destek"
+    },
+    "adminDashboard": {
+      "car_text": "Araç",
+      "users_online_text": "Çevrimiçi Kullanıcılar",
+      "tasks_text": "Görevler",
+      "leads_text": "Potansiyel Müşteriler",
+      "search_placeholder": "Ara...",
+      "leads_header": "Potansiyel Müşteriler",
+      "name_header": "Ad",
+      "days_header": "Gün Sayısı",
+      "status_header": "Durum",
+      "created_date_header": "Oluşturulma Tarihi",
+      "view_header": "Görüntüle",
+
+      "total_reviews_text": "Toplam Yorumlar",
+      "see_details_text": "Detayları Görüntüle"
+    },
+    "leadsPage": {
+      "leads_title": "Potansiyel Müşteriler",
+      "create_lead_button": "Potansiyel Müşteri Oluştur",
+      "private_trips": "Özel Turlar",
+      "public_trips": "Genel Turlar",
+      "car_rental": "Araç Kiralama",
+      "lead_status_new": "Yeni",
+      "lead_status_pending": "Beklemede",
+      "lead_status_inprogress": "Devam Ediyor",
+      "lead_status_finished": "Tamamlandı",
+      "lead_status_lost": "Kaybedildi",
+      "notes": "Notlar:",
+      "status": "Durum:",
+      "created_date": "Oluşturulma Tarihi:",
+      "new_lable": "Yeni",
+      "pending_lable": "Beklemede",
+      "inprogress_lable": "Devam Ediyor",
+      "finished_lable": "Tamamlandı",
+      "lost_lable": "Kaybedildi"
+    },
+    "tripsPage": {
+      "section_title": "Gezilerimiz",
+      "explore_our_trips": "Gezilerimizi Keşfedin"
+    },
+    "privateTrip": {
+      "private_title": "Kendi Gezinizi Planlayın",
+      "full_name_label": "Adınız Soyadınız:",
+      "plan_date_label": "Gezinizi ne zaman yapmayı planlıyorsunuz?",
+      "end_date_label": "Gezinizi ne zaman bitirmeyi planlıyorsunuz?",
+      "num_of_people_label": "Kaç kişi gidiyor?",
+      "destinations_title": "İstediğiniz destinasyonları seçin:",
+      "search_placeholder": "Gezileri Ara...",
+      "view_all_button": "Hepsini Görüntüle",
+      "show_less_button": "Daha Az Göster",
+      "other_notes_label": "Eklemek istediğiniz başka notlar var mı?",
+      "whatsapp_button": "WhatsApp'ta Gönder"
     }
   }
-  }
+}

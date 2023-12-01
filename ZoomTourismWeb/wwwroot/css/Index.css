@@ -24,14 +24,14 @@
     }
 
         .text-side h1 {
-            font-size: 5em;
+            font-size: 4em;
             color: #292929;
             font-weight: 600;
             position: relative;
         }
 
         .text-side h3 {
-            font-size: 3em;
+            font-size: 2em;
             color: #292929;
             font-weight: 700;
             width: 90%;
@@ -52,7 +52,7 @@
 
     .text-side p,
     .CustomTrip-text p {
-        font-size: 1.2em;
+        font-size: 1em;
         color: #7A7a7a;
         width: 60%;
         text-align: justify;
@@ -69,7 +69,7 @@
     }
 
     .text-side a {
-        font-size: 1.2em;
+        font-size: 1em;
         color: #fff;
         text-align: justify;
         font-weight: 600;
@@ -359,7 +359,7 @@
 
 
         .experience-text-side h3 {
-            font-size: 3em;
+            font-size: 2em;
             color: #292929;
             font-weight: 700;
             width: 90%;
@@ -386,7 +386,7 @@
         }
 
         .experience-items p {
-            font-size: 1.2em;
+            font-size: 1em;
             color: #7A7A7A;
             width: 90%;
             font-weight: 500;
@@ -422,7 +422,7 @@
     }
 
         .reviews-text h3 {
-            font-size: 3em;
+            font-size: 2em;
             color: #292929;
             font-weight: 700;
             width: 90%;
@@ -572,7 +572,7 @@
         }
 
         .text-side p {
-            font-size: 1.2em;
+            font-size: 1em;
             color: #7A7A7A;
             width: 90%;
             line-height: 1.3rem;
@@ -582,7 +582,7 @@
         }
 
         .text-side a {
-            font-size: 1.2em;
+            font-size: 1em;
             color: #fff;
             text-align: justify;
             font-weight: 600;
@@ -854,7 +854,7 @@
         }
 
         .experience-items p {
-            font-size: 1.2em;
+            font-size: 1em;
             color: #7A7A7A;
             width: 90%;
             font-weight: 500;
@@ -893,7 +893,7 @@
     }
 
         .reviews-text h3 {
-            font-size: 3em;
+            font-size: 2em;
             color: #292929;
             font-weight: 700;
             width: 90%;
