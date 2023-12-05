@@ -359,11 +359,11 @@ section .bottom {
         }
 
         .top p {
-            font-size: 25px;
+            font-size: 1em !important;
         }
 
         .top a {
-            font-size: 25px;
+            font-size: 1em !important;
         }
 }
 
