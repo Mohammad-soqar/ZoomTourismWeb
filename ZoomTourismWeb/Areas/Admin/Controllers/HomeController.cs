@@ -1,4 +1,6 @@
-﻿using CodyleOffical.Utility;
+﻿using Amazon.S3.Model;
+using Amazon.S3;
+using ZoomTourism.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -7,6 +9,7 @@ using System.Linq;
 using ZoomTourism.DataAccess.Repository.IRepository;
 using ZoomTourism.Models;
 using ZoomTourism.Models.ViewModels;
+using Amazon;
 
 namespace ZoomTourismWeb.Areas.Admin.Controllers
 {
@@ -98,7 +101,7 @@ namespace ZoomTourismWeb.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult SupportReport(Report obj, IFormFile file)
+        public async Task<IActionResult> SupportReport(Report obj, IFormFile file)
         {
 
             IdentityUser user = _userManager.GetUserAsync(User).Result;
@@ -109,27 +112,29 @@ namespace ZoomTourismWeb.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 string wwwRootPath = _HostEnvironment.WebRootPath;
-                if (file != null)
+                if (file != null && file.Length > 0)
                 {
-                    string fileName = Guid.NewGuid().ToString();
-                    var uploads = Path.Combine(wwwRootPath, @"Images\Reports");
-                    var extension = Path.GetExtension(file.FileName);
-
-                    if (obj.ImageUrl != null)
+                    using (var memoryStream = new MemoryStream())
                     {
-                        var oldImagePath = Path.Combine(wwwRootPath, obj.ImageUrl.TrimStart('\\'));
-                        if (System.IO.File.Exists(oldImagePath))
+                        await file.CopyToAsync(memoryStream);
+                        var extension = Path.GetExtension(file.FileName);
+                        var fileName = Guid.NewGuid().ToString() + extension;
+
+                        // Use the AmazonS3Client to upload the file to S3
+                        var s3Client = new AmazonS3Client("AKIA2VXAQTX6WKS7IIHB", "CGvzFn0noWJSAKMKbT7It2eNSxzuJk9ZwVS6N/Bo", RegionEndpoint.EUCentral1);
+                        var putRequest = new PutObjectRequest
                         {
-                            System.IO.File.Delete(oldImagePath);
-                        }
+                            BucketName = "zoomtourismassets",
+                            Key = "Images/Report/" + fileName,
+                            InputStream = memoryStream,
+                            ContentType = file.ContentType,
+                            CannedACL = S3CannedACL.PublicRead // Optional: Set appropriate ACL for your use case
+                        };
 
+                        await s3Client.PutObjectAsync(putRequest);
 
+                        obj.ImageUrl = "https://zoomtourismassets.s3.eu-central-1.amazonaws.com/Images/Report/" + fileName;
                     }
-                    using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
-                    {
-                        file.CopyTo(fileStreams);
-                    }
-                    obj.ImageUrl = @"\Images\Reports\" + fileName + extension;
                 }
                 if (obj.Id == 0)
                 {
@@ -142,7 +147,7 @@ namespace ZoomTourismWeb.Areas.Admin.Controllers
 
 
                 _unitOfWork.Save();
-                return RedirectToAction("Index");
+                return RedirectToAction("AdminDashboard");
             }
 
             return View(obj);

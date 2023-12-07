@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "85BdoX5wa449Qv4C+F58cdqCSXxkNmLJ8YhthV1BPh8CNcZdVDTGnD77e1kHNMVZ65xRDgkq0FlyHbZObwi8GA==",
+  "dgSpecHash": "f+wBj0YsezBysfACVJtriZRYDpUeNTRdil9GqWpufuUlk+popSnxahPpv8tdkPO4hLO3KYczXEKh4fGKU5pkqA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\ZoomTourismWeb.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Mohammad Ahmad\\.nuget\\packages\\awssdk.core\\3.7.300.13\\awssdk.core.3.7.300.13.nupkg.sha512",
+    "C:\\Users\\Mohammad Ahmad\\.nuget\\packages\\awssdk.s3\\3.7.304.2\\awssdk.s3.3.7.304.2.nupkg.sha512",
     "C:\\Users\\Mohammad Ahmad\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Mohammad Ahmad\\.nuget\\packages\\hangfire\\1.8.6\\hangfire.1.8.6.nupkg.sha512",
     "C:\\Users\\Mohammad Ahmad\\.nuget\\packages\\hangfire.aspnetcore\\1.8.6\\hangfire.aspnetcore.1.8.6.nupkg.sha512",

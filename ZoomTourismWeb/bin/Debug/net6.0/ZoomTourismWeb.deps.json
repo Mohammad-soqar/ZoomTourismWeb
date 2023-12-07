@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "ZoomTourismWeb/1.0.0": {
         "dependencies": {
+          "AWSSDK.S3": "3.7.304.2",
           "Hangfire": "1.8.6",
           "Hangfire.SqlServer": "1.8.6",
           "Microsoft.AspNet.Mvc": "5.2.9",
@@ -27,6 +28,25 @@
         },
         "runtime": {
           "ZoomTourismWeb.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.300.13": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.300.13"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.304.2": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.300.13"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.304.2"
+          }
         }
       },
       "BouncyCastle.Cryptography/2.2.1": {
@@ -3166,6 +3186,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.7.300.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nst87N4yVP3C55kX/ZzLnkzPfDXmWH2cvKKHvH5YgS1jMJuPR11KgmtshQgWv0maWa2Rvqlrb+KvcmKEQaXefA==",
+      "path": "awssdk.core/3.7.300.13",
+      "hashPath": "awssdk.core.3.7.300.13.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.304.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eIGcsNfWeOMD8aW175HKGNCGbXrTelKszPMYlpeGOmy2jvUe3IIeN4yEULKZaXN5Ygty8Dpun2DtUZLI/+hf9g==",
+      "path": "awssdk.s3/3.7.304.2",
+      "hashPath": "awssdk.s3.3.7.304.2.nupkg.sha512"
     },
     "BouncyCastle.Cryptography/2.2.1": {
       "type": "package",

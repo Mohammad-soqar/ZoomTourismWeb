@@ -9,6 +9,34 @@
       "PackagePath": "staticwebassets\\Images\\Blogs\\247a32ec-84bb-4257-8ce9-ed9e7ad22ae0.jpg"
     },
     {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\2b50dcc0-9913-4442-9a4d-f8884cf27ee5.png",
+      "PackagePath": "staticwebassets\\Images\\CarThumb\\2b50dcc0-9913-4442-9a4d-f8884cf27ee5.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\4b0b04c8-575e-4edd-98d8-a86f4b19803a.png",
+      "PackagePath": "staticwebassets\\Images\\CarThumb\\4b0b04c8-575e-4edd-98d8-a86f4b19803a.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\902f76ca-cbad-442c-aacb-e5b5709f206e.png",
+      "PackagePath": "staticwebassets\\Images\\CarThumb\\902f76ca-cbad-442c-aacb-e5b5709f206e.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\95765598-aa03-40c8-a880-2242f3aca7b4.png",
+      "PackagePath": "staticwebassets\\Images\\CarThumb\\95765598-aa03-40c8-a880-2242f3aca7b4.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\9f2f9301-61f3-404f-ad49-071fc63c66ec.png",
+      "PackagePath": "staticwebassets\\Images\\CarThumb\\9f2f9301-61f3-404f-ad49-071fc63c66ec.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\be31cbb0-a63f-42ab-a036-fb951f9a64dd.png",
+      "PackagePath": "staticwebassets\\Images\\CarThumb\\be31cbb0-a63f-42ab-a036-fb951f9a64dd.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\e19952ad-c618-43d4-b39f-4927b07e8675.png",
+      "PackagePath": "staticwebassets\\Images\\CarThumb\\e19952ad-c618-43d4-b39f-4927b07e8675.png"
+    },
+    {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Translation\\LayoutTranslation.json",
       "PackagePath": "staticwebassets\\Translation\\LayoutTranslation.json"
     },
@@ -461,6 +489,10 @@
       "PackagePath": "staticwebassets\\css\\SignIn.css"
     },
     {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Support.css",
+      "PackagePath": "staticwebassets\\css\\Support.css"
+    },
+    {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\TasksView.css",
       "PackagePath": "staticwebassets\\css\\TasksView.css"
     },
@@ -519,6 +551,10 @@
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\LeadTable.js",
       "PackagePath": "staticwebassets\\js\\LeadTable.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\Search.js",
+      "PackagePath": "staticwebassets\\js\\Search.js"
     },
     {
       "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\TripTable.js",

@@ -7,8 +7,11 @@ using ZoomTourism.Models;
 using ZoomTourism.Models.ViewModels;
 using System.Linq;
 using System.Collections.Generic;
-using CodyleOffical.Utility;
+using ZoomTourism.Utility;
 using Microsoft.AspNetCore.Authorization;
+using Amazon.S3.Model;
+using Amazon.S3;
+using Amazon;
 
 namespace ZoomTourism.Areas.Admin.Controllers
 {
@@ -60,7 +63,6 @@ namespace ZoomTourism.Areas.Admin.Controllers
                 return View(carVM);
             }
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(CarVM obj, List<IFormFile> images, IFormFile file)
@@ -69,115 +71,45 @@ namespace ZoomTourism.Areas.Admin.Controllers
             {
                 if (obj.Car.Id == 0)
                 {
-                   
                     _unitOfWork.Car.Add(obj.Car);
                     _unitOfWork.Save();
 
-                   
-                    string wwwRootPath = _HostEnvironment.WebRootPath;
-
                     if (file != null)
                     {
-                        string fileName = Guid.NewGuid().ToString();
-                        var uploads = Path.Combine(wwwRootPath, @"Images\CarThumb");
-                        var extension = Path.GetExtension(file.FileName);
-
-                        if (obj.Car.CarCardImage != null)
-                        {
-                            var oldImagePath = Path.Combine(wwwRootPath, obj.Car.CarCardImage.TrimStart('\\'));
-                            if (System.IO.File.Exists(oldImagePath))
-                            {
-                                System.IO.File.Delete(oldImagePath);
-                            }
-
-
-                        }
-                        using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
-                        {
-                            file.CopyTo(fileStreams);
-                        }
-                        obj.Car.CarCardImage = @"\Images\CarThumb\" + fileName + extension;
-
+                        var imageUrl = HandleImageUploadToS3(file, "CarThumb");
+                        obj.Car.CarCardImage = imageUrl;
                     }
+
                     _unitOfWork.Car.Update(obj.Car);
                     _unitOfWork.Save();
-
-
 
                     if (images != null && images.Count > 0)
                     {
                         foreach (var image in images)
                         {
-                            string fileName = Guid.NewGuid().ToString();
-                            var uploads = Path.Combine(wwwRootPath, @"Images\Cars");
-                            var extension = Path.GetExtension(image.FileName);
-
-                            var imageUrl = HandleImageUpload(image, uploads, fileName, extension);
+                            var imageUrl = HandleImageUploadToS3(image, "Cars");
 
                             var carImage = new CarImages
                             {
-                                CarId = obj.Car.Id, 
+                                CarId = obj.Car.Id,
                                 ImageUrl = imageUrl
                             };
 
-                            // Save the car image to the database
                             _unitOfWork.CarImage.Add(carImage);
                             _unitOfWork.Save();
                         }
-                    }
-
-                    if (file != null)
-                    {
-                        string fileName = Guid.NewGuid().ToString();
-                        var uploads = Path.Combine(wwwRootPath, @"Images\CarThumb");
-                        var extension = Path.GetExtension(file.FileName);
-
-                        if (obj.Car.CarCardImage != null)
-                        {
-                            var oldImagePath = Path.Combine(wwwRootPath, obj.Car.CarCardImage.TrimStart('\\'));
-                            if (System.IO.File.Exists(oldImagePath))
-                            {
-                                System.IO.File.Delete(oldImagePath);
-                            }
-
-
-                        }
-                        using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
-                        {
-                            file.CopyTo(fileStreams);
-                        }
-                        obj.Car.CarCardImage = @"\Images\CarThumb\" + fileName + extension;
                     }
 
                     return RedirectToAction("Index");
                 }
                 else
                 {
-                    string wwwRootPath = _HostEnvironment.WebRootPath;
-
                     if (file != null)
                     {
-                        string fileName = Guid.NewGuid().ToString();
-                        var uploads = Path.Combine(wwwRootPath, @"Images\CarThumb");
-                        var extension = Path.GetExtension(file.FileName);
-
-                        if (obj.Car.CarCardImage != null)
-                        {
-                            var oldImagePath = Path.Combine(wwwRootPath, obj.Car.CarCardImage.TrimStart('\\'));
-                            if (System.IO.File.Exists(oldImagePath))
-                            {
-                                System.IO.File.Delete(oldImagePath);
-                            }
-
-
-                        }
-                        using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
-                        {
-                            file.CopyTo(fileStreams);
-                        }
-                        obj.Car.CarCardImage = @"\Images\CarThumb\" + fileName + extension;
-
+                        var imageUrl = HandleImageUploadToS3(file, "CarThumb");
+                        obj.Car.CarCardImage = imageUrl;
                     }
+
                     _unitOfWork.Car.Update(obj.Car);
                     _unitOfWork.Save();
 
@@ -196,29 +128,21 @@ namespace ZoomTourism.Areas.Admin.Controllers
 
                         _unitOfWork.CarImage.RemoveRange(objImages);
 
-
                         foreach (var image in images)
                         {
-                            string fileName = Guid.NewGuid().ToString();
-                            var uploads = Path.Combine(wwwRootPath, @"Images\Cars");
-                            var extension = Path.GetExtension(image.FileName);
+                            var imageUrl = HandleImageUploadToS3(image, "Cars");
 
-                            // Handle image upload
-                            var imageUrl = HandleImageUpload(image, uploads, fileName, extension);
-
-                            // Create a new CarImages instance and associate it with the new car using its ID
                             var carImage = new CarImages
                             {
-                                CarId = obj.Car.Id, // Set the car's ID as the foreign key
+                                CarId = obj.Car.Id,
                                 ImageUrl = imageUrl
                             };
 
-                            // Save the car image to the database
                             _unitOfWork.CarImage.Add(carImage);
                             _unitOfWork.Save();
                         }
                     }
-               
+
                     return RedirectToAction("Index");
                 }
             }
@@ -226,19 +150,29 @@ namespace ZoomTourism.Areas.Admin.Controllers
             return View(obj);
         }
 
-        private string HandleImageUpload(IFormFile image, string uploadPath, string fileName, string extension)
+        private string HandleImageUploadToS3(IFormFile image, string s3Folder)
         {
-            var uniqueFileName = fileName + extension;
-            var filePath = Path.Combine(uploadPath, uniqueFileName);
+            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(image.FileName);
+            var s3Key = $"{s3Folder}/{fileName}";
 
-            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            using (var stream = image.OpenReadStream())
             {
-                image.CopyTo(fileStream);
+                var s3Client = new AmazonS3Client("AKIA2VXAQTX6WKS7IIHB", "CGvzFn0noWJSAKMKbT7It2eNSxzuJk9ZwVS6N/Bo", RegionEndpoint.EUCentral1);
+                var putRequest = new PutObjectRequest
+                {
+                    BucketName = "zoomtourismassets",
+                    Key = s3Key,
+                    InputStream = stream,
+                    ContentType = image.ContentType,
+                    CannedACL = S3CannedACL.PublicRead // Set ACL as needed
+                };
+
+                s3Client.PutObjectAsync(putRequest).Wait();
             }
 
-            // Return the relative path to the uploaded image
-            return @"\Images\Cars\" + uniqueFileName;
+            return $"https://zoomtourismassets.s3.eu-central-1.amazonaws.com/{s3Key}";
         }
+
 
 
         public IActionResult Delete(int? Id)

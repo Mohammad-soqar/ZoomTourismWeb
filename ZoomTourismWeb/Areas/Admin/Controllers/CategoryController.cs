@@ -1,4 +1,4 @@
-﻿using CodyleOffical.Utility;
+﻿using ZoomTourism.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZoomTourism.DataAccess.Repository.IRepository;

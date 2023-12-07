@@ -1,7 +1,8 @@
 ﻿@using ZoomTourism.DataAccess.Repository.IRepository;
 @using ZoomTourism.DataAccess.Repository;
 @using ZoomTourism.Models;
-
+@using ZoomTourism.Utility;
+@using ZoomTourism.Utility;
 @model IEnumerable<ATask>
 @{
 
@@ -58,8 +59,12 @@
                                         <img src="/assets/Icons/threedots.png" height="20px" alt="">
                                     </div>
                                     <div class="dropdown-content">
-                                        <a asp-action="Upsert" asp-route-id="@task.Id">Edit</a>
-                                        <a onClick=Delete('/Admin/Task/DeletePost/@task.Id') class="Delete-button">Delete</a>
+                                        @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_CodyleSupport))
+                                        {
+
+                                            <a asp-action="Upsert" asp-route-id="@task.Id">Edit</a>
+                                            <a onClick=Delete('/Admin/Task/DeletePost/@task.Id') class="Delete-button">Delete</a>
+                                        }
                                         <div class="status-dropdown">
                                             <a asp-action="TaskStatusInProgress" asp-route-id="@task.Id">In Progress</a>
                                             <a asp-action="TaskStatusDone" asp-route-id="@task.Id">Done</a>
@@ -126,8 +131,11 @@
                                         <img src="/assets/Icons/threedots.png" height="20px" alt="">
                                     </div>
                                     <div class="dropdown-content">
+                                        @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_CodyleSupport)){
+
                                         <a asp-action="Upsert" asp-route-id="@task.Id">Edit</a>
                                         <a onClick=Delete('/Admin/Task/DeletePost/@task.Id') class="Delete-button">Delete</a>
+                                        }
                                         <div class="status-dropdown">
                                             <a asp-action="TaskStatusToDo" asp-route-id="@task.Id">To Do</a>
                                             <a asp-action="TaskStatusDone" asp-route-id="@task.Id">Done</a>
@@ -192,8 +200,12 @@
                                         <img src="/assets/Icons/threedots.png" height="20px" alt="">
                                     </div>
                                     <div class="dropdown-content">
-                                        <a asp-action="Upsert" asp-route-id="@task.Id">Edit</a>
-                                        <a onClick=Delete('/Admin/Task/DeletePost/@task.Id') class="Delete-button">Delete</a>
+                                        @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_CodyleSupport))
+                                        {
+
+                                            <a asp-action="Upsert" asp-route-id="@task.Id">Edit</a>
+                                            <a onClick=Delete('/Admin/Task/DeletePost/@task.Id') class="Delete-button">Delete</a>
+                                        }
                                         <div class="status-dropdown">
                                             <a asp-action="TaskStatusToDo" asp-route-id="@task.Id">To Do</a>
                                             <a asp-action="TaskStatusInProgress" asp-route-id="@task.Id">In Progress</a>

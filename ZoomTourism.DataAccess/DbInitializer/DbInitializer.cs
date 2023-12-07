@@ -1,4 +1,4 @@
-﻿using CodyleOffical.Utility;
+﻿using ZoomTourism.Utility;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;

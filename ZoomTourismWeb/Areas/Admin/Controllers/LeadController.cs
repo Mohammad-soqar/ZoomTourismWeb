@@ -1,5 +1,5 @@
 ﻿
-using CodyleOffical.Utility;
+using ZoomTourism.Utility;
 using Hangfire;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

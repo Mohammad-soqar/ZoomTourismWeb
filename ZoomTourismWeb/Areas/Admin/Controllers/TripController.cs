@@ -1,11 +1,14 @@
 ﻿
-using CodyleOffical.Utility;
+using Amazon.S3.Model;
+using Amazon.S3;
+using ZoomTourism.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ZoomTourism.DataAccess.Repository.IRepository;
 using ZoomTourism.Models;
 using ZoomTourism.Models.ViewModels;
+using Amazon;
 
 namespace ZoomTourism.Areas.Admin.Controllers
 {
@@ -52,33 +55,35 @@ namespace ZoomTourism.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Trip obj, IFormFile file)
+        public async Task<IActionResult> Upsert(Trip obj, IFormFile file)
         {
             if (ModelState.IsValid)
             {
-                string wwwRootPath = _HostEnvironment.WebRootPath;
-                if (file != null)
+                if (file != null && file.Length > 0)
                 {
-                    string fileName = Guid.NewGuid().ToString();
-                    var uploads = Path.Combine(wwwRootPath, @"Images\Trips");
-                    var extension = Path.GetExtension(file.FileName);
-
-                    if (obj.ImageUrl != null)
+                    using (var memoryStream = new MemoryStream())
                     {
-                        var oldImagePath = Path.Combine(wwwRootPath, obj.ImageUrl.TrimStart('\\'));
-                        if (System.IO.File.Exists(oldImagePath))
+                        await file.CopyToAsync(memoryStream);
+                        var extension = Path.GetExtension(file.FileName);
+                        var fileName = Guid.NewGuid().ToString() + extension;
+
+                        // Use the AmazonS3Client to upload the file to S3
+                        var s3Client = new AmazonS3Client("AKIA2VXAQTX6WKS7IIHB", "CGvzFn0noWJSAKMKbT7It2eNSxzuJk9ZwVS6N/Bo", RegionEndpoint.EUCentral1);
+                        var putRequest = new PutObjectRequest
                         {
-                            System.IO.File.Delete(oldImagePath);
-                        }
+                            BucketName = "zoomtourismassets",
+                            Key = "Images/Trips/" + fileName,
+                            InputStream = memoryStream,
+                            ContentType = file.ContentType,
+                            CannedACL = S3CannedACL.PublicRead // Optional: Set appropriate ACL for your use case
+                        };
 
+                        await s3Client.PutObjectAsync(putRequest);
 
+                        obj.ImageUrl = "https://zoomtourismassets.s3.eu-central-1.amazonaws.com/Images/Trips/" + fileName;
                     }
-                    using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
-                    {
-                        file.CopyTo(fileStreams);
-                    }
-                    obj.ImageUrl = @"\Images\Trips\" + fileName + extension;
                 }
+
                 if (obj.Id == 0)
                 {
                     _unitOfWork.Trip.Add(obj);
@@ -88,14 +93,13 @@ namespace ZoomTourism.Areas.Admin.Controllers
                     _unitOfWork.Trip.Update(obj);
                 }
 
-
                 _unitOfWork.Save();
-                return RedirectToAction("TripsDashboard","Home");
+                return RedirectToAction("TripsDashboard", "Home");
             }
 
             return View(obj);
-
         }
+
 
         public IActionResult Delete(int? Id)
         {
@@ -119,10 +123,8 @@ namespace ZoomTourism.Areas.Admin.Controllers
         }
 
         [HttpDelete]
-
         public IActionResult DeletePost(int? Id)
         {
-          
             try
             {
                 var obj = _unitOfWork.Trip.GetFirstOrDefault(u => u.Id == Id);
@@ -132,11 +134,15 @@ namespace ZoomTourism.Areas.Admin.Controllers
                     return Json(new { success = false, message = "Error while deleting" });
                 }
 
-                var oldImagePath = Path.Combine(_HostEnvironment.WebRootPath, obj.ImageUrl.TrimStart('\\'));
-                if (System.IO.File.Exists(oldImagePath))
+                // Use the AmazonS3Client to delete the file from S3
+                var s3Client = new AmazonS3Client("AKIA2VXAQTX6WKS7IIHB", "CGvzFn0noWJSAKMKbT7It2eNSxzuJk9ZwVS6N/Bo", RegionEndpoint.EUCentral1);
+                var deleteRequest = new DeleteObjectRequest
                 {
-                    System.IO.File.Delete(oldImagePath);
-                }
+                    BucketName = "zoomtourismassets",
+                    Key = obj.ImageUrl
+                };
+
+                s3Client.DeleteObjectAsync(deleteRequest);
 
                 _unitOfWork.Trip.Remove(obj);
                 _unitOfWork.Save();
@@ -150,10 +156,8 @@ namespace ZoomTourism.Areas.Admin.Controllers
                 // Return an error response
                 return Json(new { success = false, message = $"Error: {ex.Message}" });
             }
-
-
-
         }
+
 
 
         #endregion

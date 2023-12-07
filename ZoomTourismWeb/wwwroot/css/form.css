@@ -13,6 +13,11 @@ body{
     margin:0 ;
 }
 
+.logoutbtn {
+    min-height: 0rem !important;
+    background-color: transparent !important;
+}
+
 .btn-secondary{
     background-color: #C4942F;
     width: 100%;

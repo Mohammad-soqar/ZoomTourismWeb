@@ -1,10 +1,14 @@
 ﻿@model ZoomTourism.Models.Report
+<head>
+    <link rel="stylesheet" href="~/css/Support.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/form.css asp-append-version="true" />
 
+</head>
 <h2>Support Report</h2>
 @{
     Layout = "_AdminLayout"; // Specify the user layout
 }
-<form asp-action="SupportReport" method="post" enctype="multipart/form-data">
+<form asp-action="SupportReport" class="inputs-line" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label asp-for="Description">Description</label>
         <textarea asp-for="Description" class="form-control" rows="4"></textarea>

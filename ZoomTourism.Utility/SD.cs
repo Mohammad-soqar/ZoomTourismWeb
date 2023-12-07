@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodyleOffical.Utility
+namespace ZoomTourism.Utility
 {
     public static class SD
     {
