@@ -555,3 +555,4 @@ D:\proj\ZoomTourismWeb\ZoomTourismWeb\bin\Debug\net6.0\Npgsql.dll
 D:\proj\ZoomTourismWeb\ZoomTourismWeb\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\proj\ZoomTourismWeb\ZoomTourismWeb\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
 D:\proj\ZoomTourismWeb\ZoomTourismWeb\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\proj\ZoomTourismWeb\ZoomTourismWeb\bin\Debug\net6.0\global.json
