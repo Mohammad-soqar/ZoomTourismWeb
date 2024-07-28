@@ -15,3 +15,21 @@ C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\obj\D
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.pdb
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.genruntimeconfig.cache
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ref\ZoomTourism.DataAccess.dll
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.DataAccess.deps.json
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.DataAccess.runtimeconfig.json
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.DataAccess.dll
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.DataAccess.pdb
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.Models.dll
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\bin\Debug\net6.0\ZoomTourism.Models.pdb
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.csproj.AssemblyReference.cache
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.AssemblyInfoInputs.cache
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.AssemblyInfo.cs
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.csproj.CoreCompileInputs.cache
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.sourcelink.json
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.csproj.CopyComplete
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.dll
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\refint\ZoomTourism.DataAccess.dll
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.pdb
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ZoomTourism.DataAccess.genruntimeconfig.cache
+D:\proj\ZoomTourismWeb\ZoomTourism.DataAccess\obj\Debug\net6.0\ref\ZoomTourism.DataAccess.dll

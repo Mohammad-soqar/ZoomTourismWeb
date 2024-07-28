@@ -1,827 +1,831 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ZoomTourismWeb.bundle.scp.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ZoomTourismWeb.bundle.scp.css",
       "PackagePath": "staticwebassets\\ZoomTourismWeb.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Blogs\\06081a5b-307d-4bad-a70c-e0ed0a76efdf.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Blogs\\06081a5b-307d-4bad-a70c-e0ed0a76efdf.png",
       "PackagePath": "staticwebassets\\Images\\Blogs\\06081a5b-307d-4bad-a70c-e0ed0a76efdf.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Blogs\\77426c71-e75d-4b9a-b9c9-d40dcd1c14ad.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Blogs\\77426c71-e75d-4b9a-b9c9-d40dcd1c14ad.png",
       "PackagePath": "staticwebassets\\Images\\Blogs\\77426c71-e75d-4b9a-b9c9-d40dcd1c14ad.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Blogs\\bd0fcd41-ef91-41f3-b480-0f365048da45.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Blogs\\bd0fcd41-ef91-41f3-b480-0f365048da45.png",
       "PackagePath": "staticwebassets\\Images\\Blogs\\bd0fcd41-ef91-41f3-b480-0f365048da45.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\1df5f452-2408-4f50-a971-7ed90759ac6d.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\1df5f452-2408-4f50-a971-7ed90759ac6d.png",
       "PackagePath": "staticwebassets\\Images\\CarThumb\\1df5f452-2408-4f50-a971-7ed90759ac6d.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\3230fd58-87a7-470c-ba4b-f4b2bef52024.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\3230fd58-87a7-470c-ba4b-f4b2bef52024.png",
       "PackagePath": "staticwebassets\\Images\\CarThumb\\3230fd58-87a7-470c-ba4b-f4b2bef52024.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\6fae705d-6c7d-4d9d-89a7-4290e7c44fdf.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\6fae705d-6c7d-4d9d-89a7-4290e7c44fdf.png",
       "PackagePath": "staticwebassets\\Images\\CarThumb\\6fae705d-6c7d-4d9d-89a7-4290e7c44fdf.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\70d07772-039c-4782-9b02-422297ca5902.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\70d07772-039c-4782-9b02-422297ca5902.png",
       "PackagePath": "staticwebassets\\Images\\CarThumb\\70d07772-039c-4782-9b02-422297ca5902.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\cbc96381-e49d-4485-a75f-ed68e47018be.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\cbc96381-e49d-4485-a75f-ed68e47018be.png",
       "PackagePath": "staticwebassets\\Images\\CarThumb\\cbc96381-e49d-4485-a75f-ed68e47018be.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\cce94719-dc7a-4258-bcdb-6cc72122e1f5.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\cce94719-dc7a-4258-bcdb-6cc72122e1f5.png",
       "PackagePath": "staticwebassets\\Images\\CarThumb\\cce94719-dc7a-4258-bcdb-6cc72122e1f5.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\d4113df1-166b-4e3a-91c2-65357fc8ec2a.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\d4113df1-166b-4e3a-91c2-65357fc8ec2a.png",
       "PackagePath": "staticwebassets\\Images\\CarThumb\\d4113df1-166b-4e3a-91c2-65357fc8ec2a.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\e6c78dd8-21c1-418f-b8fd-cf952cec751e.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\CarThumb\\e6c78dd8-21c1-418f-b8fd-cf952cec751e.png",
       "PackagePath": "staticwebassets\\Images\\CarThumb\\e6c78dd8-21c1-418f-b8fd-cf952cec751e.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\1644d24e-1b8d-4456-8c88-e58be507f8d7.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\1644d24e-1b8d-4456-8c88-e58be507f8d7.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\1644d24e-1b8d-4456-8c88-e58be507f8d7.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\30582b79-9423-4c74-8911-b70fbf1c707c.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\30582b79-9423-4c74-8911-b70fbf1c707c.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\30582b79-9423-4c74-8911-b70fbf1c707c.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\3110f8ca-004c-43b6-950c-231943e94707.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\3110f8ca-004c-43b6-950c-231943e94707.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\3110f8ca-004c-43b6-950c-231943e94707.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\3ba95f60-a191-4e35-84cf-f0d9d773528f.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\3ba95f60-a191-4e35-84cf-f0d9d773528f.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\3ba95f60-a191-4e35-84cf-f0d9d773528f.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\4ddd837c-d50f-4bd4-88d6-2b0c815ce509.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\4ddd837c-d50f-4bd4-88d6-2b0c815ce509.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\4ddd837c-d50f-4bd4-88d6-2b0c815ce509.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\53544e88-b3d7-47a0-84a1-8a5cf59a0525.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\53544e88-b3d7-47a0-84a1-8a5cf59a0525.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\53544e88-b3d7-47a0-84a1-8a5cf59a0525.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\58357299-a5f6-4ace-a4c2-fd27c363787a.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\58357299-a5f6-4ace-a4c2-fd27c363787a.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\58357299-a5f6-4ace-a4c2-fd27c363787a.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\73a35331-4dc9-4d40-ab45-c901bb2a21ec.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\73a35331-4dc9-4d40-ab45-c901bb2a21ec.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\73a35331-4dc9-4d40-ab45-c901bb2a21ec.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\76748719-6cbf-475d-b759-15d7a46217d1.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\76748719-6cbf-475d-b759-15d7a46217d1.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\76748719-6cbf-475d-b759-15d7a46217d1.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\917c690f-e7a9-4378-895f-9072e8a7dcec.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\917c690f-e7a9-4378-895f-9072e8a7dcec.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\917c690f-e7a9-4378-895f-9072e8a7dcec.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\cdaf7d18-434a-4a39-b4cf-cda999dea659.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\cdaf7d18-434a-4a39-b4cf-cda999dea659.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\cdaf7d18-434a-4a39-b4cf-cda999dea659.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\e7533b2a-8678-4960-9e40-2a7687c3adee.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Cars\\e7533b2a-8678-4960-9e40-2a7687c3adee.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\e7533b2a-8678-4960-9e40-2a7687c3adee.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Reports\\22bf5637-0c26-4770-b372-26cf34f27a44.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Reports\\22bf5637-0c26-4770-b372-26cf34f27a44.png",
       "PackagePath": "staticwebassets\\Images\\Reports\\22bf5637-0c26-4770-b372-26cf34f27a44.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\18483ce5-9d0c-4b8c-829b-6f3589486638.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\168f3a69-a859-457c-8f93-62c8a86ad228.png",
+      "PackagePath": "staticwebassets\\Images\\Trips\\168f3a69-a859-457c-8f93-62c8a86ad228.png"
+    },
+    {
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\18483ce5-9d0c-4b8c-829b-6f3589486638.png",
       "PackagePath": "staticwebassets\\Images\\Trips\\18483ce5-9d0c-4b8c-829b-6f3589486638.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\21568891-2511-4521-b92d-727a398698a9.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\21568891-2511-4521-b92d-727a398698a9.png",
       "PackagePath": "staticwebassets\\Images\\Trips\\21568891-2511-4521-b92d-727a398698a9.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\3e4fc7ea-95fe-4539-bb62-ab550d81c343.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\3e4fc7ea-95fe-4539-bb62-ab550d81c343.png",
       "PackagePath": "staticwebassets\\Images\\Trips\\3e4fc7ea-95fe-4539-bb62-ab550d81c343.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\4ba1edb6-f89b-4fd2-9099-30281887203b.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\4ba1edb6-f89b-4fd2-9099-30281887203b.png",
       "PackagePath": "staticwebassets\\Images\\Trips\\4ba1edb6-f89b-4fd2-9099-30281887203b.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\4d53f58e-0011-4687-94d4-2c7420e351d0.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\4d53f58e-0011-4687-94d4-2c7420e351d0.png",
       "PackagePath": "staticwebassets\\Images\\Trips\\4d53f58e-0011-4687-94d4-2c7420e351d0.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\767f66ff-3adb-4740-ab82-45e2b95f4270.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\767f66ff-3adb-4740-ab82-45e2b95f4270.png",
       "PackagePath": "staticwebassets\\Images\\Trips\\767f66ff-3adb-4740-ab82-45e2b95f4270.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\792ff926-973b-4621-bf0f-653a6bedf5ca.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\792ff926-973b-4621-bf0f-653a6bedf5ca.png",
       "PackagePath": "staticwebassets\\Images\\Trips\\792ff926-973b-4621-bf0f-653a6bedf5ca.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\9fbff19d-1d2b-4c95-aee6-1d67db7dc236.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\9fbff19d-1d2b-4c95-aee6-1d67db7dc236.png",
       "PackagePath": "staticwebassets\\Images\\Trips\\9fbff19d-1d2b-4c95-aee6-1d67db7dc236.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\b264432e-9105-4b63-acdc-cb9cce571ca0.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\b264432e-9105-4b63-acdc-cb9cce571ca0.png",
       "PackagePath": "staticwebassets\\Images\\Trips\\b264432e-9105-4b63-acdc-cb9cce571ca0.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\e07bbb04-f41d-4d8c-9b62-05b12a1324a9.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Images\\Trips\\e07bbb04-f41d-4d8c-9b62-05b12a1324a9.png",
       "PackagePath": "staticwebassets\\Images\\Trips\\e07bbb04-f41d-4d8c-9b62-05b12a1324a9.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Translation\\LayoutTranslation.json",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Translation\\LayoutTranslation.json",
       "PackagePath": "staticwebassets\\Translation\\LayoutTranslation.json"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Translation\\languages.json",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\Translation\\languages.json",
       "PackagePath": "staticwebassets\\Translation\\languages.json"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Brand\\Logo.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Brand\\Logo.png",
       "PackagePath": "staticwebassets\\assets\\Brand\\Logo.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Brand\\LogoPlane.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Brand\\LogoPlane.png",
       "PackagePath": "staticwebassets\\assets\\Brand\\LogoPlane.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-back.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-back.jpg",
       "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-back.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-face.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-face.jpg",
       "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-face.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side1.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side1.jpg",
       "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-side1.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side2.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side2.jpg",
       "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-side2.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side3.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side3.jpg",
       "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-side3.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side4.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito-side4.jpg",
       "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito-side4.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Benz-Vito.png",
       "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Benz-Vito.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Logo.svg.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Cars\\Mercedes-Logo.svg.png",
       "PackagePath": "staticwebassets\\assets\\Cars\\Mercedes-Logo.svg.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Flags\\Arabic.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Flags\\Arabic.png",
       "PackagePath": "staticwebassets\\assets\\Flags\\Arabic.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Flags\\RUSSIA.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Flags\\RUSSIA.png",
       "PackagePath": "staticwebassets\\assets\\Flags\\RUSSIA.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Flags\\TURKEY.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Flags\\TURKEY.png",
       "PackagePath": "staticwebassets\\assets\\Flags\\TURKEY.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Flags\\USA.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Flags\\USA.png",
       "PackagePath": "staticwebassets\\assets\\Flags\\USA.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Font\\Inter-Medium.ttf",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Font\\Inter-Medium.ttf",
       "PackagePath": "staticwebassets\\assets\\Font\\Inter-Medium.ttf"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Add-icon-with-circle.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Add-icon-with-circle.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Add-icon-with-circle.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Add-icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Add-icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Add-icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\CRM.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\CRM.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\CRM.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Car-Icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Car-Icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Car-Icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Dashboard-icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Dashboard-icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Dashboard-icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Delete-Icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Delete-Icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Delete-Icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\DownArrow.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\DownArrow.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\DownArrow.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Edit-Icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Edit-Icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Edit-Icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Edit.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Edit.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Edit.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Guide-icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Guide-icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Guide-icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Leads-icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Leads-icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Leads-icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Logo.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Logo.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Logo.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Logout-icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Logout-icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Logout-icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Notification-icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Notification-icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Notification-icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Phone.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Phone.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Phone.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\SaudiArabiaFlag.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\SaudiArabiaFlag.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\SaudiArabiaFlag.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Search-icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Search-icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Search-icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Sharebtn.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Sharebtn.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Sharebtn.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Sharebtn3.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Sharebtn3.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Sharebtn3.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\StarReview.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\StarReview.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\StarReview.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Status-Icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Status-Icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Status-Icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Support-icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Support-icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Support-icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Tasks-icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Tasks-icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Tasks-icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\User-Icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\User-Icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\User-Icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\UserTasks.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\UserTasks.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\UserTasks.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Useronline.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\Useronline.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\Useronline.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\arrowLeft.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\arrowLeft.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\arrowLeft.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\arrowRight.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\arrowRight.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\arrowRight.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\britainFlag.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\britainFlag.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\britainFlag.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\Fuel.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\Fuel.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\cars\\Fuel.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\ModelYear.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\ModelYear.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\cars\\ModelYear.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\Seats.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\Seats.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\cars\\Seats.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\manufucture.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\manufucture.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\cars\\manufucture.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\model.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\model.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\cars\\model.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\transmission.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\cars\\transmission.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\cars\\transmission.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\eye-Icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\eye-Icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\eye-Icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\like.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\like.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\like.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\log-in-packground.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\log-in-packground.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\log-in-packground.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\mail.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\mail.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\mail.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\menu-icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\menu-icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\menu-icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\right-btn-arrow.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\right-btn-arrow.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\right-btn-arrow.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\seat-Icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\seat-Icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\seat-Icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\seats.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\seats.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\seats.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\settings.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\settings.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\settings.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\settings2.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\settings2.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\settings2.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\starBadge.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\starBadge.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\starBadge.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\transmission-Icon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\transmission-Icon.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\transmission-Icon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\transmission.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\transmission.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\transmission.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\twoStars.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\twoStars.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\twoStars.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\whatsapp.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Icons\\whatsapp.png",
       "PackagePath": "staticwebassets\\assets\\Icons\\whatsapp.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\CustomTrip.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\CustomTrip.png",
       "PackagePath": "staticwebassets\\assets\\Pictures\\CustomTrip.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\airport.jpg",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\airport.jpg",
       "PackagePath": "staticwebassets\\assets\\Pictures\\airport.jpg"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\girl-xp-suitcase.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\girl-xp-suitcase.png",
       "PackagePath": "staticwebassets\\assets\\Pictures\\girl-xp-suitcase.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\main-ZOOM.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\main-ZOOM.png",
       "PackagePath": "staticwebassets\\assets\\Pictures\\main-ZOOM.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\man-suitcase.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\man-suitcase.png",
       "PackagePath": "staticwebassets\\assets\\Pictures\\man-suitcase.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\reviews-map.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\Pictures\\reviews-map.png",
       "PackagePath": "staticwebassets\\assets\\Pictures\\reviews-map.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\New-Maidens-Tower-Yeni-Kiz-Kulesi-Istanbul-Tourist-Information.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\New-Maidens-Tower-Yeni-Kiz-Kulesi-Istanbul-Tourist-Information.png",
       "PackagePath": "staticwebassets\\assets\\blogs\\New-Maidens-Tower-Yeni-Kiz-Kulesi-Istanbul-Tourist-Information.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\erdogan.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\erdogan.png",
       "PackagePath": "staticwebassets\\assets\\blogs\\erdogan.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\firework.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\firework.png",
       "PackagePath": "staticwebassets\\assets\\blogs\\firework.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\mountaineering-ararat.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\mountaineering-ararat.png",
       "PackagePath": "staticwebassets\\assets\\blogs\\mountaineering-ararat.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\oil.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\oil.png",
       "PackagePath": "staticwebassets\\assets\\blogs\\oil.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\shutterstock_395147326.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\blogs\\shutterstock_395147326.png",
       "PackagePath": "staticwebassets\\assets\\blogs\\shutterstock_395147326.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\elements\\ExperienceVector.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\elements\\ExperienceVector.png",
       "PackagePath": "staticwebassets\\assets\\elements\\ExperienceVector.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\trips\\Bursa.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\trips\\Bursa.png",
       "PackagePath": "staticwebassets\\assets\\trips\\Bursa.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\trips\\Trabzon.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\trips\\Trabzon.png",
       "PackagePath": "staticwebassets\\assets\\trips\\Trabzon.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\trips\\kapadokya.png",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\assets\\trips\\kapadokya.png",
       "PackagePath": "staticwebassets\\assets\\trips\\kapadokya.png"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\BlogDetails.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\BlogDetails.css",
       "PackagePath": "staticwebassets\\css\\BlogDetails.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Blogs.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Blogs.css",
       "PackagePath": "staticwebassets\\css\\Blogs.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\CarDetails.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\CarDetails.css",
       "PackagePath": "staticwebassets\\css\\CarDetails.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\CarRental.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\CarRental.css",
       "PackagePath": "staticwebassets\\css\\CarRental.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\CarsDashboard.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\CarsDashboard.css",
       "PackagePath": "staticwebassets\\css\\CarsDashboard.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Crmsite.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Crmsite.css",
       "PackagePath": "staticwebassets\\css\\Crmsite.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Dashboard.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Dashboard.css",
       "PackagePath": "staticwebassets\\css\\Dashboard.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Employees.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Employees.css",
       "PackagePath": "staticwebassets\\css\\Employees.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Index.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Index.css",
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Leads.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Leads.css",
       "PackagePath": "staticwebassets\\css\\Leads.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\NavBar.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\NavBar.css",
       "PackagePath": "staticwebassets\\css\\NavBar.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\SignIn.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\SignIn.css",
       "PackagePath": "staticwebassets\\css\\SignIn.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\TasksView.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\TasksView.css",
       "PackagePath": "staticwebassets\\css\\TasksView.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\TripDetails.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\TripDetails.css",
       "PackagePath": "staticwebassets\\css\\TripDetails.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Trips.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\Trips.css",
       "PackagePath": "staticwebassets\\css\\Trips.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\form.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\form.css",
       "PackagePath": "staticwebassets\\css\\form.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\profile.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\profile.css",
       "PackagePath": "staticwebassets\\css\\profile.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\site.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\favicon.ico",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\BlogTable.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\BlogTable.js",
       "PackagePath": "staticwebassets\\js\\BlogTable.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\CarDetails.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\CarDetails.js",
       "PackagePath": "staticwebassets\\js\\CarDetails.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\CarTable.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\CarTable.js",
       "PackagePath": "staticwebassets\\js\\CarTable.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\Dashboard.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\Dashboard.js",
       "PackagePath": "staticwebassets\\js\\Dashboard.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\IndexTranslation.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\IndexTranslation.js",
       "PackagePath": "staticwebassets\\js\\IndexTranslation.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\LeadTable.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\LeadTable.js",
       "PackagePath": "staticwebassets\\js\\LeadTable.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\TripTable.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\TripTable.js",
       "PackagePath": "staticwebassets\\js\\TripTable.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\TripmessageSending.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\TripmessageSending.js",
       "PackagePath": "staticwebassets\\js\\TripmessageSending.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\app.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\app.js",
       "PackagePath": "staticwebassets\\js\\app.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\messageSending.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\messageSending.js",
       "PackagePath": "staticwebassets\\js\\messageSending.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\site.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\tableJs.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\js\\tableJs.js",
       "PackagePath": "staticwebassets\\js\\tableJs.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Mohammad Ahmad\\source\\repos\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\proj\\ZoomTourismWeb\\ZoomTourismWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

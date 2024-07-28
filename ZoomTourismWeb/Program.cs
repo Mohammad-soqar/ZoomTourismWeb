@@ -6,17 +6,56 @@ using ZoomTourism.DataAccess.Repository;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using ZoomTourism.Utility;
 using Twilio.Clients;
-using ZoomTourismWeb;
 using Microsoft.Extensions.Options;
+using Npgsql;
+using Microsoft.Extensions.Logging;
+using ZoomTourismWeb;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("appsettings.json");
 
+// Add logging
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
- builder.Configuration.GetConnectionString("DefaultConnection")
-    ));
+
+// Retrieve the DATABASE_URL environment variable from Heroku
+var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+
+string connectionString;
+
+if (!string.IsNullOrEmpty(databaseUrl))
+{
+    // Parse the DATABASE_URL manually to handle the Heroku format
+    var databaseUri = new Uri(databaseUrl);
+    var userInfo = databaseUri.UserInfo.Split(':');
+
+    var npgsqlBuilder = new NpgsqlConnectionStringBuilder
+    {
+        Host = databaseUri.Host,
+        Port = databaseUri.Port,
+        Username = userInfo[0],
+        Password = userInfo[1],
+        Database = databaseUri.LocalPath.TrimStart('/'),
+        SslMode = SslMode.Require,
+        TrustServerCertificate = true
+    };
+
+    connectionString = npgsqlBuilder.ConnectionString;
+}
+else
+{
+    // Fallback to the connection string from appsettings.json
+    connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+}
+
+// Debug logging to verify the connection string
+Console.WriteLine("Connection String: " + connectionString);
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(connectionString));
 
 var twilioSettings = new TwilioSettings();
 builder.Configuration.GetSection("Twilio").Bind(twilioSettings);
@@ -62,12 +101,11 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication(); 
+app.UseAuthentication();
 
 app.UseAuthorization();
 app.MapRazorPages();

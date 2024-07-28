@@ -12,3 +12,18 @@ C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.Utility\obj\Debu
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ZoomTourism.Utility.pdb
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ZoomTourism.Utility.genruntimeconfig.cache
 C:\Users\Mohammad Ahmad\source\repos\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ref\ZoomTourism.Utility.dll
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\bin\Debug\net6.0\ZoomTourism.Utility.deps.json
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\bin\Debug\net6.0\ZoomTourism.Utility.runtimeconfig.json
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\bin\Debug\net6.0\ZoomTourism.Utility.dll
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\bin\Debug\net6.0\ZoomTourism.Utility.pdb
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ZoomTourism.Utility.csproj.AssemblyReference.cache
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ZoomTourism.Utility.GeneratedMSBuildEditorConfig.editorconfig
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ZoomTourism.Utility.AssemblyInfoInputs.cache
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ZoomTourism.Utility.AssemblyInfo.cs
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ZoomTourism.Utility.csproj.CoreCompileInputs.cache
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ZoomTourism.Utility.sourcelink.json
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ZoomTourism.Utility.dll
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\refint\ZoomTourism.Utility.dll
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ZoomTourism.Utility.pdb
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ZoomTourism.Utility.genruntimeconfig.cache
+D:\proj\ZoomTourismWeb\ZoomTourism.Utility\obj\Debug\net6.0\ref\ZoomTourism.Utility.dll

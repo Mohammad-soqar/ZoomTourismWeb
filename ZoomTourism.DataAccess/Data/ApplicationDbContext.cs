@@ -1,20 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
 using ZoomTourism.Models;
 
 namespace ZoomTourism.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) :base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
         }
 
         public DbSet<Category> Categories { get; set; }
@@ -30,6 +23,5 @@ namespace ZoomTourism.DataAccess.Data
         public DbSet<ATask> Tasks { get; set; }
         public DbSet<LeadDay> LeadDays { get; set; }
         public DbSet<Report> Reports { get; set; }
-
     }
 }

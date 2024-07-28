@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomTourismWeb", "ZoomTourismWeb\ZoomTourismWeb.csproj", "{72AD5FE1-AF57-4A6D-BF7E-2DCEAB920CF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZoomTourismWeb", "ZoomTourismWeb\ZoomTourismWeb.csproj", "{72AD5FE1-AF57-4A6D-BF7E-2DCEAB920CF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomTourism.Models", "ZoomTourism.Models\ZoomTourism.Models.csproj", "{D7085711-D8DB-481A-AF8B-48D7396D1431}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZoomTourism.Models", "ZoomTourism.Models\ZoomTourism.Models.csproj", "{D7085711-D8DB-481A-AF8B-48D7396D1431}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomTourism.Utility", "ZoomTourism.Utility\ZoomTourism.Utility.csproj", "{BE409B69-582E-42EA-9B35-AB93C62D32CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZoomTourism.Utility", "ZoomTourism.Utility\ZoomTourism.Utility.csproj", "{BE409B69-582E-42EA-9B35-AB93C62D32CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomTourism.DataAccess", "ZoomTourism.DataAccess\ZoomTourism.DataAccess.csproj", "{D407659A-F3C8-4910-B4E1-5B644F006043}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZoomTourism.DataAccess", "ZoomTourism.DataAccess\ZoomTourism.DataAccess.csproj", "{D407659A-F3C8-4910-B4E1-5B644F006043}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E4DFB33E-62AB-44A6-A6CD-EAEAB74E3EDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

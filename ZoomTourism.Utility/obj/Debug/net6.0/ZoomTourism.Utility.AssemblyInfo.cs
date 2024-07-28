@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZoomTourism.Utility")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8367fda05bda708d2ef739c47c7e4d61dfae172")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZoomTourism.Utility")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZoomTourism.Utility")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
